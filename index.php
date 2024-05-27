@@ -946,24 +946,6 @@
     animationTimingFunction: "ease-in-out",
   });
   glide.mount();
-
-  var proyectos = new Glide("#projects-slider", {
-    type: "carousel",
-    perView: 3,
-    breakpoints: {
-      768: {
-        perView: 2,
-      },
-      550: {
-        perView: 1,
-      },
-    },
-    autoplay: 5000,
-    animationDuration: 2000,
-    animationTimingFunction: "ease-in-out",
-    pauseOnHover: true,
-  });
-  proyectos.mount();
 </script>
 
 </html>

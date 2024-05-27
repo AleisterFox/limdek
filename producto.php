@@ -65,28 +65,12 @@
   <main>
     <section id="productos-hero">
       <figure class="portada"><img loading="lazy" src="img/portada.jpg" alt=""></figure>
-      <h2 class="product-title">División Microscopía</h2>
     </section>
     <div class="pb"></div>
-    <div class="topbar topbar-producto">
-      <div class="steps">
-        <div class="step active">
-          <p>Home</p>
-
-        </div>
-        <div class="step active">
-          <a href="productos.php">División Microscopía</a>
-
-        </div>
-        <div class="step">
-          <p>Microscopio Educativo</p>
-        </div>
-      </div>
-    </div>
 
     <section id="product">
       <div class="container">
-        <div class="side-gallery">
+        <!-- <div class="side-gallery">
           <figure class="product__gallery--image active">
             <img loading="lazy" src="img/estereo.png" alt="" />
           </figure>
@@ -96,48 +80,61 @@
           <figure class="product__gallery--image">
             <img loading="lazy" src="img/microscopia.png" alt="" />
           </figure>
-        </div>
+        </div> -->
 
-        <div class="product-image">
+        <!-- <div class="product-image">
           <figure class="product__image--active pi1">
             <img loading="lazy" src="img/estereo.png" alt="" />
           </figure>
-        </div>
+        </div> -->
 
-        <div class="product__slider">
-          <div class="glide" id="product-slider">
-            <div class="glide__track" data-glide-el="track">
-              <ul class="glide__slides">
-                <li class="glide__slide">
-                  <figure><img loading="lazy" src="img/estereo.png" alt="" /></figure>
-                </li>
-                <li class="glide__slide">
-                  <figure><img loading="lazy" src="img/invertidos.png" alt="" /></figure>
-                </li>
-                <li class="glide__slide">
-                  <figure><img loading="lazy" src="img/microscopia.png" alt="" /></figure>
-                </li>
-              </ul>
-              <div class="glide__bullets" data-glide-el="controls[nav]">
-                <button class="glide__bullet" data-glide-dir="=0"></button>
-                <button class="glide__bullet" data-glide-dir="=1"></button>
-                <button class="glide__bullet" data-glide-dir="=2"></button>
-              </div>
-            </div>
+        <div class="glide" id="product-slider">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+              <li class="glide__slide product-image">
+                <figure class="portada pi1"><img loading="lazy" src="img/lambrin-interior.png" alt="" /></figure>
+              </li>
+              <li class="glide__slide product-image">
+                <figure class="portada pi1"><img loading="lazy" src="img/lambrin-interior2.png" alt="" /></figure>
+              </li>
+              <li class="glide__slide product-image">
+                <figure class="portada pi1"><img loading="lazy" src="img/lambrin-interior.png" alt="" /></figure>
+              </li>
+              <li class="glide__slide product-image">
+                <figure class="portada pi1"><img loading="lazy" src="img/lambrin-interior2.png" alt="" /></figure>
+              </li>
+            </ul>
+          </div>
+          <div data-glide-el="controls" class="slider__controls">
+            <button data-glide-dir="<"><i class="fas fa-chevron-left"></i></button>
+            <button data-glide-dir=">"><i class="fas fa-chevron-right"></i></button>
           </div>
         </div>
 
         <div class="product-info">
-          <h2 class="product__title">Microscopio Educativo</h2>
-
+          <h2 class="product__title">Lorem Ipsum</h2>
+          <div class="tags">
+            <div class="nuevo">
+              <h5>Nuevo</h5>
+            </div>
+            <div class="agotado">
+              <h5>Agotado</h5>
+            </div>
+          </div>
+          <div class="product-info__top">
+            <p class="price"><strong>$ 0.00 MXN</strong></p>
+            <div class="calificacion">
+              <p>5.0</p>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
           <p class="desc">
-            Óptica Plan Acromática <br>
-            Oculares 10x/20 Objetivos 4x, 10x, 40x y 100x oil <br>
-            Iluminación fija Koehler y de tipo LED <br>
-            Técnicas de iluminación: BF y DF <br>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+            eget dui quis diam gravida sollicitudin in nec ex. Aenean pharetra
+            viverra est a sodales. Nam non turpis ut est gravida ornare.
           </p>
 
-          <div class="adder" style="display: none;">
+          <div class="adder">
             <p>Cantidad</p>
             <div class="input-group">
               <input type="number" value="0" name="Qty" id="Qty" />
@@ -147,13 +144,13 @@
           </div>
 
           <div class="product__buttons">
-            <!-- <a href="javascript:void(0);" class="button__secondary add__product">Agregar al carrito</a> -->
-            <a href="contacto.php" class="button">Contacta a un asesor</a>
+            <a href="javascript:void(0);" class="button__secondary add__product">Agregar al carrito</a>
+            <a href="carrito.php" class="button__secondary">Comprar</a>
           </div>
 
           <div class="product__image--zoom">
             <figure class="product__image--active pi2">
-              <img loading="lazy" src="img/estereo.png" alt="" />
+              <img loading="lazy" src="img/us1.jpg" alt="" />
             </figure>
           </div>
         </div>
@@ -161,21 +158,150 @@
     </section>
 
     <section id="product-specs">
-      <h2>Especificaciones técnicas</h2>
-      <ul>
-        <li>Control total: Pantalla de intensidad de luz azul en ambos lados del soporte actúan como una importante función de control sobre todos los microscopios en la salida del curso: para el control por parte del educador y control rápido de la intensidad de luz por parte de los usuarios.</li>
-        <li>Platina sin dientes y recubrimiento especial para su seguridad y comodidad.</li>
-        <li>Mando de la platina corto y robusto con escalas fáciles de leer.</li>
-        <li>Tubo Siedentopf regulable en altura con 30º y campo de vision de 20 mm.</li>
-        <li>Ajuste de relieve ocular individual en un amplio rango de 48 mm a 75 mm.</li>
-        <li>Objetivos y oculares protegidos contra robo.</li>
-        <li>Tratamiento antifúngico de objetivos.</li>
-        <li>Modelo: Primostar 1, Köhler fijo, binocular, campo de visión de 20mm, 4 posiciones porta objetivos, ABBE 0.9/1.25, Platina 75×40, puntero</li>
-      </ul>
+      <div class="left">
+        <ul>
+          <li>
+            <p><strong>Tamaño Panel</strong></p>
+            <p>2.90 m x 0.16 m</p>
+          </li>
+          <li>
+            <p><strong>Largo de Panel</strong></p>
+            <p>Ajustable (Se puede recortar)</p>
+          </li>
+          <li>
+            <p><strong>Metros cuadrados por panel</strong></p>
+            <p>0.46 m²</p>
+          </li>
+          <li>
+            <p><strong>Presentación</strong></p>
+            <p>Caja con 18 paneles</p>
+          </li>
+          <li>
+            <p><strong>Área total caja</strong></p>
+            <p>2.90 m x 2.90 m</p>
+          </li>
+          <li>
+            <p><strong>Metros cuadrados por caja</strong></p>
+            <p>8.4 m²</p>
+          </li>
+          <li>
+            <p><strong>Aplicaciones</strong></p>
+            <p>Uso exclusivo para INTERIOR. Habitación,
+              estudio, sala, oficina, lobby, cocina, baño,
+              techo, cabeceras, hoteles, recepción,
+              consultorio, Airbnb.</p>
+          </li>
+          <li>
+            <p><strong>Reciclaje</strong></p>
+            <p>100% reciclable</p>
+          </li>
+          <li>
+            <p><strong>Tiempo de vida</strong></p>
+            <p>10 años</p>
+          </li>
+          <li>
+            <p><strong>Mantenimiento</strong></p>
+            <p>10 Mínimo mantenimiento</p>
+          </li>
+          <li>
+            <p><strong>Peso Caja</strong></p>
+            <p>53 kg</p>
+          </li>
+          <li>
+            <p><strong>Tamaño Caja</strong></p>
+            <p>3 m x 0.20 m x 0.20 m</p>
+          </li>
+        </ul>
+      </div>
+      <div class="right">
+        <div class="imagen">
+          <figure>
+            <img src="img/lambrin.png" alt="">
+          </figure>
+        </div>
+
+        <h2>Crea espacios interiores modernos y elegantes</h2>
+
+        <p>Expresa tu estilo y crea espacios interiores modernos y elegantes con los nuevos paneles de madera WPC. Es el producto ideal para tu habitación, estudio, sala, oficina, lobby. <br> <br>
+
+          Los paneles tipo lambrín WPC están disponibles en una amplia gama de colores y acabados que complementarán cualquier decoración. <br><br>
+
+          Se pueden instalar de forma versátil en paredes y techos en espacios de interior. Están disponibles en un formato elegante de 2.9 m de alto, perfecto para una doble altura.</p>
+
+
+        <section id="faqs" class="product-faqs">
+          <div class="contenedor">
+            <div class="container">
+              <details>
+                <summary>
+                  <h5>¿Qué contiene la caja?</h5> <i class="fas fa-chevron-down"></i>
+                </summary>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus possimus iure mollitia, necessitatibus sit blanditiis obcaecati tempore consequatur vero! Atque amet ipsum nisi voluptate sed illo in voluptatem aliquam quisquam.</p>
+              </details>
+              <details>
+                <summary>
+                  <h5>¿Tiempo de entrega?</h5> <i class="fas fa-chevron-down"></i>
+                </summary>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus possimus iure mollitia, necessitatibus sit blanditiis obcaecati tempore consequatur vero! Atque amet ipsum nisi voluptate sed illo in voluptatem aliquam quisquam.</p>
+              </details>
+              <details>
+                <summary>
+                  <h5>¿Porqué es la mejor opción para interiores?</h5> <i class="fas fa-chevron-down"></i>
+                </summary>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus possimus iure mollitia, necessitatibus sit blanditiis obcaecati tempore consequatur vero! Atque amet ipsum nisi voluptate sed illo in voluptatem aliquam quisquam.</p>
+              </details>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </section>
+
+    <section id="facilities">
+      <div class="container">
+        <div class="left">
+          <figure>
+            <img src="img/instalacion.png" alt="">
+          </figure>
+        </div>
+        <div class="right">
+          <h2>Instalación</h2>
+          <p>El WPC para interior es de fácil y rápida instalación, cualquier persona de mantenimiento o con habilidad de taladro lo puede instalar</p>
+          <p>Para recortar el material se puede utilizar una sierra eléctrica.
+            La caja incluye los clips que fijan los paneles a la pared.</p>
+          <a href="" class="button__secondary">Ver video de instalación</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="container">
+        <div class="feature">
+          <span><img src="img/envios-icon.png" alt=""></span>
+          <h4>Envíos</h4>
+          <p>Hacemos envíos a toda la República Mexicana.</p>
+        </div>
+        <div class="feature">
+          <span><img src="img/servicio-icon.png" alt=""></span>
+          <h4>Servicio al Cliente</h4>
+          <p>¿Una pregunta? Comuníquese con nosotros al 123 456 7890</p>
+        </div>
+        <div class="feature">
+          <span><img src="img/ubicación-icon.png" alt=""></span>
+          <h4>Ubicación</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ligula elit, varius sed nunc ut, dignissim.</p>
+        </div>
+        <div class="feature">
+          <span><img src="img/pagoseguro-icon.png" alt=""></span>
+          <h4>Pago Seguro</h4>
+          <p>Tu información de pago se procesa de forma segura</p>
+        </div>
+      </div>
     </section>
 
     <section id="mas-vendidos">
-      <h2>Equipos más vendidos</h2>
+      <h2>Modelos de Interior</h2>
+      <p>Expresa tu propio estilo, dales vida y crea espacios interiores modernos, <br> con nuestros elegantes modelos de interior.</p>
       <div class="slider__buttons">
         <div class="slide__button--left">
           <i class="fas fa-chevron-left"></i>
@@ -187,57 +313,161 @@
       <div class="container">
         <div class="products__container">
           <div class="equipo">
-            <figure><img src="img/microscopia.png" alt=""></figure>
-            <h5>Microscopio Educativo</h5>
-            <p>Microscopio binocular campo claro
-              para luz transmitida</p>
-            <a href="">Ver más <i class="fas fa-arrow-right"></i></a>
+            <figure><img src="img/lambrin-interior.png" alt="">
+              <div class="tags">
+                <div class="nuevo">
+                  <h5>Nuevo</h5>
+                </div>
+                <div class="agotado">
+                  <h5>Agotado</h5>
+                </div>
+              </div>
+            </figure>
+            <div class="calificacion">
+              <p>5.0</p>
+              <i class="fas fa-star"></i>
+            </div>
+            <h5>Lambrin WPC Interior
+              Color Avellana Fondo Negro</h5>
+            <p class="precio">$9,900</p>
           </div>
           <div class="equipo">
-            <figure><img src="img/microscopia.png" alt=""></figure>
-            <h5>Microscopio Educativo</h5>
-            <p>Microscopio binocular campo claro
-              para luz transmitida</p>
-            <a href="">Ver más <i class="fas fa-arrow-right"></i></a>
+            <figure><img src="img/roca-pu.png" alt="">
+              <div class="tags">
+                <div class="nuevo">
+                  <h5>Nuevo</h5>
+                </div>
+                <div class="agotado">
+                  <h5>Agotado</h5>
+                </div>
+              </div>
+            </figure>
+            <div class="calificacion">
+              <p>5.0</p>
+              <i class="fas fa-star"></i>
+            </div>
+            <h5>Roca PU TURK Color
+              Grafito 60x120</h5>
+            <p class="precio">$1,300</p>
           </div>
           <div class="equipo">
-            <figure><img src="img/microscopia.png" alt=""></figure>
-            <h5>Microscopio Educativo</h5>
-            <p>Microscopio binocular campo claro
-              para luz transmitida</p>
-            <a href="">Ver más <i class="fas fa-arrow-right"></i></a>
+            <figure><img src="img/lambrin-interior2.png" alt="">
+              <div class="tags">
+                <div class="nuevo">
+                  <h5>Nuevo</h5>
+                </div>
+                <div class="agotado">
+                  <h5>Agotado</h5>
+                </div>
+              </div>
+            </figure>
+            <div class="calificacion">
+              <p>5.0</p>
+              <i class="fas fa-star"></i>
+            </div>
+            <h5>Lambrin WPC Interior
+              Color Parota</h5>
+            <p class="precio">$9,900</p>
           </div>
           <div class="equipo">
-            <figure><img src="img/microscopia.png" alt=""></figure>
-            <h5>Microscopio Educativo</h5>
-            <p>Microscopio binocular campo claro
-              para luz transmitida</p>
-            <a href="">Ver más <i class="fas fa-arrow-right"></i></a>
+            <figure><img src="img/roca-pu2.png" alt="">
+              <div class="tags">
+                <div class="nuevo">
+                  <h5>Nuevo</h5>
+                </div>
+                <div class="agotado">
+                  <h5>Agotado</h5>
+                </div>
+              </div>
+            </figure>
+            <div class="calificacion">
+              <p>5.0</p>
+              <i class="fas fa-star"></i>
+            </div>
+            <h5>Roca PU TURK Color
+              Greige 60x120</h5>
+            <p class="precio">$1,300</p>
           </div>
           <div class="equipo">
-            <figure><img src="img/microscopia.png" alt=""></figure>
-            <h5>Microscopio Educativo</h5>
-            <p>Microscopio binocular campo claro
-              para luz transmitida</p>
-            <a href="">Ver más <i class="fas fa-arrow-right"></i></a>
+            <figure><img src="img/lambrin-interior.png" alt="">
+              <div class="tags">
+                <div class="nuevo">
+                  <h5>Nuevo</h5>
+                </div>
+                <div class="agotado">
+                  <h5>Agotado</h5>
+                </div>
+              </div>
+            </figure>
+            <div class="calificacion">
+              <p>5.0</p>
+              <i class="fas fa-star"></i>
+            </div>
+            <h5>Lambrin WPC Interior
+              Color Avellana Fondo Negro</h5>
+            <p class="precio">$9,900</p>
           </div>
           <div class="equipo">
-            <figure><img src="img/microscopia.png" alt=""></figure>
-            <h5>Microscopio Educativo</h5>
-            <p>Microscopio binocular campo claro
-              para luz transmitida</p>
-            <a href="">Ver más <i class="fas fa-arrow-right"></i></a>
+            <figure><img src="img/roca-pu.png" alt="">
+              <div class="tags">
+                <div class="nuevo">
+                  <h5>Nuevo</h5>
+                </div>
+                <div class="agotado">
+                  <h5>Agotado</h5>
+                </div>
+              </div>
+            </figure>
+            <div class="calificacion">
+              <p>5.0</p>
+              <i class="fas fa-star"></i>
+            </div>
+            <h5>Roca PU TURK Color
+              Grafito 60x120</h5>
+            <p class="precio">$1,300</p>
           </div>
           <div class="equipo">
-            <figure><img src="img/microscopia.png" alt=""></figure>
-            <h5>Microscopio Educativo</h5>
-            <p>Microscopio binocular campo claro
-              para luz transmitida</p>
-            <a href="">Ver más <i class="fas fa-arrow-right"></i></a>
+            <figure><img src="img/lambrin-interior2.png" alt="">
+              <div class="tags">
+                <div class="nuevo">
+                  <h5>Nuevo</h5>
+                </div>
+                <div class="agotado">
+                  <h5>Agotado</h5>
+                </div>
+              </div>
+            </figure>
+            <div class="calificacion">
+              <p>5.0</p>
+              <i class="fas fa-star"></i>
+            </div>
+            <h5>Lambrin WPC Interior
+              Color Parota</h5>
+            <p class="precio">$9,900</p>
+          </div>
+          <div class="equipo">
+            <figure><img src="img/roca-pu2.png" alt="">
+              <div class="tags">
+                <div class="nuevo">
+                  <h5>Nuevo</h5>
+                </div>
+                <div class="agotado">
+                  <h5>Agotado</h5>
+                </div>
+              </div>
+            </figure>
+            <div class="calificacion">
+              <p>5.0</p>
+              <i class="fas fa-star"></i>
+            </div>
+            <h5>Roca PU TURK Color
+              Greige 60x120</h5>
+            <p class="precio">$1,300</p>
           </div>
         </div>
       </div>
     </section>
+    <div class="pb"></div>
 
     <div class="cart__modal cart__modal--active">
       <div class="cart__modal--container">
@@ -250,7 +480,7 @@
         <div class="products">
           <div class="product">
             <div class="product__info">
-              <figure><img loading="lazy" src="img/estereo.png" alt="" /></figure>
+              <figure><img loading="lazy" src="img/lambrin-interior.png" alt="" /></figure>
               <div class="product__info--data">
                 <h4 class="product__name">Nombre del producto</h4>
                 <div class="input-group">
@@ -277,13 +507,14 @@
             <p class="total__amount">$ 0.00 MXN</p>
           </div>
         </div>
-        <a href="carrito.php" class="button">Comprar ahora</a>
+        <a href="carrito.php" class="button__secondary">Comprar ahora</a>
         <div class="cart__bottom">
           <a href="javascript:void(0);" class="keep__buying">Seguir comprando</a>
           <a href="javascript:void(0);">Vaciar carrito</a>
         </div>
       </div>
     </div>
+
   </main>
 
   <?php include 'elements/footer.php' ?>
@@ -308,42 +539,56 @@
 </script>
 
 <script>
-  const img1 = document.querySelector(".pi1");
+  const imgs1 = document.querySelectorAll(".pi1");
   const img2 = document.querySelector(".product__image--zoom");
   const zoomImg = document.querySelector(".pi2 > img");
   const mainImg = document.querySelector(".pi1 > img");
-  const galleryImages = document.querySelectorAll(".product__gallery--image");
+  const galleryImages = document.querySelectorAll(".glide__slide");
+  const figures = document.querySelectorAll(".glide__slide > figure");
+  const productSlider = document.querySelector('.glide__slides');
 
-  galleryImages.forEach((galleryImage) => {
-    galleryImage.addEventListener("click", () => {
-      galleryImages.forEach((galleryImg) => {
-        galleryImg.classList.remove("active");
-      });
-      galleryImage.classList.add("active");
-      let srcAttr = galleryImage.firstElementChild.getAttribute("src");
-      mainImg.setAttribute("src", srcAttr);
-      zoomImg.setAttribute("src", srcAttr);
+
+  imgs1.forEach(img1 => {
+    img1.addEventListener("mousemove", (e) => ver(e, img1));
+    img1.addEventListener("mouseout", () => {
+      img2.style.display = "none";
     });
   });
 
-  img1.addEventListener("mousemove", ver);
-  img1.addEventListener("mouseout", () => {
-    img2.style.display = "none";
-  });
-
-  function ver(e) {
+  function ver(e, img1) {
+    let mainImg = img1.firstElementChild;
+    let srcAttr = mainImg.getAttribute("src");
+    zoomImg.setAttribute("src", srcAttr);
+    img1.style.cursor = "zoom-in";
     img2.style.display = "block";
     img2.style.boxShadow = "5px 5px 10px 0px gray";
     img2.style.border = "1px solid black";
-    img1.style.cursor = "zoom-in";
-    const rect = img1.getBoundingClientRect();
+
+    const rect = mainImg.getBoundingClientRect();
     let offsetX = e.clientX - rect.left;
-    offsetX = (offsetX / img1.clientWidth) * 100;
+    let half = img1.clientWidth / 2;
+    if (offsetX < half) {
+      offsetX = ((offsetX / img1.clientWidth) * 100) * (-1);
+      offsetX += 50;
+    } else {
+      offsetX = (offsetX / img1.clientWidth) * 100;
+      offsetX -= 50;
+      offsetX = offsetX * (-1)
+    }
+
     let offsetY = e.clientY - rect.top;
-    offsetY = (offsetY / img1.clientHeight) * 100;
-    zoomImg.style.left = `-${offsetX}%`;
-    zoomImg.style.top = `-${offsetY}%`;
-    zoomImg.style.transform = "scale(1.2)";
+
+    if (offsetY < half) {
+      offsetY = ((offsetY / img1.clientWidth) * 100) * (-1);
+      offsetY += 50;
+    } else {
+      offsetY = (offsetY / img1.clientWidth) * 100;
+      offsetY -= 50;
+      offsetY = offsetY * (-1)
+    }
+    zoomImg.style.left = `${offsetX}%`;
+    zoomImg.style.top = `${offsetY}%`;
+    zoomImg.style.transform = "scale(1.4)";
   }
 </script>
 
