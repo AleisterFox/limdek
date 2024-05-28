@@ -5,35 +5,30 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="author" content="Molcajete" />
-  <meta name="description" content="Cardiología clínica.
-    Subespecialista formado en centro médico nacional Siglo XXI Ciudad de México.
-    Diagnostico y tratamiento de las enfermedades Cardiovasculares (insuficiencia cardiaca, arritmias, bradicardia, taquicardia, bloqueo auriculoventricular, cardiopatía isquémica aguda o crónica, miocardiopatías, enfermedades del pericardio, Hipertensión arterial sistémica, estenosis carotidea, Enfermedad valvular cardiaca, entre otros).
-    Diagnostico especializado con herramientas diagnosticas como ecocardiograma, monitoreo Holter, monitoreo ambulatorio de la presión arterial, Prueba de esfuerzo." />
+  <meta name="description" content="Transform your spaces with our stylish interior models, PVC marble sheets, and elegant interior beams. Our durable WPC materials offer superior resistance to moisture, insects, and breakage, ensuring long-lasting beauty without the need for painting or sealing" />
 
-  <meta name="Keywords" content="Doctor, Bulmaro Irving Padilla Gomez, salud, cardiología, cardiologo, internista, especialidad, científico, investigación, Puerto Vallarta, México" />
+  <meta name="Keywords" content="Interior Models, Stylish Interior Designs, PVC Marble Sheets, Wall Panels, Marble-Look PVC, Interior Beams, Elegant Beams, WPC Materials, Durable WPC, Wood-Plastic Composite, Moisture-Resistant Materials, Insect-Resistant Materials, Low-Maintenance Building Materials, Home Improvement Solutions" />
 
   <meta name="robots" content="all" />
-  <meta property="og:title" content="Tecnobiomedica" />
-  <meta property="og:description" content="Cardiología clínica.
-    Subespecialista formado en centro médico nacional Siglo XXI Ciudad de México.
-    Diagnostico y tratamiento de las enfermedades Cardiovasculares (insuficiencia cardiaca, arritmias, bradicardia, taquicardia, bloqueo auriculoventricular, cardiopatía isquémica aguda o crónica, miocardiopatías, enfermedades del pericardio, Hipertensión arterial sistémica, estenosis carotidea, Enfermedad valvular cardiaca, entre otros).
-    Diagnostico especializado con herramientas diagnosticas como ecocardiograma, monitoreo Holter, monitoreo ambulatorio de la presión arterial, Prueba de esfuerzo." />
+  <meta property="og:title" content="Limdek" />
+  <meta property="og:description" content="Transform your spaces with our stylish interior models, PVC marble sheets, and elegant interior beams. Our durable WPC materials offer superior resistance to moisture, insects, and breakage, ensuring long-lasting beauty without the need for painting or sealing" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="" />
-  <meta property="og:image" content="../img/imagen.png" />
+  <meta property="og:image" content="../img/icono.png" />
   <meta property="og:image:width" content="300" />
   <meta property="og:image:height" content="300" />
-  <meta property="og:site_name" content="Tecnobiomedica" />
+  <meta property="og:site_name" content="Limdek" />
   <meta name="msapplication-TileColor" content="rgb(16, 48, 55)" />
   <meta name="theme-color" content="rgb(16, 48, 55)" />
 
   <?php include 'elements/estilos.php' ?>
 
+
   <script src="js/wow.min.js"></script>
   <script>
     new WOW().init();
   </script>
-  <title>Tecnobiomedica</title>
+  <title>Limdek</title>
 </head>
 
 <body>
