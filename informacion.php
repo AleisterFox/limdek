@@ -75,13 +75,13 @@
           <p>Información</p>
           <i class="fas fa-chevron-right"></i>
         </div>
-        <div class="step">
+        <!-- <div class="step">
           <p>Envío</p>
           <i class="fas fa-chevron-right"></i>
         </div>
         <div class="step">
           <p>Pago</p>
-        </div>
+        </div> -->
       </div>
     </div>
 
@@ -89,60 +89,68 @@
 
       <div class="container">
         <div class="left">
+
           <div class="buying__cart">
             <div class="top">
-              <h3>Información</h3>
+              <h3>Contacto</h3>
             </div>
 
             <div class="customer__info">
               <form action="">
-                <input type="text" name="name" id="name" placeholder="Nombre y Apellido*" required />
-                <input type="tel" name="phone" id="phone" placeholder="Teléfono*" required />
-                <input type="email" name="email" id="email" placeholder="Email*" required />
+                <input type="text" name="contact" id="contact" placeholder="Email o número de teléfono movil" required>
+              </form>
+            </div>
+          </div>
+
+          <div class="buying__cart">
+            <div class="top">
+              <h3>Entrega</h3>
+            </div>
+
+            <div class="customer__info">
+              <form action="">
+                <select name="" id="">
+                  <option value="">País / Región</option>
+                  <option value="">opcion1</option>
+                  <option value="">opcion2</option>
+                  <option value="">opcion3</option>
+                  <option value="">opcion4</option>
+                  <option value="">opcion5</option>
+                </select>
+                <input type="text" name="name" id="name" placeholder="Nombre" required>
+                <input type="text" name="lastname" id="lastname" placeholder="Apellido" required>
+                <input type="text" name="empresa" id="empresa" placeholder="Empresa (opcional)">
+                <input type="text" name="address" id="address" placeholder="Dirección" required>
+                <input type="text" name="type" id="type" placeholder="Casa, apartamento, etc. (opcional)">
+                <input type="number" name="postal" id="postal" placeholder="Código postal" required>
+                <input type="text" name="city" id="city" placeholder="Ciudad" required> 
+                <select name="state" id="state">
+                  <option value="javascript:void(0);">Estado</option>
+                </select>
                 <div class="store-data">
                   <input type="checkbox" name="store-data" id="store-data">
                   <label for="store-data">Permito guardar mis datos de forma segura para mis siguientes pedidos.</label>
                 </div>
-                <div class="facturacion">
-                  <p>¿Desea facturar?</p>
-                  <input type="radio" name="facturar" id="facturar">
-                  <label for="facturar">Si</label>
-                  <input type="radio" name="facturar" id="no_facturar">
-                  <label for="no_facturar">No</label>
-                </div>
-                <input type="file" name="csf" id="csf" class="inputfile" data-multiple-caption="{count} files selected" multiple>
-                <label for="csf">Constancia de Situación Fiscal <span><i class="fas fa-upload"></i></span></label>
-
-                <label for="uso" class="uso-cfdi">Uso de CFDI</label>
-                <select name="uso" id="uso">
-                  <option value="">Seleccione</option>
-                  <option value="">1</option>
-                  <option value="">2</option>
-                  <option value="">3</option>
-                  <option value="">4</option>
-                </select>
               </form>
             </div>
 
             <div class="bottom">
               <a href="carrito.php" class="back"><i class="fas fa-chevron-left"></i>Volver a carrito</a>
-              <a href="envio.php" class="button">Continuar</a>
+              <a href="pago.php" class="button__black">Continuar</a>
             </div>
           </div>
         </div>
+
+
         <div class="right">
           <div class="cart__total">
             <h2>Total del carrito</h2>
 
             <div class="cart__products">
               <div class="cart__products--product">
-                <figure><img src="img/estereo.png" alt=""></figure>
+                <figure><img src="img/lambrin-interior.png" alt=""></figure>
                 <div class="cart__product--description">
-                  <h4>Microscopio Educativo</h4>
-                  <p>Óptica Plan Acromática <br>
-                    Oculares 10x/20 Objetivos 4x, 10x, 40x y 100x oil <br>
-                    Iluminación fija Koehler y de tipo LED <br>
-                    Técnicas de iluminación: BF y DF</p>
+                  <h4>Lambrin WPC Interior Color Avellana Fondo Negro</h4>
                 </div>
                 <p>$0.00 MXN</p>
               </div>
@@ -175,7 +183,7 @@
 <script src="js/loader.js"></script>
 <script src="js/adder.js"></script>
 
-<!-- <script>
+<script>
   const estadosMexicanos = [
     "Aguascalientes",
     "Baja California",
@@ -219,10 +227,10 @@
     option.value = index + 1;
     select.add(option);
   });
-</script> -->
+</script>
 
 
-<script>
+<!-- <script>
   const inputs = document.querySelectorAll('.inputfile');
   inputs.forEach(input => {
     let label = input.nextElementSibling;
@@ -264,7 +272,7 @@
         label.innerHTML = 'Constancia de Situación Fiscal';
     });
   });
-</script>
+</script> -->
 
 
 </html>

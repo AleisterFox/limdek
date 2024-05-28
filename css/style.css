@@ -6,6 +6,7 @@
 
 .wow {
     animation-duration: 1s !important;
+    animation-delay: 0 !important;
     /* animation-timing-function: linear; */
 }
 
@@ -80,6 +81,18 @@ img {
     object-fit: cover;
 }
 
+main {
+    background: url('../img/main-bg.png');
+    background-repeat: repeat-y;
+    background-size:contain;
+}
+
+main.main-contact {
+    background: url('../img/main-bg.png');
+    background-repeat: repeat-y;
+    background-size:cover;
+}
+
 .whatsapp {
     background-color: #25D366;
     width: 6rem;
@@ -141,6 +154,25 @@ img {
 
 .button__secondary:hover {
     background-color: var(--mint-hover);
+}
+
+.button__black {
+    min-width: 15rem;
+    width: fit-content;
+    min-height: 5rem;
+    padding: 1rem 2rem;
+    background-color: black;
+    color: white;
+    font-size: 2rem;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.button__black:hover {
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 header {
@@ -376,6 +408,7 @@ main {
     /* width: 100vw; */
     position: relative;
     overflow-x: hidden !important;
+    background-color: white;
 }
 
 #hero .socials {
@@ -384,11 +417,6 @@ main {
     top: 50%;
 }
 
-#nosotros .socials {
-    position: absolute;
-    right: 1rem;
-    top: 10rem;
-}
 
 #hero .socials ul li {
     margin: 1rem 0;
@@ -511,6 +539,7 @@ h2 {
     position: relative;
     padding: 3rem 5rem;
     background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
 }
 
 #categorias .category figure {
@@ -556,6 +585,7 @@ h2 {
     justify-content: center;
     padding: 3rem;
     gap: 2rem;
+    background-color: white;
 }
 
 #features .feature span {
@@ -665,7 +695,6 @@ h2 {
 
 #us {
     padding: var(--padding);
-    background: rgba(49, 49, 49, 1);
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -673,20 +702,10 @@ h2 {
     padding-bottom: 10rem;
 }
 
-#us p {
-    color: white;
-}
-
-#us h2 {
-    font-size: 3rem;
-    font-weight: 500;
-    text-align: left;
-    color: white;
-}
-
 #us .top, #us .bottom {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 #us .top {
@@ -695,22 +714,19 @@ h2 {
     margin: 10rem 0;
 }
 
-#us .top .left, #us .top .right {
-    flex-basis: 50rem;
+
+#us .top figure {
+    flex-basis: 40rem;
     flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    row-gap: 4rem;
-    /* align-items: center; */
-    justify-content: center;
-    height: fit-content;
-    height: 50rem;
 }
 
+#us .top .text {
+    flex-basis: 40rem;
+    flex-grow: 1;
+}
 
-#us .top .right figure {
-    height: 100%;
-    width: 100%;
+#us p {
+    margin: 2rem 0;
 }
 
 #us .bottom {
@@ -718,31 +734,16 @@ h2 {
     row-gap: 5rem;
 }
 
-#us .bottom .left {
-    flex-basis: 70rem;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    row-gap: 2rem;
+#us .bottom figure {
+    width: 40rem;
+    max-width: 100%;
 }
 
-#us .bottom .right {
-    flex-basis: 50rem;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    row-gap: 2rem;
+#us .bottom .text { 
+    flex-basis: 60rem;
+    max-width: 100%;
 }
 
-#us .bottom h2 {
-    font-size: 2.6rem;
-    text-align: center;
-    color: white;
-}
-
-#us .bottom .right figure {
-    height: calc(100% - 22rem);
-}
 /* US  */
 
 /* CLIENTES  */
@@ -1234,6 +1235,10 @@ h2 {
     justify-content: center;
 }
 
+#contacto .right iframe {
+    width: 100%;
+}
+
 #contacto .right a {
     color: var(--text);
     font-size: 2rem;
@@ -1280,6 +1285,8 @@ h2 {
     flex-basis: 50%;
     border: none;
     cursor: pointer;
+    border: 1px solid;
+    margin-left: auto;
 }
 
 ::placeholder {
@@ -1292,41 +1299,6 @@ form .button {
     color: white;
     border: 2px solid black;
     cursor: pointer;
-}
-
-.success-modal {
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    row-gap: 2rem;
-    border-radius: 5rem;
-    border: 2px solid black;
-    width: 60rem;
-    max-width: 90vw;
-    height: 30rem;
-    position: absolute;
-    top: 50vh;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    display: none;
-    z-index: 100;
-}
-
-.success-modal .check {
-    width: 6rem;
-    height: 6rem;
-    border-radius: 100rem;
-    background-color: rgba(136, 180, 73, 1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.success-modal .check i {
-    color: white;
-    font-size: 3rem;
 }
 
 /* CONTACT  */
@@ -1642,7 +1614,7 @@ input[type="number"]::-webkit-outer-spin-button {
     margin-bottom: 4rem;
 }
 
-#process .button {
+#process .button__black {
     width: 100%;
     margin: 2rem 0;
 }
@@ -1741,6 +1713,11 @@ input[type="number"]::-webkit-outer-spin-button {
     position: relative;
 }
 
+.buying__cart .product .product__information {
+    flex-basis: 30rem;
+    flex-grow: 1;
+}
+
 .buying__cart .product .input-group {
     border: 1px solid rgb(217, 217, 217);
     border-radius: 1rem;
@@ -1772,7 +1749,9 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .product__information .product__name {
     font-size: 1.6rem;
-    font-weight: 400;
+    font-weight: 600;
+    width: 30rem;
+    max-width: 100%;
 }
 
 .product__information p {
@@ -1827,7 +1806,7 @@ input[type="number"]::-webkit-outer-spin-button {
     margin-top: 2rem;
 }
 
-#process .buying__cart .bottom .button {
+#process .buying__cart .bottom .button__black {
     width: 50%;
 }
 
@@ -1835,8 +1814,7 @@ input[type="number"]::-webkit-outer-spin-button {
     display: flex;
     flex-direction: column;
     row-gap: 1rem;
-    padding-bottom: 4rem;
-    border-bottom: 1px solid rgba(217, 217, 217, 1);
+    
 }
 
 #process .cart__products--product {
@@ -1867,6 +1845,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 #process .cart__products--product .cart__product--description {
     flex-grow: 1;
+    flex-basis: 20rem;
 }
 
 #process .cart__products--product .cart__product--description + p {
@@ -2326,6 +2305,8 @@ label.uso-cfdi {
 
 details {
     border-bottom: 2px solid rgba(51, 62, 75, 1);
+    background-color: white;
+    padding: 1rem;
 }
 
 details[open] i {
@@ -2940,14 +2921,6 @@ details p {
         max-width: 100%;
     }
 
-    #nosotros .top-mobile {
-        display: flex;
-    }
-
-    #nosotros .top {
-        display: none;
-    }
-
 }
 
 @media screen and (max-width: 550px) {
@@ -3002,10 +2975,6 @@ details p {
     #product .container {
         flex-wrap: wrap;
         row-gap: 4rem;
-    }
-
-    #product .side-gallery, #product .product-image {
-        display: none;
     }
 
     .product__slider {

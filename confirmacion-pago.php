@@ -81,7 +81,7 @@
               <p><strong>Fecha aprox de entrega:</strong>Fecha de entrega estimada</p>
             </div>
             <div class="bottom conf">
-              <a href="index.php#products" class="button">Continuar</a>
+              <a href="index.php#products" class="button__black">Continuar</a>
             </div>
           </div>
 
@@ -92,13 +92,9 @@
 
             <div class="cart__products">
               <div class="cart__products--product">
-                <figure><img src="img/estereo.png" alt=""></figure>
+                <figure><img src="img/lambrin-interior.png" alt=""></figure>
                 <div class="cart__product--description">
-                  <h4>Microscopio Educativo</h4>
-                  <p>Óptica Plan Acromática <br>
-                    Oculares 10x/20 Objetivos 4x, 10x, 40x y 100x oil <br>
-                    Iluminación fija Koehler y de tipo LED <br>
-                    Técnicas de iluminación: BF y DF</p>
+                  <h4>Lambrin WPC Interior Color Avellana Fondo Negro</h4>
                 </div>
                 <p>$0.00 MXN</p>
               </div>

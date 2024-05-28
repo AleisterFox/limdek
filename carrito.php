@@ -71,7 +71,7 @@
           <p>Carrito</p>
           <i class="fas fa-chevron-right"></i>
         </div>
-        <div class="step">
+        <!-- <div class="step">
           <p>Información</p>
           <i class="fas fa-chevron-right"></i>
         </div>
@@ -81,7 +81,7 @@
         </div>
         <div class="step">
           <p>Pago</p>
-        </div>
+        </div> -->
       </div>
     </div>
 
@@ -96,16 +96,11 @@
             </div>
 
             <div class="product">
-              <figure><img src="img/estereo.png" alt="" /></figure>
+              <figure><img src="img/lambrin-interior.png" alt="" /></figure>
               <div class="product__information">
-                <h3 class="product__name">Microscopio Educativo</h3>
+                <h3 class="product__name">Lambrin WPC Interior Color Avellana Fondo Negro</h3>
                 <div class="product__information--container">
-                  <p class="desc">
-                    Óptica Plan Acromática <br>
-                    Oculares 10x/20 Objetivos 4x, 10x, 40x y 100x oil <br>
-                    Iluminación fija Koehler y de tipo LED <br>
-                    Técnicas de iluminación: BF y DF <br>
-                  </p>
+                  
                   <div class="input-group">
                     <input type="number" value="0" name="Qty" id="Qty" />
                     <button class="decrement">-</button>
@@ -135,7 +130,7 @@
               <h3>Total</h3>
               <p class="total__amount">$ 0.00 MXN</p>
             </div>
-            <a href="informacion.php" class="button">Finalizar Compra</a>
+            <a href="informacion.php" class="button__black">Finalizar Compra</a>
             <div class="cart__bottom">
               <p><i class="fas fa-shield"></i>Compra segura</p>
             </div>

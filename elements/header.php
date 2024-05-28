@@ -10,7 +10,7 @@
     <ul class="menu">
       <li><a href="index.php">Inicio</a></li>
       <li><a href="productos.php">Productos</a></li>
-      <li><a href="index.php#us">Nosotros</a></li>
+      <li><a href="nosotros.php">Nosotros</a></li>
       <!-- <li><a href="index.php#servicios">Servicios</a></li>
       <li><a href="index.php#faqs">Faqs</a></li> -->
       <li><a href="contacto.php">Contacto</a></li>
