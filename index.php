@@ -102,22 +102,22 @@
     </section>
 
     <section id="categorias">
-      <h2>Categorías</h2>
+      <h2 class="fadeInUp wow">Categorías</h2>
       <div class="container">
         <a href="" class="category">
-          <figure><img src="img/lambrin.png" alt=""></figure>
+          <figure class="show wow"><img src="img/lambrin.png" alt=""></figure>
           <p>Lambrin WPC <br> Interior</p>
         </a>
         <a href="" class="category">
-          <figure><img src="img/material-wpc.png" alt=""></figure>
+          <figure class="show wow"><img src="img/material-wpc.png" alt=""></figure>
           <p>Material WPC <br> Exterior</p>
         </a>
         <a href="" class="category">
-          <figure><img src="img/material-pu.png" alt=""></figure>
+          <figure class="show wow"><img src="img/material-pu.png" alt=""></figure>
           <p>Material PU</p>
         </a>
         <a href="" class="category">
-          <figure><img src="img/laminas-marmol.png" alt=""></figure>
+          <figure class="show wow"><img src="img/laminas-marmol.png" alt=""></figure>
           <p>Láminas Tipo <br> Mármol</p>
         </a>
       </div>
@@ -149,8 +149,8 @@
     </section>
 
     <section id="mas-vendidos">
-      <h2>Modelos de Interior</h2>
-      <p>Expresa tu propio estilo, dales vida y crea espacios interiores modernos, <br> con nuestros elegantes modelos de interior.</p>
+      <h2 class="fadeInUp wow">Modelos de Interior</h2>
+      <p class="fadeInUp wow">Expresa tu propio estilo, dales vida y crea espacios interiores modernos, <br> con nuestros elegantes modelos de interior.</p>
       <div class="slider__buttons">
         <div class="slide__button--left">
           <i class="fas fa-chevron-left"></i>
@@ -161,7 +161,7 @@
       </div>
       <div class="container">
         <div class="products__container">
-          <div class="equipo">
+          <div class="equipo fadeInUp wow delay">
             <figure><img src="img/lambrin-interior.png" alt="">
               <div class="tags">
                 <div class="nuevo">
@@ -180,7 +180,7 @@
               Color Avellana Fondo Negro</h5>
             <p class="precio">$9,900</p>
           </div>
-          <div class="equipo">
+          <div class="equipo fadeInUp wow delay">
             <figure><img src="img/roca-pu.png" alt="">
               <div class="tags">
                 <div class="nuevo">
@@ -199,7 +199,7 @@
               Grafito 60x120</h5>
             <p class="precio">$1,300</p>
           </div>
-          <div class="equipo">
+          <div class="equipo fadeInUp wow delay">
             <figure><img src="img/lambrin-interior2.png" alt="">
               <div class="tags">
                 <div class="nuevo">
@@ -218,7 +218,7 @@
               Color Parota</h5>
             <p class="precio">$9,900</p>
           </div>
-          <div class="equipo">
+          <div class="equipo fadeInUp wow delay">
             <figure><img src="img/roca-pu2.png" alt="">
               <div class="tags">
                 <div class="nuevo">
@@ -237,7 +237,7 @@
               Greige 60x120</h5>
             <p class="precio">$1,300</p>
           </div>
-          <div class="equipo">
+          <div class="equipo fadeInUp wow delay">
             <figure><img src="img/lambrin-interior.png" alt="">
               <div class="tags">
                 <div class="nuevo">
@@ -256,7 +256,7 @@
               Color Avellana Fondo Negro</h5>
             <p class="precio">$9,900</p>
           </div>
-          <div class="equipo">
+          <div class="equipo fadeInUp wow delay">
             <figure><img src="img/roca-pu.png" alt="">
               <div class="tags">
                 <div class="nuevo">
@@ -275,7 +275,7 @@
               Grafito 60x120</h5>
             <p class="precio">$1,300</p>
           </div>
-          <div class="equipo">
+          <div class="equipo fadeInUp wow">
             <figure><img src="img/lambrin-interior2.png" alt="">
               <div class="tags">
                 <div class="nuevo">
@@ -294,7 +294,7 @@
               Color Parota</h5>
             <p class="precio">$9,900</p>
           </div>
-          <div class="equipo">
+          <div class="equipo fadeInUp wow">
             <figure><img src="img/roca-pu2.png" alt="">
               <div class="tags">
                 <div class="nuevo">
@@ -320,8 +320,8 @@
 
 
     <section id="mas-vendidos">
-      <h2>Lámina PVC tipo mármol</h2>
-      <p>La hoja de mármol de panel de pared de PVC es un tipo de revestimiento para <br>
+      <h2 class="fadeInUp wow">Lámina PVC tipo mármol</h2>
+      <p class="fadeInUp wow">La hoja de mármol de panel de pared de PVC es un tipo de revestimiento para <br>
         paredes que imita el aspecto del mármol natural.</p>
       <div class="slider__buttons">
         <div class="slide__button--left">
@@ -333,7 +333,7 @@
       </div>
       <div class="container">
         <div class="products__container">
-          <div class="equipo">
+          <div class="equipo fadeInUp wow delay">
             <figure><img src="img/lamina1.png" alt="">
               <div class="tags">
                 <div class="nuevo">
@@ -352,7 +352,7 @@
               Negro</h5>
             <p class="precio">$1,500</p>
           </div>
-          <div class="equipo">
+          <div class="equipo fadeInUp wow delay">
             <figure><img src="img/lamina2.png" alt="">
               <div class="tags">
                 <div class="nuevo">
@@ -371,7 +371,7 @@
               Gris</h5>
             <p class="precio">$1,500</p>
           </div>
-          <div class="equipo">
+          <div class="equipo fadeInUp wow delay">
             <figure><img src="img/lamina3.png" alt="">
               <div class="tags">
                 <div class="nuevo">
@@ -389,7 +389,7 @@
             <h5>Lámina PVC Color Traventino</h5>
             <p class="precio">$1,500</p>
           </div>
-          <div class="equipo">
+          <div class="equipo fadeInUp wow delay">
             <figure><img src="img/lamina4.png" alt="">
               <div class="tags">
                 <div class="nuevo">
@@ -409,7 +409,7 @@
             <p class="precio">$1,500</p>
           </div>
 
-          <div class="equipo">
+          <div class="equipo fadeInUp wow delay">
             <figure><img src="img/lamina1.png" alt="">
               <div class="tags">
                 <div class="nuevo">
@@ -428,7 +428,7 @@
               Negro</h5>
             <p class="precio">$1,500</p>
           </div>
-          <div class="equipo">
+          <div class="equipo fadeInUp wow delay">
             <figure><img src="img/lamina2.png" alt="">
               <div class="tags">
                 <div class="nuevo">
@@ -447,7 +447,7 @@
               Gris</h5>
             <p class="precio">$1,500</p>
           </div>
-          <div class="equipo">
+          <div class="equipo fadeInUp wow">
             <figure><img src="img/lamina3.png" alt="">
               <div class="tags">
                 <div class="nuevo">
@@ -465,7 +465,7 @@
             <h5>Lámina PVC Color Traventino</h5>
             <p class="precio">$1,500</p>
           </div>
-          <div class="equipo">
+          <div class="equipo fadeInUp wow">
             <figure><img src="img/lamina4.png" alt="">
               <div class="tags">
                 <div class="nuevo">
@@ -491,8 +491,8 @@
 
 
     <section id="mas-vendidos">
-      <h2>Vigas de Interior</h2>
-      <p>Disponibles en un formato elegante y con variedad de colores.</p>
+      <h2 class="fadeInUp wow">Vigas de Interior</h2>
+      <p class="fadeInUp wow">Disponibles en un formato elegante y con variedad de colores.</p>
       <div class="slider__buttons">
         <div class="slide__button--left">
           <i class="fas fa-chevron-left"></i>
@@ -503,7 +503,7 @@
       </div>
       <div class="container">
         <div class="products__container">
-          <div class="equipo">
+          <div class="equipo fadeInUp wow delay">
             <figure><img src="img/viga1.png" alt="">
               <div class="tags">
                 <div class="nuevo">
@@ -523,7 +523,7 @@
               Maple Blossom</h5>
             <p class="precio">$600</p>
           </div>
-          <div class="equipo">
+          <div class="equipo fadeInUp wow delay">
             <figure><img src="img/viga2.png" alt="">
               <div class="tags">
                 <div class="nuevo">
@@ -543,7 +543,7 @@
               Negro Texturizado</h5>
             <p class="precio">$600</p>
           </div>
-          <div class="equipo">
+          <div class="equipo fadeInUp wow delay">
             <figure><img src="img/viga1.png" alt="">
               <div class="tags">
                 <div class="nuevo">
@@ -563,7 +563,7 @@
               Maple Blossom</h5>
             <p class="precio">$600</p>
           </div>
-          <div class="equipo">
+          <div class="equipo fadeInUp wow delay">
             <figure><img src="img/viga2.png" alt="">
               <div class="tags">
                 <div class="nuevo">
@@ -584,7 +584,7 @@
             <p class="precio">$600</p>
           </div>
 
-          <div class="equipo">
+          <div class="equipo fadeInUp wow delay">
             <figure><img src="img/viga1.png" alt="">
               <div class="tags">
                 <div class="nuevo">
@@ -604,7 +604,7 @@
               Maple Blossom</h5>
             <p class="precio">$600</p>
           </div>
-          <div class="equipo">
+          <div class="equipo fadeInUp wow delay">
             <figure><img src="img/viga2.png" alt="">
               <div class="tags">
                 <div class="nuevo">
@@ -624,7 +624,7 @@
               Negro Texturizado</h5>
             <p class="precio">$600</p>
           </div>
-          <div class="equipo">
+          <div class="equipo fadeInUp wow">
             <figure><img src="img/viga1.png" alt="">
               <div class="tags">
                 <div class="nuevo">
@@ -644,7 +644,7 @@
               Maple Blossom</h5>
             <p class="precio">$600</p>
           </div>
-          <div class="equipo">
+          <div class="equipo fadeInUp wow">
             <figure><img src="img/viga2.png" alt="">
               <div class="tags">
                 <div class="nuevo">
@@ -670,17 +670,15 @@
       </div>
     </section>
 
-
-
     <section id="servicios">
-      <h2>Beneficios Materiales WPC</h2>
+      <h2 class="fadeInUp wow">Beneficios Materiales WPC</h2>
       <div class="container">
         <div class="left">
-          <figure>
+          <figure class="show wow">
             <img src="img/durabilidad.png" alt="">
           </figure>
         </div>
-        <div class="right">
+        <div class="right fadeInUp wow">
           <h2>Durabilidad</h2>
           <p>La durabilidad de los materiales WPC es uno de sus principales beneficios. Los materiales WPC están hechos de una combinación de madera y plástico, lo que les confiere una resistencia superior a la humedad, insectos, y a la rotura en comparación con la madera natural.</p>
           <p>Además, no requieren pintura ni sellado, lo que los hace más duraderos y menos propensos a la degradación a lo largo del tiempo.</p>
@@ -689,14 +687,14 @@
 
       <div class="container fondo">
 
-        <div class="right">
+        <div class="right fadeInUp wow">
           <h2>Bajo
             mantenimiento</h2>
           <p>Los materiales WPC son una opción más sostenible y amigable con el medio ambiente en comparación con otros materiales de construcción, lo que los hace una opción atractiva para aquellos que buscan minimizar su impacto ambiental.</p>
         </div>
 
         <div class="left">
-          <figure>
+          <figure class="show wow">
             <img src="img/durabilidad.png" alt="">
           </figure>
         </div>
@@ -705,11 +703,11 @@
 
       <div class="container">
         <div class="left">
-          <figure>
+          <figure class="show wow">
             <img src="img/bajo.png" alt="">
           </figure>
         </div>
-        <div class="right">
+        <div class="right fadeInUp wow">
           <h2>Bajo impacto <br>
             ambiental</h2>
           <p>Los materiales WPC son una opción más sostenible y amigable con el medio ambiente en comparación con otros materiales de construcción, lo que los hace una opción atractiva para aquellos que buscan minimizar su impacto ambiental.</p>
@@ -720,14 +718,14 @@
 
       <div class="container fondo">
 
-        <div class="right">
+        <div class="right fadeInUp wow">
           <h2>Bajo
             mantenimiento</h2>
           <p>Los materiales WPC son una opción más sostenible y amigable con el medio ambiente en comparación con otros materiales de construcción, lo que los hace una opción atractiva para aquellos que buscan minimizar su impacto ambiental.</p>
         </div>
 
         <div class="left">
-          <figure>
+          <figure class="show wow">
             <img src="img/bajo.png" alt="">
           </figure>
         </div>
@@ -768,7 +766,7 @@
       </div>
     </section> -->
 
-    <section id="faqs">
+    <section id="faqs" style="overflow: hidden;">
       <div class="contenedor">
         <div class="texto">
           <h2>FAQ</h2>
@@ -781,49 +779,49 @@
             7:00 p.m. y sábados de 10:00 a.m. a 2:00 p.m.</p>
         </div>
         <div class="container">
-          <details>
+          <details class="fadeInRight wow">
             <summary>
               <h5>¿Hacen envíos internacionales?</h5> <i class="fas fa-chevron-down"></i>
             </summary>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus possimus iure mollitia, necessitatibus sit blanditiis obcaecati tempore consequatur vero! Atque amet ipsum nisi voluptate sed illo in voluptatem aliquam quisquam.</p>
           </details>
-          <details>
+          <details class="fadeInRight wow">
             <summary>
               <h5>¿Cuánto tiempo tarda en llegar mi paquete?</h5> <i class="fas fa-chevron-down"></i>
             </summary>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus possimus iure mollitia, necessitatibus sit blanditiis obcaecati tempore consequatur vero! Atque amet ipsum nisi voluptate sed illo in voluptatem aliquam quisquam.</p>
           </details>
-          <details>
+          <details class="fadeInRight wow">
             <summary>
               <h5>¿Cuánto tiempo tarda en llegar mi paquete?</h5> <i class="fas fa-chevron-down"></i>
             </summary>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus possimus iure mollitia, necessitatibus sit blanditiis obcaecati tempore consequatur vero! Atque amet ipsum nisi voluptate sed illo in voluptatem aliquam quisquam.</p>
           </details>
-          <details>
+          <details class="fadeInRight wow">
             <summary>
               <h5>¿Por qué mi envío tarda más que el promedio?</h5> <i class="fas fa-chevron-down"></i>
             </summary>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus possimus iure mollitia, necessitatibus sit blanditiis obcaecati tempore consequatur vero! Atque amet ipsum nisi voluptate sed illo in voluptatem aliquam quisquam.</p>
           </details>
-          <details>
+          <details class="fadeInRight wow">
             <summary>
               <h5>¿Hay alguna forma de acelerar el envío de mi paquete irregular?</h5> <i class="fas fa-chevron-down"></i>
             </summary>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus possimus iure mollitia, necessitatibus sit blanditiis obcaecati tempore consequatur vero! Atque amet ipsum nisi voluptate sed illo in voluptatem aliquam quisquam.</p>
           </details>
-          <details>
+          <details class="fadeInRight wow">
             <summary>
               <h5>¿Qué pasa si mi paquete no llega en el plazo de 15 días hábiles?</h5> <i class="fas fa-chevron-down"></i>
             </summary>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus possimus iure mollitia, necessitatibus sit blanditiis obcaecati tempore consequatur vero! Atque amet ipsum nisi voluptate sed illo in voluptatem aliquam quisquam.</p>
           </details>
-          <details>
+          <details class="fadeInRight wow">
             <summary>
               <h5>Lorem Ipsum</h5> <i class="fas fa-chevron-down"></i>
             </summary>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus possimus iure mollitia, necessitatibus sit blanditiis obcaecati tempore consequatur vero! Atque amet ipsum nisi voluptate sed illo in voluptatem aliquam quisquam.</p>
           </details>
-          <details>
+          <details class="fadeInRight wow">
             <summary>
               <h5>Lorem Ipsum</h5> <i class="fas fa-chevron-down"></i>
             </summary>
@@ -836,7 +834,7 @@
     <section id="facilities">
       <div class="container">
         <div class="left">
-          <figure>
+          <figure class="fadeIn wow">
             <img src="img/instalacion.png" alt="">
           </figure>
         </div>

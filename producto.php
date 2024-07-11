@@ -255,7 +255,7 @@
     <section id="facilities">
       <div class="container">
         <div class="left">
-          <figure>
+          <figure class="fadeIn wow">
             <img src="img/instalacion.png" alt="">
           </figure>
         </div>
@@ -295,8 +295,8 @@
     </section>
 
     <section id="mas-vendidos">
-      <h2>Modelos de Interior</h2>
-      <p>Expresa tu propio estilo, dales vida y crea espacios interiores modernos, <br> con nuestros elegantes modelos de interior.</p>
+      <h2 class="fadeInUp wow">Modelos de Interior</h2>
+      <p class="fadeInUp wow">Expresa tu propio estilo, dales vida y crea espacios interiores modernos, <br> con nuestros elegantes modelos de interior.</p>
       <div class="slider__buttons">
         <div class="slide__button--left">
           <i class="fas fa-chevron-left"></i>
@@ -307,7 +307,7 @@
       </div>
       <div class="container">
         <div class="products__container">
-          <div class="equipo">
+          <div class="equipo fadeInUp wow delay">
             <figure><img src="img/lambrin-interior.png" alt="">
               <div class="tags">
                 <div class="nuevo">
@@ -326,7 +326,7 @@
               Color Avellana Fondo Negro</h5>
             <p class="precio">$9,900</p>
           </div>
-          <div class="equipo">
+          <div class="equipo fadeInUp wow delay">
             <figure><img src="img/roca-pu.png" alt="">
               <div class="tags">
                 <div class="nuevo">
@@ -345,7 +345,7 @@
               Grafito 60x120</h5>
             <p class="precio">$1,300</p>
           </div>
-          <div class="equipo">
+          <div class="equipo fadeInUp wow delay">
             <figure><img src="img/lambrin-interior2.png" alt="">
               <div class="tags">
                 <div class="nuevo">
@@ -364,7 +364,7 @@
               Color Parota</h5>
             <p class="precio">$9,900</p>
           </div>
-          <div class="equipo">
+          <div class="equipo fadeInUp wow delay">
             <figure><img src="img/roca-pu2.png" alt="">
               <div class="tags">
                 <div class="nuevo">
@@ -383,7 +383,7 @@
               Greige 60x120</h5>
             <p class="precio">$1,300</p>
           </div>
-          <div class="equipo">
+          <div class="equipo fadeInUp wow delay">
             <figure><img src="img/lambrin-interior.png" alt="">
               <div class="tags">
                 <div class="nuevo">
@@ -402,7 +402,7 @@
               Color Avellana Fondo Negro</h5>
             <p class="precio">$9,900</p>
           </div>
-          <div class="equipo">
+          <div class="equipo fadeInUp wow delay">
             <figure><img src="img/roca-pu.png" alt="">
               <div class="tags">
                 <div class="nuevo">
@@ -421,7 +421,7 @@
               Grafito 60x120</h5>
             <p class="precio">$1,300</p>
           </div>
-          <div class="equipo">
+          <div class="equipo fadeInUp wow">
             <figure><img src="img/lambrin-interior2.png" alt="">
               <div class="tags">
                 <div class="nuevo">
@@ -440,7 +440,7 @@
               Color Parota</h5>
             <p class="precio">$9,900</p>
           </div>
-          <div class="equipo">
+          <div class="equipo fadeInUp wow">
             <figure><img src="img/roca-pu2.png" alt="">
               <div class="tags">
                 <div class="nuevo">
@@ -462,6 +462,7 @@
         </div>
       </div>
     </section>
+
     <div class="pb"></div>
 
     <div class="cart__modal cart__modal--active">

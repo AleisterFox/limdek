@@ -113,7 +113,7 @@
 
         <div class="micros prd">
           <a href="producto.php">
-            <div class="equipo">
+            <div class="equipo fadeIn wow sdelay">
               <figure><img src="img/lambrin-interior.png" alt="">
                 <div class="tags">
                   <div class="nuevo">
@@ -133,8 +133,8 @@
               <p class="precio">$9,900</p>
             </div>
           </a>
-                    <a href="producto.php">
-            <div class="equipo">
+          <a href="producto.php">
+            <div class="equipo fadeIn wow sdelay">
               <figure><img src="img/lambrin-interior.png" alt="">
                 <div class="tags">
                   <div class="nuevo">
@@ -154,8 +154,8 @@
               <p class="precio">$9,900</p>
             </div>
           </a>
-                    <a href="producto.php">
-            <div class="equipo">
+          <a href="producto.php">
+            <div class="equipo fadeIn wow sdelay">
               <figure><img src="img/lambrin-interior.png" alt="">
                 <div class="tags">
                   <div class="nuevo">
@@ -175,8 +175,8 @@
               <p class="precio">$9,900</p>
             </div>
           </a>
-                    <a href="producto.php">
-            <div class="equipo">
+          <a href="producto.php">
+            <div class="equipo fadeIn wow sdelay">
               <figure><img src="img/lambrin-interior.png" alt="">
                 <div class="tags">
                   <div class="nuevo">
@@ -196,8 +196,8 @@
               <p class="precio">$9,900</p>
             </div>
           </a>
-                    <a href="producto.php">
-            <div class="equipo">
+          <a href="producto.php">
+            <div class="equipo fadeIn wow sdelay">
               <figure><img src="img/lambrin-interior.png" alt="">
                 <div class="tags">
                   <div class="nuevo">
@@ -217,8 +217,8 @@
               <p class="precio">$9,900</p>
             </div>
           </a>
-                    <a href="producto.php">
-            <div class="equipo">
+          <a href="producto.php">
+            <div class="equipo fadeIn wow sdelay">
               <figure><img src="img/lambrin-interior.png" alt="">
                 <div class="tags">
                   <div class="nuevo">
@@ -238,8 +238,8 @@
               <p class="precio">$9,900</p>
             </div>
           </a>
-                    <a href="producto.php">
-            <div class="equipo">
+          <a href="producto.php">
+            <div class="equipo fadeIn wow sdelay">
               <figure><img src="img/lambrin-interior.png" alt="">
                 <div class="tags">
                   <div class="nuevo">
@@ -259,8 +259,8 @@
               <p class="precio">$9,900</p>
             </div>
           </a>
-                    <a href="producto.php">
-            <div class="equipo">
+          <a href="producto.php">
+            <div class="equipo fadeIn wow sdelay">
               <figure><img src="img/lambrin-interior.png" alt="">
                 <div class="tags">
                   <div class="nuevo">
@@ -280,8 +280,8 @@
               <p class="precio">$9,900</p>
             </div>
           </a>
-                    <a href="producto.php">
-            <div class="equipo">
+          <a href="producto.php">
+            <div class="equipo fadeIn wow sdelay">
               <figure><img src="img/lambrin-interior.png" alt="">
                 <div class="tags">
                   <div class="nuevo">
