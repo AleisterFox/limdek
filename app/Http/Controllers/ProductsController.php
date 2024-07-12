@@ -16,56 +16,50 @@ class ProductsController extends Controller
         ]);
     }
 
-    public function editCategory($product)
+    public function editCategory(Product $producto)
     {
-        $product = Product::find($product);
-
         return view('admin.products.categories', [
-            'productCategoriesIDS' => $product->categories->pluck('id')->toArray(),
-            'product' => $product,
+            'productCategoriesIDS' => $producto->categories->pluck('id')->toArray(),
+            'product' => $producto,
             'categories' => Category::all()
         ])->render();
     }
 
-    public function updateCategory(Request $request, $product)
+    public function updateCategory(Request $request, Product $producto)
     {
-        $product = Product::find($product);
-
-        $product->categories()->sync($request->categories);
+        $producto->categories()->sync($request->categories);
 
         return redirect()->route('productos.index');
     }
 
-    public function updateImages(Request $request, $product)
+    public function updateImages(Request $request, Product $producto)
     {
-        $product = Product::find($product);
-
         if ($request->image2) {
             $fileName = time() . $request->image2->getClientOriginalName();
             $file = $request->file('image2');
             $file->move(public_path('images'), $fileName);
-            $product->update(['image2' => $fileName]);
+            $producto->update(['image2' => $fileName]);
         }
 
         if ($request->image3) {
             $fileName = time() . $request->image3->getClientOriginalName();
             $file = $request->file('image3');
             $file->move(public_path('images'), $fileName);
-            $product->update(['image3' => $fileName]);
+            $producto->update(['image3' => $fileName]);
         }
 
         if ($request->image4) {
             $fileName = time() . $request->image4->getClientOriginalName();
             $file = $request->file('image4');
             $file->move(public_path('images'), $fileName);
-            $product->update(['image4' => $fileName]);
+            $producto->update(['image4' => $fileName]);
         }
 
         if ($request->image5) {
             $fileName = time() . $request->image5->getClientOriginalName();
             $file = $request->file('image5');
             $file->move(public_path('images'), $fileName);
-            $product->update(['image5' => $fileName]);
+            $producto->update(['image5' => $fileName]);
         }
         
         return redirect()->route('productos.index');
@@ -89,7 +83,7 @@ class ProductsController extends Controller
         return redirect()->route('productos.index');
     }
 
-    public function update(Request $request, $product)
+    public function update(Request $request, Product $producto)
     {
         $fileName = time() . $request->image?->getClientOriginalName();
         $params = $request->all();
@@ -100,17 +94,13 @@ class ProductsController extends Controller
             $params['image'] = $fileName;
         }
 
-        $product = Product::find($product);
-
-        $product->update($params);
+        $producto->update($params);
 
         return redirect()->route('productos.index');
     }
 
-    public function destroy($product)
+    public function destroy(Product $producto)
     {
-        $product = Product::find($product);
-
         $product->delete();
 
         return redirect()->route('productos.index');

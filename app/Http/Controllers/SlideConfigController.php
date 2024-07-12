@@ -30,9 +30,8 @@ class SlideConfigController extends Controller
         return redirect()->route('slides.index');
     }
 
-    public function update(Request $request, $slide)
+    public function update(Request $request, Slide $slide)
     {
-        $slide = Slide::find($slide);
         $params = $request->all();
         if ($request->hasFile('image')) {
             $fileName = time() . $request->image->getClientOriginalName();
@@ -46,9 +45,8 @@ class SlideConfigController extends Controller
         return redirect()->route('slides.index');
     }
 
-    public function destroy($slide)
+    public function destroy(Slide $slide)
     {
-        $slide = Slide::find($slide);
         $slide->delete();
 
         return redirect()->route('slides.index');

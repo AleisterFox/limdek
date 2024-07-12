@@ -21,11 +21,9 @@ class ContactFormController extends Controller
         return redirect()->back()->with('message', 'Formulario enviado correctamente');
     }
 
-    public function destroy($contact)
+    public function destroy(ContactForm $contacto)
     {
-        $contact = ContactForm::find($contact);
-
-        $contact->delete();
+        $contacto->delete();
 
         return redirect()->back()->with('message', 'Formulario eliminado correctamente');
     }

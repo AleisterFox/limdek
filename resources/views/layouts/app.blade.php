@@ -109,11 +109,6 @@
                                         </a>
                                     </li>
                                     <li class="w-100">
-                                        <a href="{{ route('donations-form.index') }}" class="nav-link {{ request()->route()->getName() == 'donations-form.index' ? 'active' : '' }}">
-                                            <span class="d-none d-sm-inline">Página donaciones</span>
-                                        </a>
-                                    </li>
-                                    <li class="w-100">
                                         <a href="{{ route('config.index') }}" class="nav-link {{ request()->route()->getName() == 'config.index' ? 'active' : '' }}">
                                             <span class="d-none d-sm-inline">Configuración general</span>
                                         </a>

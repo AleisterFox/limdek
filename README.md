@@ -1,3 +1,7 @@
+# 
+
+* git diff --name-only HEAD HEAD~1
+
 # How to deploy
 
 * Copy all folders except public in a custom folder e.g(huellitas)

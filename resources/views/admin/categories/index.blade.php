@@ -19,7 +19,6 @@
             <tr>
                 <th>Id</th>
                 <th>Nombre</th>
-                <th>Categoria Padre</th>
                 <th>Acciones</th>
             </tr>
         </thead>
@@ -28,7 +27,6 @@
             <tr>
                 <td>{{ $category->id }}</td>
                 <td>{{ $category->name }}</td>
-                <td>{{ $category->parent?->name }}</td>
                 <td>
                     <button class="btn btn-info updateCategory"
                         data-id="{{ $category->id }}"
@@ -38,11 +36,9 @@
                     >
                         <i class="fs-4 bi-grid"></i>
                     </button>
-                    @if ($category->parent)
-                        <button data-id="{{ $category->id }}" type="submit" class="deleteCategory btn btn-danger">
-                            <i class="fs-4 bi-trash"></i>
-                        </button>
-                    @endif
+                    <button data-id="{{ $category->id }}" type="submit" class="deleteCategory btn btn-danger">
+                        <i class="fs-4 bi-trash"></i>
+                    </button>
                 </td>
             </tr>
             @endforeach
@@ -61,18 +57,7 @@
                 <form id="addProductForm" action="{{ route('categorias.store') }}" method="post" enctype="multipart/form-data">
                     @csrf
                     <input type="hidden" id="categoryId">
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" id="name" name="name" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="category" class="form-label">Categoría padre</label>
-                        <select class="form-select" id="category_id" name="parent_id" required>
-                            @foreach($categories as $category)
-                                <option value="{{ $category->id }}">{{ $category->name }}</option>
-                            @endforeach
-                        </select>
-                    </div>
+                    @include('admin.categories._form')
                 </form>
             </div>
             <div class="modal-footer">
@@ -93,18 +78,7 @@
             <div class="modal-body">
                 <form id="addProductForm"  method="post">
                     @csrf
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" id="name" name="name" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="category" class="form-label">Categoría padre</label>
-                        <select class="form-select" id="parent_id" name="parent_id" required>
-                            @foreach($categories as $category)
-                                <option value="{{ $category->id }}">{{ $category->name }}</option>
-                            @endforeach
-                        </select>
-                    </div>
+                    @include('admin.categories._form')
                 </form>
             </div>
             <div class="modal-footer">

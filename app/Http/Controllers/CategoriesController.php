@@ -20,7 +20,6 @@ class CategoriesController extends Controller
 
         $request->validate([
             'name' => 'required',
-            'parent_id' => 'required',
         ]);
 
         if ($request->hasFile('image')) {
@@ -36,25 +35,16 @@ class CategoriesController extends Controller
         return redirect()->route('categorias.index');
     }
 
-    public function update(Request $request, $category)
+    public function update(Request $request, Category $categoria)
     {
-        $request->validate([
-            'name' => 'required',
-            'parent_id' => 'required',
-        ]);
-
-        $category = Category::find($category);
-
-        $category->update($request->all());
+        $categoria->update($request->all());
 
         return redirect()->route('categorias.index');
     }
 
-    public function destroy($category)
+    public function destroy(Category $categoria)
     {
-        $category = Category::find($category);
-
-        $category->delete();
+        $categoria->delete();
 
         return redirect()->route('categorias.index');
     }
