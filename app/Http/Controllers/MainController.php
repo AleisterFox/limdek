@@ -24,8 +24,26 @@ class MainController extends Controller
         return view('landing.contacto');
     }
 
-    public function productos()
+    public function productos(Request $request)
     {
+        if ($request->isMethod('post') && $request->has('categories')) {
+            if ($request->collect('categories')->contains(0)) {
+                $products = Product::all();
+            } else {
+                $products = Product::whereHas('categories', function($query) use ($request) {
+                    $query->whereIn('category_id', $request->collect('categories'));
+                })->get();
+            }
+
+            return $products->map(function($product) {
+                return view('landing._product', [
+                    'product' => $product
+                ])->render();
+            })->implode('');
+        } else {
+            $products = Product::all();
+        }
+    
         return view('landing.productos', [
             'categories' => Category::all(),
             'products' => Product::all()

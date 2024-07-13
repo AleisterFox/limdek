@@ -22,7 +22,7 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::middleware([])->group(function() {
     Route::match(['get','post'], '/', [MainController::class, 'index']);
     Route::get('/contacto', [MainController::class, 'contacto']);
-    Route::get('/productos', [MainController::class, 'productos']);
+    Route::match(['get','post'], '/productos', [MainController::class, 'productos']);
     Route::get('/producto/{product}', [MainController::class, 'producto']);
     Route::get('/nosotros', [MainController::class, 'nosotros']);
     Route::get('/carrito', [MainController::class, 'carrito']);

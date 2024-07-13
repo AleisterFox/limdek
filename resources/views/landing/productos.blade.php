@@ -20,11 +20,16 @@
                 <div class="filters">
                     <div class="size">
                         <h4>Categorias</h4>
+                        <div class="size-option">
+                            <input type="checkbox" id="default-category" name="categories" class="category-checkbox" value="0" checked>
+                            <label for="default-category">Todos</label>
+                        </div>
+
                         @foreach($categories as $category)
-                            <div class="size-option">
-                                <input type="checkbox" name="category-{{ $category->id }}">
-                                <label for="category-{{ $category->id }}">{{ $category->name }}</label>
-                            </div>
+                        <div class="size-option">
+                            <input type="checkbox" name="categories" id="category-{{ $category->id }}" class="category-checkbox">
+                            <label for="category-{{ $category->id }}">{{ $category->name }}</label>
+                        </div>
                         @endforeach
                     </div>
 
@@ -51,9 +56,9 @@
 
             </div>
 
-            <div class="micros prd">
+            <div class="micros prd products-container">
                 @if ($products->count() > 0)
-                    @each('landing._product', $products, 'product')
+                @each('landing._product', $products, 'product')
                 @else
                 <a href="/producto">
                     <div class="equipo fadeIn wow sdelay">
@@ -171,7 +176,32 @@
 
         }
     });
-</script>
 
+    $(".category-checkbox").on('click', function() {
+
+        if ($(this).val() != 0) {
+            $('#default-category').prop('checked', false);
+        } else {
+            $('.category-checkbox').prop('checked', false);
+            $(this).prop('checked', true);
+        }
+
+        let categories = $('.category-checkbox:checked').map(function() {
+            return $(this).val();
+        }).get();
+
+        $.ajax({
+            url: '/productos',
+            method: 'POST',
+            data: {
+                _token: '{{ csrf_token() }}',
+                categories: categories
+            },
+            success: function(data) {
+                $('.products-container').html(data);
+            }
+        });
+    });
+</script>
 
 @endpush
