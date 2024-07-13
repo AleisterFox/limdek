@@ -27,7 +27,7 @@
 
                         @foreach($categories as $category)
                         <div class="size-option">
-                            <input type="checkbox" name="categories" id="category-{{ $category->id }}" class="category-checkbox">
+                            <input type="checkbox" name="categories" id="category-{{ $category->id }}" class="category-checkbox" value="{{ $category->id }}">
                             <label for="category-{{ $category->id }}">{{ $category->name }}</label>
                         </div>
                         @endforeach
