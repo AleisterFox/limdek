@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\MainController;
@@ -40,6 +41,7 @@ Route::middleware([])->group(function() {
 
 Route::prefix('admin')->middleware(['auth'])->group(function() {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+    Route::resource('about', AboutController::class)->only(['index', 'update']);
     Route::resource('config', LadingPageConfigController::class)->only(['index', 'update']);
     Route::resource('foster-to-adopt', FosterToAdoptConfigController::class)->only(['index', 'update']);
 

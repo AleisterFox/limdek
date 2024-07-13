@@ -1,3 +1,7 @@
+@use('App\Models\LadingPageConfig')
+@php
+$instance = LadingPageConfig::getInstance();
+@endphp
 <footer>
   <div class="top">
     <figure>
@@ -16,7 +20,7 @@
 
       <div class="direccion">
         <h4>Dirección</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ligula elit, varius sed nunc ut, dignissim lobortis quam.</p>
+        <p>{{ $instance->contact_address }}</p>
       </div>
 
     </div>
@@ -44,9 +48,9 @@
   </div>
   <div class="middle">
     <div class="socials">
-      <a href="" target="__blank"><i class="fab fa-facebook"></i></a>
-      <a href="" target="__blank"><i class="fab fa-instagram"></i></a>
-      <a href="" target="__blank"><i class="fab fa-tiktok"></i></a>
+      <a href="{{ $instance->contact_facebook }}" target="__blank"><i class="fab fa-facebook"></i></a>
+      <a href="{{ $instance->contact_instagram }}" target="__blank"><i class="fab fa-instagram"></i></a>
+      <a href="{{ $instance->contact_tiktok }}" target="__blank"><i class="fab fa-tiktok"></i></a>
     </div>
   </div>
   <div class="bottom">

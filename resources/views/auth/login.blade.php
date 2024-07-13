@@ -63,7 +63,9 @@
       <form method="POST" action="{{ route('login') }}">
         @csrf
         <input type="email" name="email" id="user-email" placeholder="Correo">
-        <a href="">¿Olvidaste tu contraseña?</a>
+        @if (false)
+          <a href="">¿Olvidaste tu contraseña?</a>
+        @endif
         <input type="password" name="password" id="user-password" placeholder="Contraseña">
         <button type="submit" class="button__secondary">Iniciar sesión</button>
       </form>

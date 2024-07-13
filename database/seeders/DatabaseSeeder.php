@@ -26,7 +26,14 @@ class DatabaseSeeder extends Seeder
             ]
         );
 
-        Category::firstOrCreate(['name' => 'Categoria']);
+        collect([
+            'Lambrin WPC interior',
+            'Lambrin WPC exterior',
+            'Material PU',
+            'Láminas Tipo Mármol',
+            'WPC Exterior',
+            'Macetas'
+        ])->each(fn ($name) => Category::firstOrCreate(['name' => $name]));
 
         LadingPageConfig::create();
     }

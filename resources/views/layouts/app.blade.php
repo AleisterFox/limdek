@@ -91,7 +91,7 @@
                             </li>
                             @php
                                 $shouldOpen = in_array(request()->route()->getName(), [
-                                    'contacto.index',  'slides.index', 'config.index', 'donations-form.index', 'donations-form.index'
+                                    'contacto.index',  'slides.index', 'config.index', 'about.index'
                                 ]);
                             @endphp
                             <li>
@@ -104,8 +104,8 @@
                                         </a>
                                     </li>
                                     <li class="w-100">
-                                        <a href="{{ route('foster-to-adopt.index') }}" class="nav-link {{ request()->route()->getName() == 'foster-to-adopt.index' ? 'active' : '' }}">
-                                            <span class="d-none d-sm-inline">Página Foster to Adopt</span>
+                                        <a href="{{ route('about.index') }}" class="nav-link {{ request()->route()->getName() == 'about.index' ? 'active' : '' }}">
+                                            <span class="d-none d-sm-inline">Página 'Nosotros'</span>
                                         </a>
                                     </li>
                                     <li class="w-100">

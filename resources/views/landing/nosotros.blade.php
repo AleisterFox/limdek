@@ -1,57 +1,50 @@
 @extends('layouts.main')
 
 @section('content')
+@use('App\Models\LadingPageConfig')
+@php
+$instance = LadingPageConfig::getInstance();
+@endphp
 <main>
     <section id="productos-hero">
-        <figure class="portada"><img loading="lazy" src="img/portada.jpg" alt=""></figure>
+        <figure class="portada">
+            @if ($instance->about_image)
+            <img loading="lazy" src="{{ asset('images/' . $instance->about_image) }}" alt="">
+            @else
+            <img loading="lazy" src="img/portada.jpg" alt="">
+            @endif
+        </figure>
     </section>
 
     <section id="us">
         <div class="top">
             <figure>
+                @if ($instance->about_image_1)
+                <img loading="lazy" src="{{ asset('images/' . $instance->about_image_1) }}" alt="">
+                @else
                 <img src="img/durabilidad.png" alt="">
+                @endif
             </figure>
 
-            <div class="text">
-                <h2>Lorem, ipsum dolor.</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat non expedita labore omnis libero adipisci ut culpa et sequi eveniet voluptatum, cupiditate aliquam doloribus dolorum distinctio quibusdam laboriosam aut reiciendis!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas animi, modi aut omnis cumque at a reiciendis beatae reprehenderit maiores ullam expedita doloremque minus alias error facere, dignissimos molestiae atque?</p>
+            <div class="text" style="font-size: 2rem; font-weight: 400;">
+                {!! $instance->about_text_1 !!}
             </div>
         </div>
         <div class="bottom">
-            <div class="text">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis illum optio similique accusamus magnam, in aliquid quibusdam, saepe fugiat veritatis modi dolorum laudantium. Saepe dolor numquam laborum quis debitis delectus?</p>
+            <div class="text" style="font-size: 2rem; font-weight: 400;">
+                {!! $instance->about_text_2 !!}
             </div>
             <figure>
+                @if ($instance->about_image_2)
+                <img loading="lazy" src="{{ asset('images/' . $instance->about_image_2) }}" alt="">
+                @else
                 <img src="img/durabilidad.png" alt="">
+                @endif
             </figure>
         </div>
     </section>
 
-    <section id="features">
-        <div class="container">
-            <div class="feature">
-                <span><img src="img/envios-icon.png" alt=""></span>
-                <h4>Envíos</h4>
-                <p>Hacemos envíos a toda la República Mexicana.</p>
-            </div>
-            <div class="feature">
-                <span><img src="img/servicio-icon.png" alt=""></span>
-                <h4>Servicio al Cliente</h4>
-                <p>¿Una pregunta? Comuníquese con nosotros al 123 456 7890</p>
-            </div>
-            <div class="feature">
-                <span><img src="img/ubicación-icon.png" alt=""></span>
-                <h4>Ubicación</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ligula elit, varius sed nunc ut, dignissim.</p>
-            </div>
-            <div class="feature">
-                <span><img src="img/pagoseguro-icon.png" alt=""></span>
-                <h4>Pago Seguro</h4>
-                <p>Tu información de pago se procesa de forma segura</p>
-            </div>
-        </div>
-    </section>
+    @include('landing._about')
 
     @include('landing._contact_form')
 </main>
