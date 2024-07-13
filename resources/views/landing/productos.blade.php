@@ -120,7 +120,7 @@
                 </div>
                 <div class="entrega">
                     <h4>Entrega</h4>
-                    <p class="subtotal__amount">Por calcular</p>
+                    <p class="subtotal__amount">Por calcular2</p>
                 </div>
                 <div class="total">
                     <h3>Total</h3>

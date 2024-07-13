@@ -403,36 +403,7 @@
                 </div>
                 <h2>Carrito de compra</h2>
             </div>
-            <div class="products">
-                <div class="product">
-                    <div class="product__info">
-                        <figure><img loading="lazy" src="/img/lambrin-interior.png" alt="" /></figure>
-                        <div class="product__info--data">
-                            <h4 class="product__name">Nombre del producto</h4>
-                            <div class="input-group">
-                                <input type="number" value="0" name="Qty" id="Qty" />
-                                <button class="decrement">-</button>
-                                <button class="increment">+</button>
-                            </div>
-                        </div>
-                        <p class="product__price">$ 0.00 MXN</p>
-                    </div>
-                </div>
-            </div>
-            <div class="costos">
-                <div class="subtotal">
-                    <h4>Subtotal</h4>
-                    <p class="subtotal__amount">$ 0.00 MXN</p>
-                </div>
-                <div class="entrega">
-                    <h4>Entrega</h4>
-                    <p class="subtotal__amount">Por calcular</p>
-                </div>
-                <div class="total">
-                    <h3>Total</h3>
-                    <p class="total__amount">$ 0.00 MXN</p>
-                </div>
-            </div>
+            <di id="cart-content"></div>
             <a href="carrito.php" class="button__secondary">Comprar ahora</a>
             <div class="cart__bottom">
                 <a href="javascript:void(0);" class="keep__buying">Seguir comprando</a>
@@ -465,7 +436,6 @@
     const galleryImages = document.querySelectorAll(".glide__slide");
     const figures = document.querySelectorAll(".glide__slide > figure");
     const productSlider = document.querySelector('.glide__slides');
-
 
     imgs1.forEach(img1 => {
         img1.addEventListener("mousemove", (e) => ver(e, img1));
