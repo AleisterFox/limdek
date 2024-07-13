@@ -60,7 +60,27 @@
                             >
                             <i class="bi bi-card-image"></i>
                         </button>
-                        <button class="btn btn-info updateProduct" id="updateProduct-{{ $product->id }}" data-id="{{ $product->id }}" data-name="{{ $product->name }}" data-description="{{ $product->description }}" data-price="{{ $product->price }}" data-in_stock="{{ $product->in_stock }}" data-category_id="{{ $product->category_id }}">
+                        <button class="btn btn-info updateProduct" 
+                            id="updateProduct-{{ $product->id }}" 
+                            data-id="{{ $product->id }}" 
+                            data-name="{{ $product->name }}" 
+                            data-description="{{ $product->description }}" 
+                            data-price="{{ $product->price }}" 
+                            data-in_stock="{{ $product->in_stock }}" 
+                            data-category_id="{{ $product->category_id }}"
+                            data-size="{{ $product->size }}"
+                            data-large="{{ $product->large }}"
+                            data-meters="{{ $product->meters }}"
+                            data-presentation="{{ $product->presentation }}"
+                            data-area="{{ $product->area }}"
+                            data-square_meters="{{ $product->square_meters }}"
+                            data-applications="{{ $product->applications }}"
+                            data-recycling="{{ $product->recycling }}"
+                            data-life="{{ $product->life }}"
+                            data-maintenance="{{ $product->maintenance }}"
+                            data-weight="{{ $product->weight }}"
+                            data-box_size="{{ $product->box_size }}"
+                            >
                             <i class="fs-4 bi-grid"></i>
                         </button>
                         <button data-id="{{ $product->id }}" type="submit" class="deleteProduct btn btn-danger">
@@ -107,26 +127,7 @@
                 <form id="addProductForm" action="{{ route('productos.store') }}" method="post" enctype="multipart/form-data">
                     @csrf
                     <input type="hidden" id="productId">
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" id="name" name="name" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="description" class="form-label" required>Descripción</label>
-                        <textarea class="form-control" id="description" name="description"></textarea>
-                    </div>
-                    <div class="mb-3">
-                        <label for="price" class="form-label" required>Precio</label>
-                        <input type="number" class="form-control" id="price" name="price">
-                    </div>
-                    <div class="mb-3">
-                        <label for="stock" class="form-label" required>Stock</label>
-                        <input type="number" class="form-control" id="in_stock" name="in_stock">
-                    </div>
-                    <div class="mb-3">
-                        <label for="image" class="form-label">Imagen</label>
-                        <input type="file" class="form-control" id="image" name="image" required>
-                    </div>
+                    @include('admin.products._form')
                 </form>
             </div>
             <div class="modal-footer">
@@ -147,34 +148,7 @@
             <div class="modal-body">
                 <form id="addProductForm" method="post">
                     @csrf
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" id="name" name="name" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="description" class="form-label" required>Descripción</label>
-                        <textarea class="form-control" id="description" name="description"></textarea>
-                    </div>
-                    <div class="mb-3">
-                        <label for="price" class="form-label" required>Precio</label>
-                        <input type="number" class="form-control" id="price" name="price">
-                    </div>
-                    <div class="mb-3">
-                        <label for="stock" class="form-label" required>Stock</label>
-                        <input type="number" class="form-control" id="in_stock" name="in_stock">
-                    </div>
-                    <div class="mb-3">
-                        <label for="category" class="form-label">Categoría</label>
-                        <select class="form-select" id="category_id" name="category_id">
-                            @foreach($categories as $category)
-                            <option value="{{ $category->id }}">{{ $category->name }}</option>
-                            @endforeach
-                        </select>
-                    </div>
-                    <div class="mb-3">
-                        <label for="image" class="form-label">Imagen</label>
-                        <input type="file" class="form-control" id="image" name="image">
-                    </div>
+                    @include('admin.products._form')
                 </form>
             </div>
             <div class="modal-footer">
@@ -318,6 +292,19 @@
         var description = $(this).data('description');
         var price = $(this).data('price');
         var in_stock = $(this).data('in_stock');
+        var size = $(this).data('size');
+        var large = $(this).data('large');
+        var meters = $(this).data('meters');
+        var category_id = $(this).data('category_id');
+        var presentation = $(this).data('presentation');
+        var area = $(this).data('area');
+        var square_meters = $(this).data('square_meters');
+        var applications = $(this).data('applications');
+        var recycling = $(this).data('recycling');
+        var life = $(this).data('life');
+        var maintenance = $(this).data('maintenance');
+        var weight = $(this).data('weight');
+        var box_size = $(this).data('box_size');
 
         $("#productId").val(id);
 
@@ -325,6 +312,19 @@
         $("#updateProductModal #description").val(description);
         $("#updateProductModal #price").val(price);
         $("#updateProductModal #in_stock").val(in_stock);
+        $("#updateProductModal #size").val(size);
+        $("#updateProductModal #category_id").val(category_id);
+        $("#updateProductModal #large").val(large);
+        $("#updateProductModal #meters").val(meters);
+        $("#updateProductModal #presentation").val(presentation);
+        $("#updateProductModal #area").val(area);
+        $("#updateProductModal #square_meters").val(square_meters);
+        $("#updateProductModal #applications").val(applications);
+        $("#updateProductModal #recycling").val(recycling);
+        $("#updateProductModal #life").val(life);
+        $("#updateProductModal #maintenance").val(maintenance);
+        $("#updateProductModal #weight").val(weight);
+        $("#updateProductModal #box_size").val(box_size);
 
         $("#updateProductModal").modal('show');
     });
@@ -378,6 +378,19 @@
         var price = $("#updateProductModal #price").val();
         var in_stock = $("#updateProductModal #in_stock").val();
         var image = $("#updateProductModal #image").val();
+        var category_id = $("#updateProductModal #category_id").val();
+        var size = $("#updateProductModal #size").val();
+        var large = $("#updateProductModal #large").val();
+        var meters = $("#updateProductModal #meters").val();
+        var presentation = $("#updateProductModal #presentation").val();
+        var area = $("#updateProductModal #area").val();
+        var square_meters = $("#updateProductModal #square_meters").val();
+        var applications = $("#updateProductModal #applications").val();
+        var recycling = $("#updateProductModal #recycling").val();
+        var life = $("#updateProductModal #life").val();
+        var maintenance = $("#updateProductModal #maintenance").val();
+        var weight = $("#updateProductModal #weight").val();
+        var box_size = $("#updateProductModal #box_size").val();
 
         var formData = new FormData();
 
@@ -391,6 +404,19 @@
         formData.append('in_stock', in_stock);
         formData.append('_token', "{{ csrf_token() }}");
         formData.append('_method', 'PUT');
+        formData.append('category_id', category_id);
+        formData.append('size', size);
+        formData.append('large', large);
+        formData.append('meters', meters);
+        formData.append('presentation', presentation);
+        formData.append('area', area);
+        formData.append('square_meters', square_meters);
+        formData.append('applications', applications);
+        formData.append('recycling', recycling);
+        formData.append('life', life);
+        formData.append('maintenance', maintenance);
+        formData.append('weight', weight);
+        formData.append('box_size', box_size);
 
         $.ajax({
             url: '/admin/productos/' + id,

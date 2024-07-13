@@ -110,54 +110,51 @@
             <ul>
                 <li>
                     <p><strong>Tamaño Panel</strong></p>
-                    <p>2.90 m x 0.16 m</p>
+                    <p>{{ $product->size }}</p>
                 </li>
                 <li>
                     <p><strong>Largo de Panel</strong></p>
-                    <p>Ajustable (Se puede recortar)</p>
+                    <p>{{ $product->large }}</p>
                 </li>
                 <li>
                     <p><strong>Metros cuadrados por panel</strong></p>
-                    <p>0.46 m²</p>
+                    <p>{{ $product->meters }}</p>
                 </li>
                 <li>
                     <p><strong>Presentación</strong></p>
-                    <p>Caja con 18 paneles</p>
+                    <p>{{ $product->presentation }}</p>
                 </li>
                 <li>
                     <p><strong>Área total caja</strong></p>
-                    <p>2.90 m x 2.90 m</p>
+                    <p>{{ $product->area }}</p>
                 </li>
                 <li>
                     <p><strong>Metros cuadrados por caja</strong></p>
-                    <p>8.4 m²</p>
+                    <p>{{ $product->square_meters }}</p>
                 </li>
                 <li>
                     <p><strong>Aplicaciones</strong></p>
-                    <p>Uso exclusivo para INTERIOR. Habitación,
-                        estudio, sala, oficina, lobby, cocina, baño,
-                        techo, cabeceras, hoteles, recepción,
-                        consultorio, Airbnb.</p>
+                    <p>{{ $product->applications }}</p>
                 </li>
                 <li>
                     <p><strong>Reciclaje</strong></p>
-                    <p>100% reciclable</p>
+                    <p>{{ $product->recycling }}</p>
                 </li>
                 <li>
                     <p><strong>Tiempo de vida</strong></p>
-                    <p>10 años</p>
+                    <p>{{ $product->life }}</p>
                 </li>
                 <li>
                     <p><strong>Mantenimiento</strong></p>
-                    <p>10 Mínimo mantenimiento</p>
+                    <p>{{ $product->maintenance }}</p>
                 </li>
                 <li>
                     <p><strong>Peso Caja</strong></p>
-                    <p>53 kg</p>
+                    <p>{{ $product->weight }}</p>
                 </li>
                 <li>
                     <p><strong>Tamaño Caja</strong></p>
-                    <p>3 m x 0.20 m x 0.20 m</p>
+                    <p>{{ $product->box_size }}</p>
                 </li>
             </ul>
         </div>

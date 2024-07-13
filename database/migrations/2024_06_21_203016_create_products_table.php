@@ -19,6 +19,19 @@ return new class extends Migration
             $table->string('price');
             $table->integer('category_id')->nullable();
             $table->string('in_stock')->default(1);
+            $table->string('size')->nullable();
+            $table->string('large')->nullable();
+            $table->string('meters')->nullable();
+            $table->string('presentation')->nullable();
+            $table->string('area')->nullable();
+            $table->string('square_meters')->nullable();
+            $table->string('applications')->nullable();
+            $table->string('recycling')->default(1);
+            $table->string('life')->nullable();
+            $table->string('maintenance')->nullable();
+            $table->string('weight')->nullable();
+            $table->string('box_size')->nullable();
+
             $table->timestamps();
         });
     }

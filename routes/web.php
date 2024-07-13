@@ -13,7 +13,6 @@ use App\Http\Controllers\LadingPageConfigController;
 use App\Http\Controllers\ShoppingCartController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\SlideConfigController;
-use App\Http\Controllers\FosterToAdoptConfigController;
 
 Auth::routes(['register' => true]);
 
@@ -43,14 +42,13 @@ Route::prefix('admin')->middleware(['auth'])->group(function() {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
     Route::resource('about', AboutController::class)->only(['index', 'update']);
     Route::resource('config', LadingPageConfigController::class)->only(['index', 'update']);
-    Route::resource('foster-to-adopt', FosterToAdoptConfigController::class)->only(['index', 'update']);
 
     Route::resource('slides', SlideConfigController::class);
+    Route::resource('categorias', CategoriesController::class);
     Route::resource('productos', ProductsController::class);
     Route::get('productos/{producto}/categorias', [ProductsController::class, 'editCategory'])->name('productos.categories');
     Route::put('productos/{producto}/categorias', [ProductsController::class, 'updateCategory'])->name('productos.categories.update');
     Route::put('productos/{producto}/imagenes', [ProductsController::class, 'updateImages'])->name('productos.images');
 
-    Route::resource('categorias', CategoriesController::class);
     Route::resource('contacto', ContactFormController::class);
 });
