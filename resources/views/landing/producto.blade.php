@@ -32,18 +32,29 @@
             <div class="glide" id="product-slider">
                 <div class="glide__track" data-glide-el="track">
                     <ul class="glide__slides">
+                        @if ($product->image2)
                         <li class="glide__slide product-image">
-                            <figure class="portada pi1"><img loading="lazy" src="/img/lambrin-interior.png" alt="" /></figure>
+                            <figure class="portada pi1"><img loading="lazy" src="{{ asset('images/' . $product->image2) }}" alt="" /></figure>
                         </li>
+                        @endif
+
+                        @if ($product->image3)
                         <li class="glide__slide product-image">
-                            <figure class="portada pi1"><img loading="lazy" src="/img/lambrin-interior2.png" alt="" /></figure>
+                            <figure class="portada pi1"><img loading="lazy" src="{{ asset('images/' . $product->image3) }}" alt="" /></figure>
                         </li>
+                        @endif
+
+                        @if ($product->image4)
                         <li class="glide__slide product-image">
-                            <figure class="portada pi1"><img loading="lazy" src="/img/lambrin-interior.png" alt="" /></figure>
+                            <figure class="portada pi1"><img loading="lazy" src="{{ asset('images/' . $product->image4) }}" alt="" /></figure>
                         </li>
+                        @endif
+
+                        @if ($product->image5)
                         <li class="glide__slide product-image">
-                            <figure class="portada pi1"><img loading="lazy" src="/img/lambrin-interior2.png" alt="" /></figure>
+                            <figure class="portada pi1"><img loading="lazy" src="{{ asset('images/' . $product->image5) }}" alt="" /></figure>
                         </li>
+                        @endif
                     </ul>
                 </div>
                 <div data-glide-el="controls" class="slider__controls">
