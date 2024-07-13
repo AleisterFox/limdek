@@ -10,40 +10,62 @@ $instace = LadingPageConfig::getInstance();
         <div class="glide" id="hero-slider">
             <div class="glide__track" data-glide-el="track">
                 <ul class="glide__slides">
-                    <li class="glide__slide">
-                        <figure class="portada"><img loading="lazy" src="img/portada.jpg" alt="" /></figure>
-                        <div class="content">
-                            <h1>Lambrin Interior</h1>
-                            <a href="" class="button">Conocer</a>
-                        </div>
-                    </li>
-                    <li class="glide__slide">
-                        <figure class="portada"><img loading="lazy" src="img/portada.jpg" alt="" /></figure>
-                        <div class="content">
-                            <h1>Lambrin Interior</h1>
-                            <a href="" class="button">Conocer</a>
-                        </div>
-                    </li>
-                    <li class="glide__slide">
-                        <figure class="portada"><img loading="lazy" src="img/portada.jpg" alt="" /></figure>
-                        <div class="content">
-                            <h1>Lambrin Interior</h1>
-                            <a href="" class="button">Conocer</a>
-                        </div>
-                    </li>
-                    <li class="glide__slide">
-                        <figure class="portada"><img loading="lazy" src="img/portada.jpg" alt="" /></figure>
-                        <div class="content">
-                            <h1>Lambrin Interior</h1>
-                            <a href="" class="button">Conocer</a>
-                        </div>
-                    </li>
+                    @if ($slides->count() > 0)
+                        @foreach($slides as $slide)
+                            <li class="glide__slide">
+                                <figure class="portada">
+                                    <img loading="lazy" src="{{ asset('slides/' . $slide->image) }}" alt="" />
+                                </figure>
+                                <div class="content">
+                                    <h1>{{ $slide->title }}</h1>
+                                    <a href="" class="button">Conocer</a>
+                                </div>
+                            </li>
+                        @endforeach
+                    @else
+                        <li class="glide__slide">
+                            <figure class="portada">
+                                <img loading="lazy" src="img/portada.jpg" alt="" />
+                            </figure>
+                            <div class="content">
+                                <h1>Lambrin Interior</h1>
+                                <a href="" class="button">Conocer</a>
+                            </div>
+                        </li>
+                        <li class="glide__slide">
+                            <figure class="portada"><img loading="lazy" src="img/portada.jpg" alt="" /></figure>
+                            <div class="content">
+                                <h1>Lambrin Interior</h1>
+                                <a href="" class="button">Conocer</a>
+                            </div>
+                        </li>
+                        <li class="glide__slide">
+                            <figure class="portada"><img loading="lazy" src="img/portada.jpg" alt="" /></figure>
+                            <div class="content">
+                                <h1>Lambrin Interior</h1>
+                                <a href="" class="button">Conocer</a>
+                            </div>
+                        </li>
+                        <li class="glide__slide">
+                            <figure class="portada"><img loading="lazy" src="img/portada.jpg" alt="" /></figure>
+                            <div class="content">
+                                <h1>Lambrin Interior</h1>
+                                <a href="" class="button">Conocer</a>
+                            </div>
+                        </li>
+                    @endif
                 </ul>
                 <div class="glide__bullets" data-glide-el="controls[nav]">
-                    <button class="glide__bullet" data-glide-dir="=0"></button>
-                    <button class="glide__bullet" data-glide-dir="=1"></button>
-                    <button class="glide__bullet" data-glide-dir="=2"></button>
-                    <button class="glide__bullet" data-glide-dir="=3"></button>
+                    @if ($slides->count() > 0)
+                        @foreach($slides as $slide)
+                            <button class="glide__bullet" data-glide-dir="={{$loop->index}}"></button>
+                        @endforeach
+                    @else
+                        <button class="glide__bullet" data-glide-dir="=0"></button>
+                        <button class="glide__bullet" data-glide-dir="=1"></button>
+                        <button class="glide__bullet" data-glide-dir="=2"></button>
+                        <button class="glide__bullet" data-glide-dir="=3"></button>
+                    @endif
                 </div>
             </div>
         </div>
@@ -827,13 +849,13 @@ $instace = LadingPageConfig::getInstance();
 
 @push('scripts')
 <script>
-  var glide = new Glide("#hero-slider", {
-    type: "carousel",
-    perView: 1,
-    autoplay: 5000,
-    animationDuration: 2000,
-    animationTimingFunction: "ease-in-out",
-  });
-  glide.mount();
+    var glide = new Glide("#hero-slider", {
+        type: "carousel",
+        perView: 1,
+        autoplay: 5000,
+        animationDuration: 2000,
+        animationTimingFunction: "ease-in-out",
+    });
+    glide.mount();
 </script>
 @endpush
