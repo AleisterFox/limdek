@@ -166,7 +166,7 @@ $instace = LadingPageConfig::getInstance();
                     <p class="precio">$9,900</p>
                 </div>
                 <div class="equipo fadeInUp wow delay">
-                    <figure><img src="img/roca-pu2.png" alt="">
+                    <figure><img src="/img/roca-pu2.png" alt="">
                         <div class="tags">
                             <div class="nuevo">
                                 <h5>Nuevo</h5>
@@ -242,7 +242,7 @@ $instace = LadingPageConfig::getInstance();
                     <p class="precio">$9,900</p>
                 </div>
                 <div class="equipo fadeInUp wow">
-                    <figure><img src="img/roca-pu2.png" alt="">
+                    <figure><img src="/img/roca-pu2.png" alt="">
                         <div class="tags">
                             <div class="nuevo">
                                 <h5>Nuevo</h5>

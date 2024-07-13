@@ -4,10 +4,11 @@
 
 <main>
     <section id="productos-hero">
-        <figure class="portada"><img loading="lazy" src="img/portada.jpg" alt=""></figure>
+        <figure class="portada"><img loading="lazy" src="/img/portada.jpg" alt=""></figure>
     </section>
     <div class="pb"></div>
 
+    <input type="hidden" id="productId" value="{{ $product->id }}">
     <section id="product">
         <div class="container">
             <!-- <div class="side-gallery">
@@ -32,16 +33,16 @@
                 <div class="glide__track" data-glide-el="track">
                     <ul class="glide__slides">
                         <li class="glide__slide product-image">
-                            <figure class="portada pi1"><img loading="lazy" src="img/lambrin-interior.png" alt="" /></figure>
+                            <figure class="portada pi1"><img loading="lazy" src="/img/lambrin-interior.png" alt="" /></figure>
                         </li>
                         <li class="glide__slide product-image">
-                            <figure class="portada pi1"><img loading="lazy" src="img/lambrin-interior2.png" alt="" /></figure>
+                            <figure class="portada pi1"><img loading="lazy" src="/img/lambrin-interior2.png" alt="" /></figure>
                         </li>
                         <li class="glide__slide product-image">
-                            <figure class="portada pi1"><img loading="lazy" src="img/lambrin-interior.png" alt="" /></figure>
+                            <figure class="portada pi1"><img loading="lazy" src="/img/lambrin-interior.png" alt="" /></figure>
                         </li>
                         <li class="glide__slide product-image">
-                            <figure class="portada pi1"><img loading="lazy" src="img/lambrin-interior2.png" alt="" /></figure>
+                            <figure class="portada pi1"><img loading="lazy" src="/img/lambrin-interior2.png" alt="" /></figure>
                         </li>
                     </ul>
                 </div>
@@ -52,7 +53,7 @@
             </div>
 
             <div class="product-info">
-                <h2 class="product__title">Lorem Ipsum</h2>
+                <h2 class="product__title">{{ $product->name }}</h2>
                 <div class="tags">
                     <div class="nuevo">
                         <h5>Nuevo</h5>
@@ -62,17 +63,13 @@
                     </div>
                 </div>
                 <div class="product-info__top">
-                    <p class="price"><strong>$ 0.00 MXN</strong></p>
+                    <p class="price"><strong>$ {{ $product->price }} MXN</strong></p>
                     <div class="calificacion">
                         <p>5.0</p>
                         <i class="fas fa-star"></i>
                     </div>
                 </div>
-                <p class="desc">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-                    eget dui quis diam gravida sollicitudin in nec ex. Aenean pharetra
-                    viverra est a sodales. Nam non turpis ut est gravida ornare.
-                </p>
+                <p class="desc">{{ $product->description }}</p>
 
                 <div class="adder">
                     <p>Cantidad</p>
@@ -84,13 +81,13 @@
                 </div>
 
                 <div class="product__buttons">
-                    <a href="javascript:void(0);" class="button__secondary add__product">Agregar al carrito</a>
-                    <a href="carrito.php" class="button__secondary">Comprar</a>
+                    <a class="button__secondary add__product" id="add__product">Agregar al carrito</a>
+                    <a class="button__secondary" id="get_product">Comprar</a>
                 </div>
 
                 <div class="product__image--zoom">
                     <figure class="product__image--active pi2">
-                        <img loading="lazy" src="img/us1.jpg" alt="" />
+                        <img loading="lazy" src="i/mg/us1.jpg" alt="" />
                     </figure>
                 </div>
             </div>
@@ -156,7 +153,7 @@
         <div class="right">
             <div class="imagen">
                 <figure>
-                    <img src="img/lambrin.png" alt="">
+                    <img src="/img/lambrin.png" alt="">
                 </figure>
             </div>
 
@@ -201,7 +198,7 @@
         <div class="container">
             <div class="left">
                 <figure class="fadeIn wow">
-                    <img src="img/instalacion.png" alt="">
+                    <img src="/img/instalacion.png" alt="">
                 </figure>
             </div>
             <div class="right">
@@ -230,7 +227,7 @@
         <div class="container">
             <div class="products__container">
                 <div class="equipo fadeInUp wow delay">
-                    <figure><img src="img/lambrin-interior.png" alt="">
+                    <figure><img src="/img/lambrin-interior.png" alt="">
                         <div class="tags">
                             <div class="nuevo">
                                 <h5>Nuevo</h5>
@@ -249,7 +246,7 @@
                     <p class="precio">$9,900</p>
                 </div>
                 <div class="equipo fadeInUp wow delay">
-                    <figure><img src="img/roca-pu.png" alt="">
+                    <figure><img src="/img/roca-pu.png" alt="">
                         <div class="tags">
                             <div class="nuevo">
                                 <h5>Nuevo</h5>
@@ -268,7 +265,7 @@
                     <p class="precio">$1,300</p>
                 </div>
                 <div class="equipo fadeInUp wow delay">
-                    <figure><img src="img/lambrin-interior2.png" alt="">
+                    <figure><img src="/img/lambrin-interior2.png" alt="">
                         <div class="tags">
                             <div class="nuevo">
                                 <h5>Nuevo</h5>
@@ -287,7 +284,7 @@
                     <p class="precio">$9,900</p>
                 </div>
                 <div class="equipo fadeInUp wow delay">
-                    <figure><img src="img/roca-pu2.png" alt="">
+                    <figure><img src="/img/roca-pu2.png" alt="">
                         <div class="tags">
                             <div class="nuevo">
                                 <h5>Nuevo</h5>
@@ -306,7 +303,7 @@
                     <p class="precio">$1,300</p>
                 </div>
                 <div class="equipo fadeInUp wow delay">
-                    <figure><img src="img/lambrin-interior.png" alt="">
+                    <figure><img src="/img/lambrin-interior.png" alt="">
                         <div class="tags">
                             <div class="nuevo">
                                 <h5>Nuevo</h5>
@@ -325,7 +322,7 @@
                     <p class="precio">$9,900</p>
                 </div>
                 <div class="equipo fadeInUp wow delay">
-                    <figure><img src="img/roca-pu.png" alt="">
+                    <figure><img src="/img/roca-pu.png" alt="">
                         <div class="tags">
                             <div class="nuevo">
                                 <h5>Nuevo</h5>
@@ -344,7 +341,7 @@
                     <p class="precio">$1,300</p>
                 </div>
                 <div class="equipo fadeInUp wow">
-                    <figure><img src="img/lambrin-interior2.png" alt="">
+                    <figure><img src="/img/lambrin-interior2.png" alt="">
                         <div class="tags">
                             <div class="nuevo">
                                 <h5>Nuevo</h5>
@@ -363,7 +360,7 @@
                     <p class="precio">$9,900</p>
                 </div>
                 <div class="equipo fadeInUp wow">
-                    <figure><img src="img/roca-pu2.png" alt="">
+                    <figure><img src="/img/roca-pu2.png" alt="">
                         <div class="tags">
                             <div class="nuevo">
                                 <h5>Nuevo</h5>
@@ -398,7 +395,7 @@
             <div class="products">
                 <div class="product">
                     <div class="product__info">
-                        <figure><img loading="lazy" src="img/lambrin-interior.png" alt="" /></figure>
+                        <figure><img loading="lazy" src="/img/lambrin-interior.png" alt="" /></figure>
                         <div class="product__info--data">
                             <h4 class="product__name">Nombre del producto</h4>
                             <div class="input-group">
@@ -501,16 +498,15 @@
         zoomImg.style.top = `${offsetY}%`;
         zoomImg.style.transform = "scale(1.4)";
     }
-</script>
 
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script>
+    const addToCartButton = document.getElementById("add__product");
+    const getProduct = document.getElementById("get_product");
     const quantity = document.getElementById("Qty");
-    const product = document.getElementById("productId");
+    const productId = document.getElementById("productId");
 
     function addToCart() {
         const params = {
-            product_id: product.value,
+            product_id: productId.value,
             quantity: quantity.value,
             "_token": "{{ csrf_token() }}",
         };

@@ -6,11 +6,15 @@
             <h4>Subtotal</h4>
             <p class="subtotal__amount">$ {{ CartService::getTotal() }} MXN</p>
         </div>
+        <div class="gastos__envio">
+            <p>Calculando gastos de envío</p>
+            <p class="subtotal__amount">$ {{ CartService::getTotal() }} MXN</p>
+        </div>
         <div class="total">
             <h3>Total</h3>
             <p class="total__amount">$ {{ CartService::getTotal() }} MXN</p>
         </div>
-        <a href="/informacion" class="button">Finalizar Compra</a>
+        <a href="/informacion" class="button__black">Finalizar Compra</a>
         <div class="cart__bottom">
             <p><i class="fas fa-shield"></i>Compra segura</p>
         </div>

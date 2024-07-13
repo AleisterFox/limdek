@@ -1,4 +1,5 @@
 @use('App\Services\CartService')
+
 <div class="left">
     <div class="buying__cart">
         <div class="top">
@@ -7,23 +8,25 @@
         </div>
 
         @foreach(CartService::getProducts() as $product)
-        <div class="product" style="margin-bottom: 10px;">
-            <i class="fas fa-x removeProduct" data-id="{{ $product['product']->id }}"></i>
-            <figure>
-                <img src="{{ asset('/images/' . $product['product']->image) }}" alt="Imagen" />
-            </figure>
+        <div class="product">
+            <figure><img src="{{ asset('/images/' . $product['product']->image) }}" alt="" /></figure>
             <div class="product__information">
                 <h3 class="product__name">{{ $product['product']->name }}</h3>
-                <p class="product__price">$ {{ $product['product']->price }} MXN</p>
-                <div class="input-group">
-                    <input type="number" name="Qty" value="{{ $product['quantity'] }}" class="product-quantity" data-id="{{ $product['product']->id }}" />
-                    <button class="decrement" data-id="{{ $product['product']->id }}">-</button>
-                    <button class="increment" data-id="{{ $product['product']->id }}">+</button>
+                <div class="product__information--container">
+
+                    <div class="input-group">
+                        <input type="number" value="{{ $product['quantity'] }}" name="Qty" data-id="{{ $product['product']->id }}" />
+                        <button class="decrement" data-id="{{ $product['product']->id }}">-</button>
+                        <button class="increment" data-id="{{ $product['product']->id }}">+</button>
+                    </div>
+                    <p class="product__price">$ {{ $product['product']->price }} MXN</p>
                 </div>
             </div>
+            <i class="fas fa-x removeProduct" data-id="{{ $product['product']->id }}"></i>
         </div>
-        @endforeach
-        <div class="total__bill">$ {{ CartService::getTotal() }} MXN</div>
-        <a href="/" class="back"><i class="fas fa-chevron-left"></i>Volver al producto</a>
+
+        @endforeach 
+        <!-- <div class="total__bill">$ 0.00 MXN</div> -->
+        <a href="/producto/{{ $product['product']->id }}" class="back"><i class="fas fa-chevron-left"></i>Volver al producto</a>
     </div>
 </div>

@@ -20,18 +20,12 @@
                 <div class="filters">
                     <div class="size">
                         <h4>Categorias</h4>
-                        <div class="size-option"><input type="checkbox" name="" id="op1" checked><label for="op1">Lambrin WPC interior</label></div>
-                        <div class="size-option"><input type="checkbox" name="" id="op2"><label for="op2">Material WPC Exterior</label></div>
-                        <div class="size-option"><input type="checkbox" name="" id="op3"><label for="op3">Material PU</label></div>
-                        <div class="size-option"><input type="checkbox" name="" id="op4"><label for="op4">Láminas Tipo Mármol</label></div>
-                        <hr>
-                        <div class="size-option"><input type="checkbox" name="" id="op5"><label for="op5">Piso SPC</label></div>
-                        <div class="size-option"><input type="checkbox" name="" id="op6"><label for="op6">WPC Interior</label></div>
-                        <div class="size-option"><input type="checkbox" name="" id="op7"><label for="op7">WPC Exterior</label></div>
-                        <div class="size-option"><input type="checkbox" name="" id="op8"><label for="op8">PVC Mármol</label></div>
-                        <div class="size-option"><input type="checkbox" name="" id="op9"><label for="op9">Macetas</label></div>
-                        <div class="size-option"><input type="checkbox" name="" id="op10"><label for="op10">Material PU</label></div>
-                        <div class="size-option"><input type="checkbox" name="" id="op11"><label for="op11">Lámpara de Corrugado</label></div>
+                        @foreach($categories as $category)
+                            <div class="size-option">
+                                <input type="checkbox" name="category-{{ $category->id }}">
+                                <label for="category-{{ $category->id }}">{{ $category->name }}</label>
+                            </div>
+                        @endforeach
                     </div>
 
                     <!-- <div class="price">
@@ -58,6 +52,9 @@
             </div>
 
             <div class="micros prd">
+                @if ($products->count() > 0)
+                    @each('landing._product', $products, 'product')
+                @else
                 <a href="/producto">
                     <div class="equipo fadeIn wow sdelay">
                         <figure><img src="img/lambrin-interior.png" alt="">
@@ -79,178 +76,9 @@
                         <p class="precio">$9,900</p>
                     </div>
                 </a>
-                <a href="/producto">
-                    <div class="equipo fadeIn wow sdelay">
-                        <figure><img src="img/lambrin-interior.png" alt="">
-                            <div class="tags">
-                                <div class="nuevo">
-                                    <h5>Nuevo</h5>
-                                </div>
-                                <div class="agotado">
-                                    <h5>Agotado</h5>
-                                </div>
-                            </div>
-                        </figure>
-                        <div class="calificacion">
-                            <p>5.0</p>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <h5>Lambrin WPC Interior
-                            Color Avellana Fondo Negro</h5>
-                        <p class="precio">$9,900</p>
-                    </div>
-                </a>
-                <a href="/producto">
-                    <div class="equipo fadeIn wow sdelay">
-                        <figure><img src="img/lambrin-interior.png" alt="">
-                            <div class="tags">
-                                <div class="nuevo">
-                                    <h5>Nuevo</h5>
-                                </div>
-                                <div class="agotado">
-                                    <h5>Agotado</h5>
-                                </div>
-                            </div>
-                        </figure>
-                        <div class="calificacion">
-                            <p>5.0</p>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <h5>Lambrin WPC Interior
-                            Color Avellana Fondo Negro</h5>
-                        <p class="precio">$9,900</p>
-                    </div>
-                </a>
-                <a href="/producto">
-                    <div class="equipo fadeIn wow sdelay">
-                        <figure><img src="img/lambrin-interior.png" alt="">
-                            <div class="tags">
-                                <div class="nuevo">
-                                    <h5>Nuevo</h5>
-                                </div>
-                                <div class="agotado">
-                                    <h5>Agotado</h5>
-                                </div>
-                            </div>
-                        </figure>
-                        <div class="calificacion">
-                            <p>5.0</p>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <h5>Lambrin WPC Interior
-                            Color Avellana Fondo Negro</h5>
-                        <p class="precio">$9,900</p>
-                    </div>
-                </a>
-                <a href="/producto">
-                    <div class="equipo fadeIn wow sdelay">
-                        <figure><img src="img/lambrin-interior.png" alt="">
-                            <div class="tags">
-                                <div class="nuevo">
-                                    <h5>Nuevo</h5>
-                                </div>
-                                <div class="agotado">
-                                    <h5>Agotado</h5>
-                                </div>
-                            </div>
-                        </figure>
-                        <div class="calificacion">
-                            <p>5.0</p>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <h5>Lambrin WPC Interior
-                            Color Avellana Fondo Negro</h5>
-                        <p class="precio">$9,900</p>
-                    </div>
-                </a>
-                <a href="/producto">
-                    <div class="equipo fadeIn wow sdelay">
-                        <figure><img src="img/lambrin-interior.png" alt="">
-                            <div class="tags">
-                                <div class="nuevo">
-                                    <h5>Nuevo</h5>
-                                </div>
-                                <div class="agotado">
-                                    <h5>Agotado</h5>
-                                </div>
-                            </div>
-                        </figure>
-                        <div class="calificacion">
-                            <p>5.0</p>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <h5>Lambrin WPC Interior
-                            Color Avellana Fondo Negro</h5>
-                        <p class="precio">$9,900</p>
-                    </div>
-                </a>
-                <a href="/producto">
-                    <div class="equipo fadeIn wow sdelay">
-                        <figure><img src="img/lambrin-interior.png" alt="">
-                            <div class="tags">
-                                <div class="nuevo">
-                                    <h5>Nuevo</h5>
-                                </div>
-                                <div class="agotado">
-                                    <h5>Agotado</h5>
-                                </div>
-                            </div>
-                        </figure>
-                        <div class="calificacion">
-                            <p>5.0</p>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <h5>Lambrin WPC Interior
-                            Color Avellana Fondo Negro</h5>
-                        <p class="precio">$9,900</p>
-                    </div>
-                </a>
-                <a href="/producto">
-                    <div class="equipo fadeIn wow sdelay">
-                        <figure><img src="img/lambrin-interior.png" alt="">
-                            <div class="tags">
-                                <div class="nuevo">
-                                    <h5>Nuevo</h5>
-                                </div>
-                                <div class="agotado">
-                                    <h5>Agotado</h5>
-                                </div>
-                            </div>
-                        </figure>
-                        <div class="calificacion">
-                            <p>5.0</p>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <h5>Lambrin WPC Interior
-                            Color Avellana Fondo Negro</h5>
-                        <p class="precio">$9,900</p>
-                    </div>
-                </a>
-                <a href="/producto">
-                    <div class="equipo fadeIn wow sdelay">
-                        <figure><img src="img/lambrin-interior.png" alt="">
-                            <div class="tags">
-                                <div class="nuevo">
-                                    <h5>Nuevo</h5>
-                                </div>
-                                <div class="agotado">
-                                    <h5>Agotado</h5>
-                                </div>
-                            </div>
-                        </figure>
-                        <div class="calificacion">
-                            <p>5.0</p>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <h5>Lambrin WPC Interior
-                            Color Avellana Fondo Negro</h5>
-                        <p class="precio">$9,900</p>
-                    </div>
-                </a>
+                @endif
             </div>
-
         </div>
-
     </section>
 
     @include('landing._about')

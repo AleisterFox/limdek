@@ -25,6 +25,9 @@ return new class extends Migration
             $table->string('contact_tiktok')->nullable();
             $table->text('contact_address')->nullable();
 
+            $table->string('contact_latitude')->nullable();
+            $table->string('contact_longitude')->nullable();
+
             $table->string('about_us', 900)->default("Empresa dedicados a la especialización en la venta de productos WPC y otros materiales para la decoración y construcción. Ofrecemos una amplia gama de opciones de alta calidad a nuestros clientes para ayudarles a transformar sus espacios en algo hermoso y funcional.");
 
             $table->string('about_image')->default('https://via.placeholder.com/600x400');

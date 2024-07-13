@@ -2,8 +2,8 @@
   <nav>
     <a href="index.php">
       <picture>
-        <source media="(max-width: 768px)" srcset="img/icono.png" />
-        <img loading="lazy" src="img/logo.png" alt="" />
+        <source media="(max-width: 768px)" srcset="/img/icono.png" />
+        <img loading="lazy" src="/img/logo.png" alt="" />
       </picture>
     </a>
 

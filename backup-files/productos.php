@@ -315,7 +315,7 @@
           <p>Hacemos envíos a toda la República Mexicana.</p>
         </div>
         <div class="feature">
-          <span><img src="img/servicio-icon.png" alt=""></span>
+          <span><img src="/img/servicio-icon.png" alt=""></span>
           <h4>Servicio al Cliente</h4>
           <p>¿Una pregunta? Comuníquese con nosotros al 123 456 7890</p>
         </div>

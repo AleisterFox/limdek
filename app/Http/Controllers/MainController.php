@@ -26,12 +26,17 @@ class MainController extends Controller
 
     public function productos()
     {
-        return view('landing.productos');
+        return view('landing.productos', [
+            'categories' => Category::all(),
+            'products' => Product::all()
+        ]);
     }
 
-    public function producto()
+    public function producto(Product $product)
     {
-        return view('landing.producto');
+        return view('landing.producto', [
+            'product' => $product
+        ]);
     }
 
     public function nosotros()
@@ -41,9 +46,9 @@ class MainController extends Controller
 
     public function carrito(CartService $cartService)
     {
-        // if (CartService::getCount() === 0) {
-        //     return redirect('/');
-        // }
+        if (CartService::getCount() === 0) {
+            return redirect('/');
+        }
 
         return view('landing.carrito', [
             'products' => $cartService->getProducts()
@@ -52,9 +57,9 @@ class MainController extends Controller
 
     public function informacion(CartService $cartService)
     {
-        // if (CartService::getCount() === 0) {
-        //     return redirect('/');
-        // }
+        if (CartService::getCount() === 0) {
+            return redirect('/');
+        }
         
         return view('landing.informacion');
     }

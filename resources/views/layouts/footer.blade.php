@@ -5,7 +5,7 @@ $instance = LadingPageConfig::getInstance();
 <footer>
   <div class="top">
     <figure>
-      <img src="./img/logo-white.png" alt="">
+      <img src="/img/logo-white.png" alt="">
     </figure>
 
     <div class="tienda">
@@ -54,6 +54,6 @@ $instance = LadingPageConfig::getInstance();
     </div>
   </div>
   <div class="bottom">
-    <p>2024&copy; TODOS LOS DERECHOS RESERVADOS <img src="./img/Icono_molcajete.png" alt=""></p>
+    <p>2024&copy; TODOS LOS DERECHOS RESERVADOS <img src="/img/Icono_molcajete.png" alt=""></p>
   </div>
 </footer>
