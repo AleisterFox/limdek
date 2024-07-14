@@ -621,6 +621,18 @@ $instace = LadingPageConfig::getInstance();
 
     <section id="servicios">
         <h2 class="fadeInUp wow">Beneficios Materiales WPC</h2>
+        @if ($instace->banner_image_1)
+        <div class="container">
+            <div class="left">
+                <figure class="show wow">
+                    <img src="{{ asset('images/' . $instace->banner_image_1) }}" alt="">
+                </figure>
+            </div>
+            <div class="right fadeInUp wow">
+                <p>{!! $instace->banner_text_1 !!}</p>
+            </div>
+        </div>
+        @else 
         <div class="container">
             <div class="left">
                 <figure class="show wow">
@@ -633,9 +645,22 @@ $instace = LadingPageConfig::getInstance();
                 <p>Además, no requieren pintura ni sellado, lo que los hace más duraderos y menos propensos a la degradación a lo largo del tiempo.</p>
             </div>
         </div>
+        @endif
 
+        @if ($instace->banner_image_2)
         <div class="container fondo">
+            <div class="right fadeInUp wow">
+                <p>{!! $instace->banner_text_2 !!}</p>
+            </div>
 
+            <div class="left">
+                <figure class="show wow">
+                    <img src="{{ asset('images/' . $instace->banner_image_2) }}" alt="">
+                </figure>
+            </div>
+        </div>
+        @else
+        <div class="container fondo">
             <div class="right fadeInUp wow">
                 <h2>Bajo
                     mantenimiento</h2>
@@ -648,8 +673,20 @@ $instace = LadingPageConfig::getInstance();
                 </figure>
             </div>
         </div>
+        @endif
 
-
+        @if ($instace->banner_image_3)
+        <div class="container">
+            <div class="left">
+                <figure class="show wow">
+                    <img src="{{ asset('images/' . $instace->banner_image_3) }}" alt="">
+                </figure>
+            </div>
+            <div class="right fadeInUp wow">
+                <p>{!! $instace->banner_text_3 !!}</p>
+            </div>
+        </div>
+        @else
         <div class="container">
             <div class="left">
                 <figure class="show wow">
@@ -664,9 +701,22 @@ $instace = LadingPageConfig::getInstance();
                 <p>Los materiales WPC pueden ser reciclados después de su uso, lo que los hace más sostenibles que otros materiales de construcción no reciclables.</p>
             </div>
         </div>
+        @endif
 
+        @if ($instace->banner_image_4)
         <div class="container fondo">
+            <div class="right fadeInUp wow">
+                <p>{!! $instace->banner_text_4 !!}</p>
+            </div>
 
+            <div class="left">
+                <figure class="show wow">
+                    <img src="{{ asset('images/' . $instace->banner_image_4) }}" alt="">
+                </figure>
+            </div>
+        </div>
+        @else
+        <div class="container fondo">
             <div class="right fadeInUp wow">
                 <h2>Bajo
                     mantenimiento</h2>
@@ -679,6 +729,7 @@ $instace = LadingPageConfig::getInstance();
                 </figure>
             </div>
         </div>
+        @endif
     </section>
 
     <!-- <section id="us">

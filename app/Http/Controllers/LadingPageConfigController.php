@@ -36,6 +36,34 @@ class LadingPageConfigController extends Controller
             $file->move(public_path('images'), $fileName);
             $params['card_3_image'] = $fileName;
         }
+
+        if ($request->hasFile('banner_image_1')) {
+            $fileName = time() . $request->banner_image_1?->getClientOriginalName();
+            $file = $request->file('banner_image_1');
+            $file->move(public_path('images'), $fileName);
+            $params['banner_image_1'] = $fileName;
+        }
+
+        if ($request->hasFile('banner_image_2')) {
+            $fileName = time() . $request->banner_image_2?->getClientOriginalName();
+            $file = $request->file('banner_image_2');
+            $file->move(public_path('images'), $fileName);
+            $params['banner_image_2'] = $fileName;
+        }
+
+        if ($request->hasFile('banner_image_3')) {
+            $fileName = time() . $request->banner_image_3?->getClientOriginalName();
+            $file = $request->file('banner_image_3');
+            $file->move(public_path('images'), $fileName);
+            $params['banner_image_3'] = $fileName;
+        }
+
+        if ($request->hasFile('banner_image_4')) {
+            $fileName = time() . $request->banner_image_4?->getClientOriginalName();
+            $file = $request->file('banner_image_4');
+            $file->move(public_path('images'), $fileName);
+            $params['banner_image_4'] = $fileName;
+        }
     
         $config = LadingPageConfig::getInstance();
         $config->update($params);

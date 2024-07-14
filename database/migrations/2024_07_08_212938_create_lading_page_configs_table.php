@@ -28,6 +28,18 @@ return new class extends Migration
             $table->string('contact_latitude')->nullable();
             $table->string('contact_longitude')->nullable();
 
+            $table->string('banner_image_1')->nullable();
+            $table->string('banner_text_1')->nullable();
+
+            $table->string('banner_image_2')->default();
+            $table->string('banner_text_2')->nullable();
+
+            $table->string('banner_image_3')->default();
+            $table->string('banner_text_3')->nullable();
+
+            $table->string('banner_image_4')->default();
+            $table->string('banner_text_4')->nullable();
+
             $table->string('about_us', 900)->default("Empresa dedicados a la especialización en la venta de productos WPC y otros materiales para la decoración y construcción. Ofrecemos una amplia gama de opciones de alta calidad a nuestros clientes para ayudarles a transformar sus espacios en algo hermoso y funcional.");
 
             $table->string('about_image')->default('https://via.placeholder.com/600x400');

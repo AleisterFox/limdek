@@ -54,6 +54,89 @@ $instance = LadingPageConfig::getInstance();
         </tbody>
     </table>
 
+    <h2 class="mt-4">Apartado: Beneficios Materiales WPC</h2>
+    <table class="table">
+        <thead></thead>
+        <tbody>
+            <tr>
+                <td>
+                    <div class="row">
+                        <label for="">Imagen de banner 1</label>
+                        <div class="col-sm-8">
+                            <input type="file" class="form-control" name="banner_image_1" id="email" form="contactForm" value="{{ $instance->banner_image_1 }}">
+                        </div>
+                        <div class="col-sm-4">
+                            @if ($instance->banner_image_1)
+                            <img src="{{ asset('images/' . $instance->banner_image_1) }}" alt="" style="width: 60px">
+                            @endif
+                        </div>
+                        <div class="col-sm-12">
+                            <label for="adoption_banner_button_text_1">Texto imagen</label>
+                            <textarea name="banner_text_1" id="banner_text_1" class="form-control" form="contactForm"></textarea>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="row">
+                        <label for="">Imagen de banner 2</label>
+                        <div class="col-sm-8">
+                            <input type="file" class="form-control" name="banner_image_2" id="email" form="contactForm" value="{{ $instance->banner_image_2 }}">
+                        </div>
+                        <div class="col-sm-4">
+                            @if ($instance->banner_image_2)
+                            <img src="{{ asset('images/' . $instance->banner_image_2) }}" alt="" style="width: 60px">
+                            @endif
+                        </div>
+                        <div class="col-sm-12">
+                            <label for="adoption_banner_button_text_1">Texto imagen</label>
+                            <textarea name="banner_text_2" id="banner_text_2" class="form-control" form="contactForm"></textarea>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="row">
+                        <label for="">Imagen de banner 3</label>
+                        <div class="col-sm-8">
+                            <input type="file" class="form-control" name="banner_image_3" id="email" form="contactForm" value="{{ $instance->banner_image_3 }}">
+                        </div>
+                        <div class="col-sm-4">
+                            @if ($instance->banner_image_3)
+                            <img src="{{ asset('images/' . $instance->banner_image_3) }}" alt="" style="width: 60px">
+                            @endif
+                        </div>
+                        <div class="col-sm-12">
+                            <label for="adoption_banner_button_text_1">Texto imagen</label>
+                            <textarea name="banner_text_3" id="banner_text_3" class="form-control" form="contactForm"></textarea>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="row">
+                        <label for="">Imagen de banner 4</label>
+                        <div class="col-sm-8">
+                            <input type="file" class="form-control" name="banner_image_4" id="email" form="contactForm" value="{{ $instance->banner_image_4 }}">
+                        </div>
+                        <div class="col-sm-4">
+                            @if ($instance->banner_image_4)
+                            <img src="{{ asset('images/' . $instance->banner_image_4) }}" alt="" style="width: 60px">
+                            @endif
+                        </div>
+                        <div class="col-sm-12">
+                            <label for="adoption_banner_button_text_1">Texto imagen</label>
+                            <textarea name="banner_text_4" id="banner_text_4" class="form-control" form="contactForm"></textarea>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
     <h2 class="mt-4">FAQ</h2>
     <table clss="table table-striped" style="width:100%">
         <thead>
@@ -127,11 +210,44 @@ $instance = LadingPageConfig::getInstance();
     $(document).ready(function() {
         CKEDITOR.replace('faq');
 
+        CKEDITOR.replace('banner_text_1');
+        CKEDITOR.replace('banner_text_2');
+        CKEDITOR.replace('banner_text_3');
+        CKEDITOR.replace('banner_text_4');
+
         CKEDITOR.instances.faq.on('instanceReady', function() {
             if ($(".cke_notification_close").length > 0)
                 $(".cke_notification_close")[0].click();
 
             CKEDITOR.instances.faq.setData(`{!! $instance->faq !!}`);
+        });
+
+        CKEDITOR.instances.banner_text_1.on('instanceReady', function() {
+            if ($(".cke_notification_close").length > 0)
+                $(".cke_notification_close")[0].click();
+
+            CKEDITOR.instances.banner_text_1.setData(`{!! $instance->banner_text_1 !!}`);
+        });
+
+        CKEDITOR.instances.banner_text_2.on('instanceReady', function() {
+            if ($(".cke_notification_close").length > 1)
+                $(".cke_notification_close")[1].click();
+
+            CKEDITOR.instances.banner_text_2.setData(`{!! $instance->banner_text_2 !!}`);
+        });
+
+        CKEDITOR.instances.banner_text_3.on('instanceReady', function() {
+            if ($(".cke_notification_close").length > 2)
+                $(".cke_notification_close")[2].click();
+
+            CKEDITOR.instances.banner_text_3.setData(`{!! $instance->banner_text_3 !!}`);
+        });
+
+        CKEDITOR.instances.banner_text_4.on('instanceReady', function() {
+            if ($(".cke_notification_close").length > 3)
+                $(".cke_notification_close")[3].click();
+
+            CKEDITOR.instances.banner_text_4.setData(`{!! $instance->banner_text_4 !!}`);
         });
     });
 </script>
