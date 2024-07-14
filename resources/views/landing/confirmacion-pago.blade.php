@@ -24,32 +24,7 @@
 
             </div>
             <div class="right">
-                <div class="cart__total">
-                    <h2>Total del carrito</h2>
-
-                    <div class="cart__products">
-                        <div class="cart__products--product">
-                            <figure><img src="img/lambrin-interior.png" alt=""></figure>
-                            <div class="cart__product--description">
-                                <h4>Lambrin WPC Interior Color Avellana Fondo Negro</h4>
-                            </div>
-                            <p>$0.00 MXN</p>
-                        </div>
-                    </div>
-
-                    <div class="subtotal">
-                        <p>Subtotal</p>
-                        <p class="subtotal__amount">$ 0.00 MXN</p>
-                    </div>
-                    <div class="gastos__envio">
-                        <p>Calculando gastos de envío</p>
-                        <p class="subtotal__amount">$ 0.00 MXN</p>
-                    </div>
-                    <div class="total">
-                        <h3>Total</h3>
-                        <p class="total__amount">$ 0.00 MXN</p>
-                    </div>
-                </div>
+                @include('landing._total_carrito')
             </div>
         </div>
     </section>

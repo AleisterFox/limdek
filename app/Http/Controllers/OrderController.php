@@ -31,18 +31,24 @@ class OrderController extends Controller
         $request->validate([
             'name' => 'required',
             'last_name' => 'required',
-            'phone' => 'required',
-            'email' => 'required',
+            'contact' => 'required',
             'address' => 'required',
             'state' => 'required',
             'city' => 'required',
+            'agreement' => 'required'
         ]);
 
         $params = $request->all();
+
+        if ($request->agreement == "on") {
+            $params['agreement'] = true;
+        } else {
+            $params['agreement'] = false;
+        }
+
         $params['total'] = $cartService->getTotal();
 
         $order = Order::create($params);
-
         foreach($cartService->getProducts() as $product) {
             $order->products()->attach(
                 $product['product']->id,
@@ -75,7 +81,7 @@ class OrderController extends Controller
                 "failure" => route('order.callback', ['order' => $order, 'status' => 'failure']),
                 "pending" => route('order.callback', ['order' => $order, 'status' => 'pending'])
             ],
-            "statement_descriptor" => "Huellitas",
+            "statement_descriptor" => "Limdek",
             "external_reference" => "CDP001"
         ]);
 

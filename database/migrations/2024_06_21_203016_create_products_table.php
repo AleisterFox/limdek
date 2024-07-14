@@ -32,6 +32,8 @@ return new class extends Migration
             $table->string('weight')->nullable();
             $table->string('box_size')->nullable();
 
+            $table->string('installation_video')->nullable();
+
             $table->timestamps();
         });
     }

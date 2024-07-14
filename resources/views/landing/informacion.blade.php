@@ -36,8 +36,8 @@
                     </div>
 
                     <div class="customer__info">
-                        <form action="">
-                            <input type="text" name="contact" id="contact" placeholder="Email o número de teléfono movil" required>
+                        <form>
+                            <input type="text" name="contact" id="contact" placeholder="Número de teléfono movil" form="orderForm" required>
                         </form>
                     </div>
                 </div>
@@ -48,27 +48,20 @@
                     </div>
 
                     <div class="customer__info">
-                        <form action="">
-                            <select name="" id="">
-                                <option value="">País / Región</option>
-                                <option value="">opcion1</option>
-                                <option value="">opcion2</option>
-                                <option value="">opcion3</option>
-                                <option value="">opcion4</option>
-                                <option value="">opcion5</option>
-                            </select>
+                        <form id="orderForm" action="{{ route('order.store') }}" method="post">
+                            @csrf
                             <input type="text" name="name" id="name" placeholder="Nombre" required>
-                            <input type="text" name="lastname" id="lastname" placeholder="Apellido" required>
-                            <input type="text" name="empresa" id="empresa" placeholder="Empresa (opcional)">
+                            <input type="text" name="last_name" id="last_name" placeholder="Apellido" required>
+                            <input type="text" name="company" id="company" placeholder="Empresa (opcional)">
                             <input type="text" name="address" id="address" placeholder="Dirección" required>
-                            <input type="text" name="type" id="type" placeholder="Casa, apartamento, etc. (opcional)">
-                            <input type="number" name="postal" id="postal" placeholder="Código postal" required>
+                            <input type="text" name="house_type" id="house_type" placeholder="Casa, apartamento, etc. (opcional)">
+                            <input type="number" name="zip" id="zip" placeholder="Código postal" required>
                             <input type="text" name="city" id="city" placeholder="Ciudad" required>
                             <select name="state" id="state">
                                 <option value="javascript:void(0);">Estado</option>
                             </select>
                             <div class="store-data">
-                                <input type="checkbox" name="store-data" id="store-data">
+                                <input type="checkbox" name="agreement" id="agreement">
                                 <label for="store-data">Permito guardar mis datos de forma segura para mis siguientes pedidos.</label>
                             </div>
                         </form>
@@ -76,39 +69,14 @@
 
                     <div class="bottom">
                         <a href="/carrito" class="back"><i class="fas fa-chevron-left"></i>Volver a carrito</a>
-                        <a href="/pago" class="button__black">Continuar</a>
+                        <button form="orderForm" type="submit" class="button__black">Continuar</button>
                     </div>
                 </div>
             </div>
 
 
             <div class="right">
-                <div class="cart__total">
-                    <h2>Total del carrito</h2>
-
-                    <div class="cart__products">
-                        <div class="cart__products--product">
-                            <figure><img src="img/lambrin-interior.png" alt=""></figure>
-                            <div class="cart__product--description">
-                                <h4>Lambrin WPC Interior Color Avellana Fondo Negro</h4>
-                            </div>
-                            <p>$0.00 MXN</p>
-                        </div>
-                    </div>
-
-                    <div class="subtotal">
-                        <p>Subtotal</p>
-                        <p class="subtotal__amount">$ 0.00 MXN</p>
-                    </div>
-                    <div class="gastos__envio">
-                        <p>Calculando gastos de envío</p>
-                        <p class="subtotal__amount">$ 0.00 MXN</p>
-                    </div>
-                    <div class="total">
-                        <h3>Total</h3>
-                        <p class="total__amount">$ 0.00 MXN</p>
-                    </div>
-                </div>
+                @include('landing._total_carrito')
             </div>
         </div>
     </section>

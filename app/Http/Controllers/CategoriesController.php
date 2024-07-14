@@ -37,7 +37,16 @@ class CategoriesController extends Controller
 
     public function update(Request $request, Category $categoria)
     {
-        $categoria->update($request->all());
+        $params = $request->all();
+
+        if ($request->hasFile('image')) {
+            $fileName = time() . $request->image->getClientOriginalName();
+            $file = $request->file('image');
+            $file->move(public_path('images'), $fileName);
+            $params['image'] = $fileName;
+        }
+
+        $categoria->update($params);
 
         return redirect()->route('categorias.index');
     }

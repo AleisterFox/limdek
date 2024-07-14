@@ -80,6 +80,7 @@
                             data-maintenance="{{ $product->maintenance }}"
                             data-weight="{{ $product->weight }}"
                             data-box_size="{{ $product->box_size }}"
+                            data-installation_video="{{ $product->installation_video }}"
                             >
                             <i class="fs-4 bi-grid"></i>
                         </button>
@@ -305,6 +306,7 @@
         var maintenance = $(this).data('maintenance');
         var weight = $(this).data('weight');
         var box_size = $(this).data('box_size');
+        var installation_video = $(this).data('installation_video');
 
         $("#productId").val(id);
 
@@ -325,6 +327,7 @@
         $("#updateProductModal #maintenance").val(maintenance);
         $("#updateProductModal #weight").val(weight);
         $("#updateProductModal #box_size").val(box_size);
+        $("#updateProductModal #installation_video").val(installation_video);
 
         $("#updateProductModal").modal('show');
     });
@@ -391,6 +394,7 @@
         var maintenance = $("#updateProductModal #maintenance").val();
         var weight = $("#updateProductModal #weight").val();
         var box_size = $("#updateProductModal #box_size").val();
+        var installation_video = $("#updateProductModal #installation_video").val();
 
         var formData = new FormData();
 
@@ -417,6 +421,7 @@
         formData.append('maintenance', maintenance);
         formData.append('weight', weight);
         formData.append('box_size', box_size);
+        formData.append('installation_video', installation_video);
 
         $.ajax({
             url: '/admin/productos/' + id,

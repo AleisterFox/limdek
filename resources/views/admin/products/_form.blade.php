@@ -36,6 +36,13 @@
         </div>
     </div>
 
+    <div class="col-sm-6">
+        <div class="mb-3">
+            <label for="installation_video" class="form-label">Video instalación</label>
+            <input type="text" class="form-control" id="installation_video" name="installation_video">
+        </div>
+    </div>
+
     <div class="col-sm-12">
         <div class="row">
             <div class="col-sm-3">

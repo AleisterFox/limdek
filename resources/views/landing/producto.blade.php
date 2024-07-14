@@ -214,7 +214,9 @@
                 <p>El WPC para interior es de fácil y rápida instalación, cualquier persona de mantenimiento o con habilidad de taladro lo puede instalar</p>
                 <p>Para recortar el material se puede utilizar una sierra eléctrica.
                     La caja incluye los clips que fijan los paneles a la pared.</p>
-                <a href="" class="button__secondary">Ver video de instalación</a>
+                @if ($product->installation_video)
+                    <a href="{{ $product->installation_video }}" class="button__secondary">Ver video de instalación</a>
+                @endif
             </div>
         </div>
     </section>

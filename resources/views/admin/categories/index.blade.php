@@ -19,6 +19,7 @@
             <tr>
                 <th>Id</th>
                 <th>Nombre</th>
+                <th>Imagen</th>
                 <th>Acciones</th>
             </tr>
         </thead>
@@ -26,13 +27,23 @@
             @foreach($categories as $category)
             <tr>
                 <td>{{ $category->id }}</td>
-                <td>{{ $category->name }}</td>
+                <td>
+                    <div>
+                        {{ $category->name }}
+                    </div>
+                </td>
+                <td>
+                    @if ($category->image)
+                        <img src="{{ asset('/images/'. $category->image) }}" alt="{{ $category->name }}" width="20">
+                    @endif
+                </td>
                 <td>
                     <button class="btn btn-info updateCategory"
                         data-id="{{ $category->id }}"
                         data-name="{{ $category->name }}"
                         data-parent_id="{{ $category->parent_id }}"
                         data-category_id="{{ $category->id }}"
+                        data-image="{{ asset('/images/'. $category->image) }}"
                     >
                         <i class="fs-4 bi-grid"></i>
                     </button>
@@ -121,18 +132,23 @@
         var id = $("#categoryId").val();
         var name = $("#updateCategoryModal #name").val();
         var parent_id = $("#updateCategoryModal #parent_id").val();
-        var category_id = $("#updateCategoryModal #category_id").val();
+        var formData = new FormData();
+
+        if ($("#updateCategoryModal #image")[0].files[0]) {
+            formData.append('image', $("#updateCategoryModal #image")[0].files[0]);
+        }
+        
+        formData.append('id', id);
+        formData.append('name', name);
+        formData.append('_token', "{{ csrf_token() }}");
+        formData.append('_method', "PUT");
 
         $.ajax({
             url: '/admin/categorias/' + id,
             type: 'POST',
-            data: {
-                "_token": "{{ csrf_token() }}",
-                _method:"PUT",
-                name: name,
-                parent_id: parent_id,
-                category_id: category_id
-            },
+            data: formData,
+            contentType: false,
+            processData: false,
             success: function(response) {
                 Swal.fire({
                     title: 'Actualizado!',
