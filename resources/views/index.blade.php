@@ -18,7 +18,9 @@ $instace = LadingPageConfig::getInstance();
                                 </figure>
                                 <div class="content">
                                     <h1>{{ $slide->title }}</h1>
-                                    <a href="" class="button">Conocer</a>
+                                    @if (false)
+                                        <a href="" class="button">Conocer</a>
+                                    @endif
                                 </div>
                             </li>
                         @endforeach
@@ -717,63 +719,49 @@ $instace = LadingPageConfig::getInstance();
         <div class="contenedor">
             <div class="texto">
                 <h2>FAQ</h2>
-                <p>Nos enorgullece ofrecer envíos a toda la República Mexicana.
-                    Para garantizarte la mejor entrega de tus materiales, trabajamos con empresas especializadas en transporte de muebles.</p>
-                <p>El tiempo estimado de entrega es de 4 a 15 días hábiles, teniendo en cuenta que el
-                    tamaño de los materiales es irregular. ¡Te garantizamos un servicio seguro y confiable
-                    para que tus materiales lleguen a su destino en perfecto estado!</p>
-                <p>Nuestro servicio de atención al cliente está disponible de lunes a viernes de 10:00 a. m. a
-                    7:00 p.m. y sábados de 10:00 a.m. a 2:00 p.m.</p>
+                <p>{!! $instace->faq !!}</p>
             </div>
             <div class="container">
+                @if ($instace->question_1)
                 <details class="fadeInRight wow">
                     <summary>
-                        <h5>¿Hacen envíos internacionales?</h5> <i class="fas fa-chevron-down"></i>
+                        <h5>{{ $instace->question_1 }}</h5> <i class="fas fa-chevron-down"></i>
                     </summary>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus possimus iure mollitia, necessitatibus sit blanditiis obcaecati tempore consequatur vero! Atque amet ipsum nisi voluptate sed illo in voluptatem aliquam quisquam.</p>
+                    <p>{{ $instace->answer_1 }}</p>
                 </details>
+                @endif
+                @if ($instace->question_2)
                 <details class="fadeInRight wow">
                     <summary>
-                        <h5>¿Cuánto tiempo tarda en llegar mi paquete?</h5> <i class="fas fa-chevron-down"></i>
+                        <h5>{{ $instace->question_2 }}</h5> <i class="fas fa-chevron-down"></i>
                     </summary>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus possimus iure mollitia, necessitatibus sit blanditiis obcaecati tempore consequatur vero! Atque amet ipsum nisi voluptate sed illo in voluptatem aliquam quisquam.</p>
+                    <p>{{ $instace->answer_1 }}</p>
                 </details>
+                @endif
+                @if ($instace->question_3)
                 <details class="fadeInRight wow">
                     <summary>
-                        <h5>¿Cuánto tiempo tarda en llegar mi paquete?</h5> <i class="fas fa-chevron-down"></i>
+                        <h5>{{ $instace->question_3 }}</h5> <i class="fas fa-chevron-down"></i>
                     </summary>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus possimus iure mollitia, necessitatibus sit blanditiis obcaecati tempore consequatur vero! Atque amet ipsum nisi voluptate sed illo in voluptatem aliquam quisquam.</p>
+                    <p>{{ $instace->answer_3 }}</p>
                 </details>
+                @endif
+                @if ($instace->question_4)
                 <details class="fadeInRight wow">
                     <summary>
-                        <h5>¿Por qué mi envío tarda más que el promedio?</h5> <i class="fas fa-chevron-down"></i>
+                        <h5>{{ $instace->question_4 }}</h5> <i class="fas fa-chevron-down"></i>
                     </summary>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus possimus iure mollitia, necessitatibus sit blanditiis obcaecati tempore consequatur vero! Atque amet ipsum nisi voluptate sed illo in voluptatem aliquam quisquam.</p>
+                    <p>{{ $instace->answer_3 }}</p>
                 </details>
+                @endif
+                @if ($instace->question_5)
                 <details class="fadeInRight wow">
                     <summary>
-                        <h5>¿Hay alguna forma de acelerar el envío de mi paquete irregular?</h5> <i class="fas fa-chevron-down"></i>
+                        <h5>{{ $instace->question_5 }}</h5> <i class="fas fa-chevron-down"></i>
                     </summary>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus possimus iure mollitia, necessitatibus sit blanditiis obcaecati tempore consequatur vero! Atque amet ipsum nisi voluptate sed illo in voluptatem aliquam quisquam.</p>
+                    <p>{{ $instace->answer_5 }}</p>
                 </details>
-                <details class="fadeInRight wow">
-                    <summary>
-                        <h5>¿Qué pasa si mi paquete no llega en el plazo de 15 días hábiles?</h5> <i class="fas fa-chevron-down"></i>
-                    </summary>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus possimus iure mollitia, necessitatibus sit blanditiis obcaecati tempore consequatur vero! Atque amet ipsum nisi voluptate sed illo in voluptatem aliquam quisquam.</p>
-                </details>
-                <details class="fadeInRight wow">
-                    <summary>
-                        <h5>Lorem Ipsum</h5> <i class="fas fa-chevron-down"></i>
-                    </summary>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus possimus iure mollitia, necessitatibus sit blanditiis obcaecati tempore consequatur vero! Atque amet ipsum nisi voluptate sed illo in voluptatem aliquam quisquam.</p>
-                </details>
-                <details class="fadeInRight wow">
-                    <summary>
-                        <h5>Lorem Ipsum</h5> <i class="fas fa-chevron-down"></i>
-                    </summary>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus possimus iure mollitia, necessitatibus sit blanditiis obcaecati tempore consequatur vero! Atque amet ipsum nisi voluptate sed illo in voluptatem aliquam quisquam.</p>
-                </details>
+                @endif
             </div>
         </div>
     </section>

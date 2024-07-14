@@ -53,6 +53,64 @@ $instance = LadingPageConfig::getInstance();
             </tr>
         </tbody>
     </table>
+
+    <h2 class="mt-4">FAQ</h2>
+    <table clss="table table-striped" style="width:100%">
+        <thead>
+            <tr>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <div class="mt-3">
+                        <label for="faq">Descripción(Izq)</label>
+                        <textarea name="faq" id="faq" class="form-control" form="contactForm"></textarea>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 class="mt-4">Preguntas</h2>
+    <table class="table">
+        <thead>
+            <th></th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <input type="text" class="form-control" name="question_1" form="contactForm" value="{{ $instance->question_1 }}">
+                    <input type="text" class="form-control" name="answer_1" form="contactForm" value="{{ $instance->answer_1 }}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" class="form-control" name="question_5" form="contactForm" value="{{ $instance->question_5 }}">
+                    <input type="text" class="form-control" name="answer_5" form="contactForm" value="{{ $instance->answer_5 }}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" class="form-control" name="question_2" form="contactForm" value="{{ $instance->question_2 }}">
+                    <input type="text" class="form-control" name="answer_2" form="contactForm" value="{{ $instance->answer_2 }}">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="text" class="form-control" name="question_3" form="contactForm" value="{{ $instance->question_3 }}">
+                    <input type="text" class="form-control" name="answer_3" form="contactForm" value="{{ $instance->answer_3 }}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" class="form-control" name="question_4" form="contactForm" value="{{ $instance->question_4 }}">
+                    <input type="text" class="form-control" name="answer_4" form="contactForm" value="{{ $instance->answer_4 }}">
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </div>
 @if (false)
 <textarea name="" id="content-area"></textarea>
@@ -66,6 +124,15 @@ $instance = LadingPageConfig::getInstance();
 <script src="https://cdn.datatables.net/2.0.8/js/dataTables.bootstrap5.js"></script>
 <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
 <script>
-    CKEDITOR.replace('content-area');
+    $(document).ready(function() {
+        CKEDITOR.replace('faq');
+
+        CKEDITOR.instances.faq.on('instanceReady', function() {
+            if ($(".cke_notification_close").length > 0)
+                $(".cke_notification_close")[0].click();
+
+            CKEDITOR.instances.faq.setData(`{!! $instance->faq !!}`);
+        });
+    });
 </script>
 @endpush

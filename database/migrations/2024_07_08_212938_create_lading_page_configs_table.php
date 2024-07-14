@@ -40,6 +40,24 @@ return new class extends Migration
 
             $table->string('about_image_2')->default('https://via.placeholder.com/600x400');
 
+            $table->string('faq', 1900)->default("Nos enorgullece ofrecer envíos a toda la República Mexicana. Para garantizarte la mejor entrega de tus materiales, trabajamos con empresas especializadas en transporte de muebles.
+            El tiempo estimado de entrega es de 4 a 15 días hábiles, teniendo en cuenta que el tamaño de los materiales es irregular. ¡Te garantizamos un servicio seguro y confiable para que tus materiales lleguen a su destino en perfecto estado!Nuestro servicio de atención al cliente está disponible de lunes a viernes de 10:00 a. m. a 7:00 p.m. y sábados de 10:00 a.m. a 2:00 p.m.");
+
+            $table->string('question_1')->default('¿Hacen envíos internacionales?');
+            $table->string('answer_1')->default('No, por el momento solo hacemos envíos a toda la República Mexicana.');
+
+            $table->string('question_2')->default('¿Cuánto tiempo tarda en llegar mi paquete?');
+            $table->string('answer_2')->default('El tiempo estimado de entrega es de 4 a 15 días hábiles, teniendo en cuenta que el tamaño de los materiales es irregular.');
+
+            $table->string('question_3')->default('¿Por qué mi envío tarda más que el promedio?');
+            $table->string('answer_3')->default('El tiempo de entrega puede variar dependiendo de la ubicación de entrega y la disponibilidad de los materiales.');
+
+            $table->string('question_4')->default('¿Cómo puedo rastrear mi pedido?');
+            $table->string('answer_4')->default('Una vez que tu pedido haya sido enviado, recibirás un correo electrónico con el número de guía para que puedas rastrear tu paquete.');
+
+            $table->string('question_5')->default('¿Qué hago si mi paquete llega dañado?');
+            $table->string('answer_5')->default('Si tu paquete llega dañado, por favor contáctanos de inmediato para que podamos ayudarte a resolver el problema.');
+
             $table->timestamps();
         });
     }
