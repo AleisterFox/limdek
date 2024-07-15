@@ -79,6 +79,10 @@ class CartService
 
     public static function getProducts()
     {
+        if (!Session::has('cart')) {
+            return [];
+        }
+    
         return Session::get('cart');
     }
 
