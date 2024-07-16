@@ -18,9 +18,7 @@ $instace = LadingPageConfig::getInstance();
                                 </figure>
                                 <div class="content">
                                     <h1>{{ $slide->title }}</h1>
-                                    @if (false)
-                                        <a href="" class="button">Conocer</a>
-                                    @endif
+                                    <a href="{{ $slide->button_link }}" class="button">{{ $slide->button_text }}</a>
                                 </div>
                             </li>
                         @endforeach
@@ -73,27 +71,7 @@ $instace = LadingPageConfig::getInstance();
         </div>
     </section>
 
-    <section id="categorias">
-        <h2 class="fadeInUp wow">Categorías</h2>
-        <div class="container">
-            <a href="" class="category">
-                <figure class="show wow"><img src="img/lambrin.png" alt=""></figure>
-                <p>Lambrin WPC <br> Interior</p>
-            </a>
-            <a href="" class="category">
-                <figure class="show wow"><img src="img/material-wpc.png" alt=""></figure>
-                <p>Material WPC <br> Exterior</p>
-            </a>
-            <a href="" class="category">
-                <figure class="show wow"><img src="img/material-pu.png" alt=""></figure>
-                <p>Material PU</p>
-            </a>
-            <a href="" class="category">
-                <figure class="show wow"><img src="img/laminas-marmol.png" alt=""></figure>
-                <p>Láminas Tipo <br> Mármol</p>
-            </a>
-        </div>
-    </section>
+    @include('landing._categories')
 
     @include('landing._about')
 

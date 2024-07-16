@@ -40,17 +40,29 @@ return new class extends Migration
             $table->string('banner_image_4')->default();
             $table->string('banner_text_4')->nullable();
 
+            $table->string('card_title_1')->default('Envíos');
+            $table->string('card_text_1')->default('Hacemos envíos a toda la República Mexicana.');
+
+            $table->string('card_title_2')->default('Servicio al Cliente');
+            $table->string('card_text_2')->default('¿Una pregunta? Comuníquese con nosotros al 123 456 7890');
+
+            $table->string('card_title_3')->default('Ubicación');
+            $table->string('card_text_3')->nullable();
+
+            $table->string('card_title_4')->default('Pago Seguro');
+            $table->string('card_text_4')->default('Tu información de pago se procesa de forma segura');
+
             $table->string('about_us', 900)->default("Empresa dedicados a la especialización en la venta de productos WPC y otros materiales para la decoración y construcción. Ofrecemos una amplia gama de opciones de alta calidad a nuestros clientes para ayudarles a transformar sus espacios en algo hermoso y funcional.");
 
-            $table->string('about_image')->default('https://via.placeholder.com/600x400');
+            $table->string('about_image')->nullable();
 
             $table->string('about_text_1', 900)->default("Somos una empresa dedicada a la especialización en la venta de productos WPC y otros materiales para la decoración y construcción. Ofrecemos una amplia gama de opciones de alta calidad a nuestros clientes para ayudarles a transformar sus espacios en algo hermoso y funcional.");
 
-            $table->string('about_image_1')->default('https://via.placeholder.com/600x400');
+            $table->string('about_image_1')->nullable();
 
             $table->string('about_text_2', 900)->default("Nuestro objetivo es ofrecer productos de alta calidad a precios competitivos, con un servicio al cliente excepcional. Nos esforzamos por ser la mejor opción para nuestros clientes, brindando productos de alta calidad y un servicio al cliente excepcional.");
 
-            $table->string('about_image_2')->default('https://via.placeholder.com/600x400');
+            $table->string('about_image_2')->nullable();
 
             $table->string('faq', 1900)->default("Nos enorgullece ofrecer envíos a toda la República Mexicana. Para garantizarte la mejor entrega de tus materiales, trabajamos con empresas especializadas en transporte de muebles.
             El tiempo estimado de entrega es de 4 a 15 días hábiles, teniendo en cuenta que el tamaño de los materiales es irregular. ¡Te garantizamos un servicio seguro y confiable para que tus materiales lleguen a su destino en perfecto estado!Nuestro servicio de atención al cliente está disponible de lunes a viernes de 10:00 a. m. a 7:00 p.m. y sábados de 10:00 a.m. a 2:00 p.m.");

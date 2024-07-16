@@ -27,18 +27,20 @@ $instance = LadingPageConfig::getInstance();
     <div class="enlaces">
       <h4>Enlaces</h4>
       <ul>
-        <li><a href="">Piso SPC</a></li>
-        <li><a href="">WPC Interior</a></li>
-        <li><a href="">WPC Exterior</a></li>
-        <li><a href="">PVC Mármol</a></li>
-        <li><a href="">Material PU</a></li>
-        <li><a href="">Lámparas de Corrugado</a></li>
-        <li><a href="">Macetas</a></li>
-        <li><a href="">Blog</a></li>
-        <li><a href="">Contacto</a></li>
-        <li><a href="">Nosotros</a></li>
-        <li><a href="">Política de devoluciones</a></li>
-        <li><a href="">Política de envíos</a></li>
+        @if(false)
+        <li><a href="/productos">Piso SPC</a></li>
+        <li><a href="/productos">WPC Interior</a></li>
+        <li><a href="/productos">WPC Exterior</a></li>
+        <li><a href="/productos">PVC Mármol</a></li>
+        <li><a href="/productos">Material PU</a></li>
+        <li><a href="/productos">Lámparas de Corrugado</a></li>
+        <li><a href="/productos">Macetas</a></li>
+        @endif
+        <li><a href="/productos">Blog</a></li>
+        <li><a href="/contacto">Contacto</a></li>
+        <li><a href="/nosotros">Nosotros</a></li>
+        <li><a href="/productos">Política de devoluciones</a></li>
+        <li><a href="/productos">Política de envíos</a></li>
       </ul>
     </div>
     <div class="empresa">

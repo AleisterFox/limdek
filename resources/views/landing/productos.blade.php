@@ -73,8 +73,10 @@
                             </div>
                         </figure>
                         <div class="calificacion">
-                            <p>5.0</p>
-                            <i class="fas fa-star"></i>
+                            @if (false)
+                                <p>5.0</p>
+                                <i class="fas fa-star"></i>
+                            @endif
                         </div>
                         <h5>Lambrin WPC Interior
                             Color Avellana Fondo Negro</h5>

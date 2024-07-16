@@ -1,24 +1,30 @@
+@use('App\Models\LadingPageConfig')
+
+@php
+    $instance = LadingPageConfig::getInstance();
+@endphp
+
 <section id="features">
     <div class="container">
         <div class="feature">
             <span><img src="/img/envios-icon.png" alt=""></span>
-            <h4>Envíos</h4>
-            <p>Hacemos envíos a toda la República Mexicana.</p>
+            <h4>{{ $instance->card_title_1 }}</h4>
+            <p>{{ $instance->card_text_1 }}</p>
         </div>
         <div class="feature">
             <span><img src="/img/servicio-icon.png" alt=""></span>
-            <h4>Servicio al Cliente</h4>
-            <p>¿Una pregunta? Comuníquese con nosotros al 123 456 7890</p>
+            <h4>{{ $instance->card_title_2 }}</h4>
+            <p>{{ $instance->card_text_2 }}</p>
         </div>
         <div class="feature">
             <span><img src="/img/ubicación-icon.png" alt=""></span>
-            <h4>Ubicación</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ligula elit, varius sed nunc ut, dignissim.</p>
+            <h4>{{ $instance->card_title_3 }}</h4>
+            <p>{{ $instance->card_text_3 }}</p>
         </div>
         <div class="feature">
             <span><img src="/img/pagoseguro-icon.png" alt=""></span>
-            <h4>Pago Seguro</h4>
-            <p>Tu información de pago se procesa de forma segura</p>
+            <h4>{{ $instance->card_title_4 }}</h4>
+            <p>{{ $instance->card_text_4 }}</p>
         </div>
     </div>
 </section>

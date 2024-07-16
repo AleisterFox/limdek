@@ -64,6 +64,35 @@ $instance = LadingPageConfig::getInstance();
         </tbody>
     </table>
 
+    <h2 class="mt-4">Configuración tarjetas</h2>
+    <table class="table">
+        <thead></thead>
+        <tbody>
+            <tr>
+                <td>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" name="card_title_1" id="card_title_1" form="contactForm" value="{{ $instance->card_title_1 }}">
+                            <input type="text" class="form-control" name="card_text_1" id="card_text_1" form="contactForm" value="{{ $instance->card_text_1 }}">
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" name="card_title_2" id="card_title_2" form="contactForm" value="{{ $instance->card_title_2 }}">
+                            <input type="text" class="form-control" name="card_text_2" id="card_text_2" form="contactForm" value="{{ $instance->card_text_2 }}">
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" name="card_title_3" id="card_title_3" form="contactForm" value="{{ $instance->card_title_3 }}">
+                            <input type="text" class="form-control" name="card_text_3" id="card_text_3" form="contactForm" value="{{ $instance->card_text_3 }}">
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" name="card_title_4" id="card_title_4" form="contactForm" value="{{ $instance->card_title_4 }}">
+                            <input type="text" class="form-control" name="card_text_4" id="card_text_4" form="contactForm" value="{{ $instance->card_text_4 }}">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
     <h2 class="mt-4">Apartado: Beneficios Materiales WPC</h2>
     <table class="table">
         <thead></thead>

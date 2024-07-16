@@ -27,6 +27,7 @@ class DatabaseSeeder extends Seeder
         );
 
         collect([
+            'Vigas',
             'Lambrin WPC interior',
             'Lambrin WPC exterior',
             'Material PU',

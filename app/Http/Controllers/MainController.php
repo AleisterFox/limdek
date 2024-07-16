@@ -14,7 +14,7 @@ class MainController extends Controller
     {
         return view('index', [
             'products' => Product::all(),
-            'categories' => Category::all(),
+            'categories' => Category::orderBy('id', 'desc')->take(4)->get(),
             'slides' => Slide::all()
         ]);
     }

@@ -44,6 +44,8 @@
                         id="updateSlide-{{ $slide->id }}" 
                         data-id="{{ $slide->id }}" 
                         data-title="{{ $slide->title }}" 
+                        data-button-text="{{ $slide->button_text }}"
+                        data-button-link="{{ $slide->button_link }}"
                         data-description="{{ $slide->description }}">
                         <i class="fs-4 bi-grid"></i>
                     </button>
@@ -116,9 +118,13 @@
         var id = $(this).data('id');
         var title = $(this).data('title');
         var description = $(this).data('description');
+        var buttonText = $(this).data('button-text');
+        var buttonLink = $(this).data('button-link');
         
         $("#slideId").val(id);
 
+        $("#updateSlideModal #button_text").val(buttonText);
+        $("#updateSlideModal #button_link").val(buttonLink);
         $("#updateSlideModal #title").val(title);
         $("#updateSlideModal #description").val(description);
 
@@ -129,13 +135,17 @@
         var id = $("#slideId").val();
         var title = $("#updateSlideModal #title").val();
         var description = $("#updateSlideModal #description").val();
+        var buttonText = $("#updateSlideModal #button_text").val();
+        var buttonLink = $("#updateSlideModal #button_link").val();
 
         var formData = new FormData();
         formData.append('title', title);
         formData.append('description', description);
+        formData.append('button_text', buttonText);
+        formData.append('button_link', buttonLink);
         formData.append('_token', "{{ csrf_token() }}");
         formData.append('_method', "PUT");
-        
+
         if ($("#updateSlideModal #image")[0].files.length > 0) {
             formData.append('image', $("#updateSlideModal #image")[0].files[0]);
         }
