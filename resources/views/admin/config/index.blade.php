@@ -25,39 +25,39 @@ $instance = LadingPageConfig::getInstance();
         <tbody>
             <tr>
                 <td>
-                    <label for="">Teléfono</label>
+                    <label>Teléfono</label>
                     <input type="text" class="form-control" name="contact_phone" id="phone" form="contactForm" value="{{ $instance->contact_phone }}">
                 </td>
                 <td>
-                    <label for="">Email</label>
+                    <label>Email</label>
                     <input type="text" class="form-control" name="contact_email" id="email" form="contactForm" value="{{ $instance->contact_email }}">
                 </td>
                 <td>
-                    <label for="">Facebook</label>
+                    <label>Facebook</label>
                     <input type="text" class="form-control" name="contact_facebook" form="contactForm" value="{{ $instance->contact_facebook }}">
                 </td>
             </tr>
             <tr>
                 <td>
-                    <label for="">Instagram</label>
+                    <label>Instagram</label>
                     <input type="text" class="form-control" name="contact_instagram" form="contactForm" value="{{ $instance->contact_instagram }}">
                 </td>
                 <td>
-                    <label for="">Tiktok</label>
+                    <label>Tiktok</label>
                     <input type="text" class="form-control" name="contact_tiktok" form="contactForm" value="{{ $instance->contact_tiktok }}">
                 </td>
                 <td>
-                    <label for="">Dirección</label>
+                    <label>Dirección</label>
                     <input type="text" class="form-control" name="contact_address" form="contactForm" value="{{ $instance->contact_address }}">
                 </td>
             </tr>
             <tr>
                 <td>
-                    <label for="">Coordenada Latitude</label>
+                    <label>Coordenada Latitude</label>
                     <input type="text" class="form-control" name="contact_latitude" form="contactForm" value="{{ $instance->contact_latitude }}">
                 </td>
                 <td>
-                    <label for="">Coordenada Longitude</label>
+                    <label>Coordenada Longitude</label>
                     <input type="text" class="form-control" name="contact_longitude" form="contactForm" value="{{ $instance->contact_longitude }}">
                 </td>
             </tr>
@@ -71,7 +71,7 @@ $instance = LadingPageConfig::getInstance();
             <tr>
                 <td>
                     <div class="row">
-                        <label for="">Imagen de banner 1</label>
+                        <label>Imagen de banner 1</label>
                         <div class="col-sm-8">
                             <input type="file" class="form-control" name="banner_image_1" id="email" form="contactForm" value="{{ $instance->banner_image_1 }}">
                         </div>
@@ -90,7 +90,7 @@ $instance = LadingPageConfig::getInstance();
             <tr>
                 <td>
                     <div class="row">
-                        <label for="">Imagen de banner 2</label>
+                        <label>Imagen de banner 2</label>
                         <div class="col-sm-8">
                             <input type="file" class="form-control" name="banner_image_2" id="email" form="contactForm" value="{{ $instance->banner_image_2 }}">
                         </div>
@@ -109,7 +109,7 @@ $instance = LadingPageConfig::getInstance();
             <tr>
                 <td>
                     <div class="row">
-                        <label for="">Imagen de banner 3</label>
+                        <label>Imagen de banner 3</label>
                         <div class="col-sm-8">
                             <input type="file" class="form-control" name="banner_image_3" id="email" form="contactForm" value="{{ $instance->banner_image_3 }}">
                         </div>
@@ -128,7 +128,7 @@ $instance = LadingPageConfig::getInstance();
             <tr>
                 <td>
                     <div class="row">
-                        <label for="">Imagen de banner 4</label>
+                        <label>Imagen de banner 4</label>
                         <div class="col-sm-8">
                             <input type="file" class="form-control" name="banner_image_4" id="email" form="contactForm" value="{{ $instance->banner_image_4 }}">
                         </div>

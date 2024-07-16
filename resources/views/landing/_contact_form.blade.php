@@ -8,7 +8,9 @@
         <div class="left">
             <h2>¿Tienes alguna pregunta?</h2>
             <p>Llena el siguiente formulario para ponerte en contacto con nuestro equipo y en breve estaremos respondiendo tu solicitud:</p>
-
+            @session('message')
+                @include('layouts._alert', ['message' => $value])
+            @endsession
             <form action="{{ route('contacto.store') }}" method="post">
                 @csrf
                 <input type="text" name="name" id="name" placeholder="Nombre" required>
