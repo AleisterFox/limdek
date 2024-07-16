@@ -13,11 +13,10 @@ class LadingPageConfig extends Model
 
     public static function getInstance(): LadingPageConfig
     {
-        return self::first();
-    }
+        if (self::count() === 0) {
+            return self::create();
+        }
 
-    public function getAdoptionCount()
-    {
-        return $this->adopted_pets_count;
+        return self::first();
     }
 }

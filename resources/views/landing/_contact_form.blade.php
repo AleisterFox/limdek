@@ -1,3 +1,8 @@
+@use('App\Models\LadingPageConfig')
+
+@php
+    $instance = LadingPageConfig::getInstance();
+@endphp
 <section id="contacto">
     <div class="container">
         <div class="left">
@@ -15,13 +20,15 @@
             </form>
         </div>
         <div class="right">
+            @if ($instance->contact_latitude && $instance->contact_longitude)
             <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3320.911810658996!2d-93.1378936!3d16.7543057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dce9ec4381a4d5%3A0x69285c7c898ba440!2s26985%20Brighton%20Ln%2C%20Lake%20Forest%2C%20CA%2092630%2C%20EE.%20UU.!5e0!3m2!1ses-419!2smx!4v1716913264922!5m2!1ses-419!2smx" 
+                src="http://maps.google.com/maps?q={{ $instance->contact_latitude }},{{ $instance->contact_longitude }}&z=16&output=embed" 
                 height="450" 
                 style="border:0;" 
                 allowfullscreen="" 
                 loading="lazy" 
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
+            @endif
         </div>
     </div>
 </section>

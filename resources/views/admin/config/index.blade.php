@@ -51,6 +51,16 @@ $instance = LadingPageConfig::getInstance();
                     <input type="text" class="form-control" name="contact_address" form="contactForm" value="{{ $instance->contact_address }}">
                 </td>
             </tr>
+            <tr>
+                <td>
+                    <label for="">Coordenada Latitude</label>
+                    <input type="text" class="form-control" name="contact_latitude" form="contactForm" value="{{ $instance->contact_latitude }}">
+                </td>
+                <td>
+                    <label for="">Coordenada Longitude</label>
+                    <input type="text" class="form-control" name="contact_longitude" form="contactForm" value="{{ $instance->contact_longitude }}">
+                </td>
+            </tr>
         </tbody>
     </table>
 
