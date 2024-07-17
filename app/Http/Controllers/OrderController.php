@@ -101,7 +101,7 @@ class OrderController extends Controller
 
             $order->updateStatus();
             $cartService->clear();
-            return redirect()->route('confirmacion-pago')->with('message', $order->getStatusMessage());
+            return redirect()->route('confirmacion-pago', ['order' => $order])->with('message', $order->getStatusMessage());
         }
     }
 

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Product;
 use App\Models\Slide;
+use App\Models\Order;
 use App\Services\CartService;
 
 class MainController extends Controller
@@ -87,9 +88,11 @@ class MainController extends Controller
         return view('landing.pago');
     }
 
-    public function confirmacionPago()
+    public function confirmacionPago(Order $order)
     {
-        return view('landing.confirmacion-pago');
+        return view('landing.confirmacion-pago', [
+            'order' => $order
+        ]);
     }
 
     public function envio()

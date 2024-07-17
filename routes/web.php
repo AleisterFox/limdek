@@ -26,7 +26,7 @@ Route::middleware([])->group(function() {
     Route::get('/nosotros', [MainController::class, 'nosotros']);
     Route::get('/carrito', [MainController::class, 'carrito']);
     Route::get('/informacion', [MainController::class, 'informacion']);
-    Route::get('/confirmacion-pago', [MainController::class, 'confirmacionPago'])->name('confirmacion-pago');
+    Route::get('/confirmacion-pago/{order:uuid}', [MainController::class, 'confirmacionPago'])->name('confirmacion-pago');
     Route::get('/envio', [MainController::class, 'envio']);
     Route::get('/pago', [MainController::class, 'pago']);
 

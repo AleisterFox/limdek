@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
 class Order extends Model
 {
@@ -73,5 +74,12 @@ class Order extends Model
         }
 
         $this->save();
+    }
+
+    protected static function booted(): void
+    {
+        static::creating(function (Order $order) {
+            $order->uuid = Str::uuid();
+        });
     }
 }
