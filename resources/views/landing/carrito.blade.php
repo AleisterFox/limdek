@@ -37,7 +37,7 @@
 @push('scripts')
 <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
 <script>
-    $(".removeProduct").on("click", function() {
+    $(document).on("click", ".removeProduct", function() {
         const id = $(this).data("id");
         $.ajax({
             url: "/remove-from-cart",
