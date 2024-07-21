@@ -32,6 +32,11 @@ class Order extends Model
         }, 0);
     }
 
+    public function getFullNameAttribute()
+    {
+        return "{$this->name} {$this->last_name}";
+    }
+
     public function getOrderId()
     {
         if (!$this->preference_response) {
