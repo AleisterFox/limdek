@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.3.0, for macos14.2 (arm64)
 --
--- Host: localhost    Database: huellitas
+-- Host: localhost    Database: limdek
 -- ------------------------------------------------------
 -- Server version	8.3.0
 
@@ -14,33 +14,6 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-
---
--- Table structure for table `adoption_forms`
---
-
-DROP TABLE IF EXISTS `adoption_forms`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `adoption_forms` (
-  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `phone` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `adoption_forms`
---
-
-LOCK TABLES `adoption_forms` WRITE;
-/*!40000 ALTER TABLE `adoption_forms` DISABLE KEYS */;
-/*!40000 ALTER TABLE `adoption_forms` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `cache`
@@ -107,7 +80,7 @@ CREATE TABLE `categories` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -116,7 +89,7 @@ CREATE TABLE `categories` (
 
 LOCK TABLES `categories` WRITE;
 /*!40000 ALTER TABLE `categories` DISABLE KEYS */;
-INSERT INTO `categories` VALUES (1,'Categoria padre',NULL,NULL,NULL,1,'2024-07-10 20:11:00','2024-07-10 20:11:00');
+INSERT INTO `categories` VALUES (1,'Vigas',NULL,NULL,NULL,1,'2024-07-22 04:24:59','2024-07-22 04:24:59'),(2,'Láminas',NULL,NULL,NULL,1,'2024-07-22 04:24:59','2024-07-22 04:24:59'),(3,'Lambrin WPC interior',NULL,NULL,NULL,1,'2024-07-22 04:24:59','2024-07-22 04:24:59'),(4,'Lambrin WPC exterior',NULL,NULL,NULL,1,'2024-07-22 04:24:59','2024-07-22 04:24:59'),(5,'Material PU',NULL,NULL,NULL,1,'2024-07-22 04:24:59','2024-07-22 04:24:59'),(6,'Láminas Tipo Mármol',NULL,NULL,NULL,1,'2024-07-22 04:24:59','2024-07-22 04:24:59'),(7,'WPC Exterior',NULL,NULL,NULL,1,'2024-07-22 04:24:59','2024-07-22 04:24:59'),(8,'Macetas',NULL,NULL,NULL,1,'2024-07-22 04:24:59','2024-07-22 04:24:59');
 /*!40000 ALTER TABLE `categories` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -160,6 +133,7 @@ DROP TABLE IF EXISTS `contact_forms`;
 CREATE TABLE `contact_forms` (
   `id` bigint unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `city` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `message` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `phone` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -276,35 +250,50 @@ DROP TABLE IF EXISTS `lading_page_configs`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `lading_page_configs` (
   `id` bigint unsigned NOT NULL AUTO_INCREMENT,
-  `adopted_pets_count` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '12',
-  `whatsapp` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '5213314148548',
-  `banner_main_quote_title` varchar(900) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Dejando huella en tu corazón',
-  `banner_main_quote_description` varchar(900) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'En nuestra organización de adopción de perritos, nos dedicamos a encontrar hogares amorosos para perros en necesidad. ¡Únete a nosotros en esta noble misión!',
-  `banner_footer_quote_title` varchar(900) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Alianzas estratégicas',
-  `banner_footer_quote_description` varchar(900) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Somos una organización protectora de animales especializada, desde el 2020, en la ayuda a perros maltratados y/o abandonados. Nuestros rescatistas realizan diariamente labores heroicas en un intento por salvar la mayor cantidad de vidas posible; sin embargo, su capacidad de dar cobijo, alimento y atención médica, se ve ampliamente rebasada por una problemática que nunca cesa de crecer.',
-  `card_1_title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Adopción de perritos',
-  `card_1_text` varchar(900) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Ofrecemos servicios de adopción de mascotas, encuentra a tu compañero peludo perfecto',
-  `card_1_image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `card_2_title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Hacer donativos',
-  `card_2_text` varchar(900) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Tus donativos nos ayudan a seguir brindando cuidado y atención a los perritos en espera de un hogar amoroso.',
-  `card_2_image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `card_3_title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Foster to adopt',
-  `card_3_text` varchar(900) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Nuestro programa de foster to adopt te permite brindar un hogar temporal a un perrito antes de adoptarlo de manera permanente.',
-  `card_3_image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `contact_phone` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '3314148548',
-  `contact_email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'roman@huellitasdiferentes.com',
+  `whatsapp` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '5216645881817',
+  `banner_main_quote_title` varchar(900) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `banner_main_quote_description` varchar(900) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `contact_phone` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `contact_email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `contact_facebook` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `contact_instagram` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `donations_banner_title` varchar(900) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Donativos',
-  `donations_banner_image` varchar(900) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `donations_banner_description` text COLLATE utf8mb4_unicode_ci,
-  `adoption_banner_title` varchar(900) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Foster to Adopt',
-  `adoption_banner_image` varchar(900) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `adoption_banner_question` varchar(900) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '¿Te gustaría saber que es nuestro programa Foster to Adopt?',
-  `adoption_banner_description_1` text COLLATE utf8mb4_unicode_ci,
-  `adoption_banner_image_1` text COLLATE utf8mb4_unicode_ci,
-  `adoption_banner_description_2` text COLLATE utf8mb4_unicode_ci,
-  `adoption_banner_image_2` text COLLATE utf8mb4_unicode_ci,
+  `contact_tiktok` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `contact_address` text COLLATE utf8mb4_unicode_ci,
+  `contact_latitude` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `contact_longitude` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `banner_image_1` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `banner_text_1` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `banner_image_2` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `banner_text_2` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `banner_image_3` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `banner_text_3` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `banner_image_4` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `banner_text_4` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `card_title_1` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Envíos',
+  `card_text_1` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Hacemos envíos a toda la República Mexicana.',
+  `card_title_2` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Servicio al Cliente',
+  `card_text_2` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '¿Una pregunta? Comuníquese con nosotros al 123 456 7890',
+  `card_title_3` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Ubicación',
+  `card_text_3` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `card_title_4` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Pago Seguro',
+  `card_text_4` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Tu información de pago se procesa de forma segura',
+  `about_us` varchar(900) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Empresa dedicados a la especialización en la venta de productos WPC y otros materiales para la decoración y construcción. Ofrecemos una amplia gama de opciones de alta calidad a nuestros clientes para ayudarles a transformar sus espacios en algo hermoso y funcional.',
+  `about_image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `about_text_1` varchar(900) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Somos una empresa dedicada a la especialización en la venta de productos WPC y otros materiales para la decoración y construcción. Ofrecemos una amplia gama de opciones de alta calidad a nuestros clientes para ayudarles a transformar sus espacios en algo hermoso y funcional.',
+  `about_image_1` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `about_text_2` varchar(900) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Nuestro objetivo es ofrecer productos de alta calidad a precios competitivos, con un servicio al cliente excepcional. Nos esforzamos por ser la mejor opción para nuestros clientes, brindando productos de alta calidad y un servicio al cliente excepcional.',
+  `about_image_2` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `faq` varchar(1900) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Nos enorgullece ofrecer envíos a toda la República Mexicana. Para garantizarte la mejor entrega de tus materiales, trabajamos con empresas especializadas en transporte de muebles.\n            El tiempo estimado de entrega es de 4 a 15 días hábiles, teniendo en cuenta que el tamaño de los materiales es irregular. ¡Te garantizamos un servicio seguro y confiable para que tus materiales lleguen a su destino en perfecto estado!Nuestro servicio de atención al cliente está disponible de lunes a viernes de 10:00 a. m. a 7:00 p.m. y sábados de 10:00 a.m. a 2:00 p.m.',
+  `question_1` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '¿Hacen envíos internacionales?',
+  `answer_1` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'No, por el momento solo hacemos envíos a toda la República Mexicana.',
+  `question_2` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '¿Cuánto tiempo tarda en llegar mi paquete?',
+  `answer_2` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'El tiempo estimado de entrega es de 4 a 15 días hábiles, teniendo en cuenta que el tamaño de los materiales es irregular.',
+  `question_3` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '¿Por qué mi envío tarda más que el promedio?',
+  `answer_3` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'El tiempo de entrega puede variar dependiendo de la ubicación de entrega y la disponibilidad de los materiales.',
+  `question_4` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '¿Cómo puedo rastrear mi pedido?',
+  `answer_4` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Una vez que tu pedido haya sido enviado, recibirás un correo electrónico con el número de guía para que puedas rastrear tu paquete.',
+  `question_5` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '¿Qué hago si mi paquete llega dañado?',
+  `answer_5` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Si tu paquete llega dañado, por favor contáctanos de inmediato para que podamos ayudarte a resolver el problema.',
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -317,7 +306,7 @@ CREATE TABLE `lading_page_configs` (
 
 LOCK TABLES `lading_page_configs` WRITE;
 /*!40000 ALTER TABLE `lading_page_configs` DISABLE KEYS */;
-INSERT INTO `lading_page_configs` VALUES (1,'12','5213314148548','Dejando huella en tu corazón','En nuestra organización de adopción de perritos, nos dedicamos a encontrar hogares amorosos para perros en necesidad. ¡Únete a nosotros en esta noble misión!','Alianzas estratégicas','Somos una organización protectora de animales especializada, desde el 2020, en la ayuda a perros maltratados y/o abandonados. Nuestros rescatistas realizan diariamente labores heroicas en un intento por salvar la mayor cantidad de vidas posible; sin embargo, su capacidad de dar cobijo, alimento y atención médica, se ve ampliamente rebasada por una problemática que nunca cesa de crecer.','Adopción de perritos','Ofrecemos servicios de adopción de mascotas, encuentra a tu compañero peludo perfecto',NULL,'Hacer donativos','Tus donativos nos ayudan a seguir brindando cuidado y atención a los perritos en espera de un hogar amoroso.',NULL,'Foster to adopt','Nuestro programa de foster to adopt te permite brindar un hogar temporal a un perrito antes de adoptarlo de manera permanente.',NULL,'3314148548','roman@huellitasdiferentes.com',NULL,NULL,'Donativos',NULL,NULL,'Foster to Adopt',NULL,'¿Te gustaría saber que es nuestro programa Foster to Adopt?',NULL,NULL,NULL,NULL,'2024-07-10 20:11:00','2024-07-10 20:11:00');
+INSERT INTO `lading_page_configs` VALUES (1,'5216645881817','','',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Envíos','Hacemos envíos a toda la República Mexicana.','Servicio al Cliente','¿Una pregunta? Comuníquese con nosotros al 123 456 7890','Ubicación',NULL,'Pago Seguro','Tu información de pago se procesa de forma segura','Empresa dedicados a la especialización en la venta de productos WPC y otros materiales para la decoración y construcción. Ofrecemos una amplia gama de opciones de alta calidad a nuestros clientes para ayudarles a transformar sus espacios en algo hermoso y funcional.',NULL,'Somos una empresa dedicada a la especialización en la venta de productos WPC y otros materiales para la decoración y construcción. Ofrecemos una amplia gama de opciones de alta calidad a nuestros clientes para ayudarles a transformar sus espacios en algo hermoso y funcional.',NULL,'Nuestro objetivo es ofrecer productos de alta calidad a precios competitivos, con un servicio al cliente excepcional. Nos esforzamos por ser la mejor opción para nuestros clientes, brindando productos de alta calidad y un servicio al cliente excepcional.',NULL,'Nos enorgullece ofrecer envíos a toda la República Mexicana. Para garantizarte la mejor entrega de tus materiales, trabajamos con empresas especializadas en transporte de muebles.\n            El tiempo estimado de entrega es de 4 a 15 días hábiles, teniendo en cuenta que el tamaño de los materiales es irregular. ¡Te garantizamos un servicio seguro y confiable para que tus materiales lleguen a su destino en perfecto estado!Nuestro servicio de atención al cliente está disponible de lunes a viernes de 10:00 a. m. a 7:00 p.m. y sábados de 10:00 a.m. a 2:00 p.m.','¿Hacen envíos internacionales?','No, por el momento solo hacemos envíos a toda la República Mexicana.','¿Cuánto tiempo tarda en llegar mi paquete?','El tiempo estimado de entrega es de 4 a 15 días hábiles, teniendo en cuenta que el tamaño de los materiales es irregular.','¿Por qué mi envío tarda más que el promedio?','El tiempo de entrega puede variar dependiendo de la ubicación de entrega y la disponibilidad de los materiales.','¿Cómo puedo rastrear mi pedido?','Una vez que tu pedido haya sido enviado, recibirás un correo electrónico con el número de guía para que puedas rastrear tu paquete.','¿Qué hago si mi paquete llega dañado?','Si tu paquete llega dañado, por favor contáctanos de inmediato para que podamos ayudarte a resolver el problema.','2024-07-22 04:25:02','2024-07-22 04:25:02');
 /*!40000 ALTER TABLE `lading_page_configs` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -333,7 +322,7 @@ CREATE TABLE `migrations` (
   `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -342,7 +331,7 @@ CREATE TABLE `migrations` (
 
 LOCK TABLES `migrations` WRITE;
 /*!40000 ALTER TABLE `migrations` DISABLE KEYS */;
-INSERT INTO `migrations` VALUES (1,'0001_01_01_000000_create_users_table',1),(2,'0001_01_01_000001_create_cache_table',1),(3,'0001_01_01_000002_create_jobs_table',1),(4,'2024_06_21_202914_create_categories_table',1),(5,'2024_06_21_203016_create_products_table',1),(6,'2024_06_21_235808_add_columns_to_products_table',1),(7,'2024_06_22_004758_create_contact_forms_table',1),(8,'2024_06_22_010411_create_adoption_forms_table',1),(9,'2024_06_22_010620_create_pets_table',1),(10,'2024_06_22_191326_create_category_product_table',1),(11,'2024_06_22_195903_create_pet_categories_table',1),(12,'2024_06_25_223211_add_column_status_to_pets_table',1),(13,'2024_06_25_224840_create_pet_adoption_forms_table',1),(14,'2024_06_30_153513_create_orders_table',1),(15,'2024_06_30_154147_create_order_product_table',1),(16,'2024_06_30_181447_add_column_to_orders_table',1),(17,'2024_07_08_212938_create_lading_page_configs_table',1),(18,'2024_07_08_214605_create_slides_table',1);
+INSERT INTO `migrations` VALUES (1,'0001_01_01_000000_create_users_table',1),(2,'0001_01_01_000001_create_cache_table',1),(3,'0001_01_01_000002_create_jobs_table',1),(4,'2024_06_21_202914_create_categories_table',1),(5,'2024_06_21_203016_create_products_table',1),(6,'2024_06_21_235808_add_columns_to_products_table',1),(7,'2024_06_22_004758_create_contact_forms_table',1),(8,'2024_06_22_191326_create_category_product_table',1),(9,'2024_06_30_153513_create_orders_table',1),(10,'2024_06_30_154147_create_order_product_table',1),(11,'2024_06_30_181447_add_column_to_orders_table',1),(12,'2024_07_08_212938_create_lading_page_configs_table',1),(13,'2024_07_08_214605_create_slides_table',1),(14,'2024_07_14_171649_add_column_agreement_to_orders_table',1),(15,'2024_07_17_001029_add_column_uuid_to_orders_table',1),(16,'2024_07_19_134907_add_column_user_id_to_orders_table',1);
 /*!40000 ALTER TABLE `migrations` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -387,10 +376,16 @@ DROP TABLE IF EXISTS `orders`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `orders` (
   `id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` int DEFAULT NULL,
+  `uuid` char(36) COLLATE utf8mb4_unicode_ci NOT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `agreement` tinyint(1) NOT NULL DEFAULT '0',
+  `company` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `contact` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `house_type` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `last_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `phone` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `phone` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `address` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `state` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `city` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -402,7 +397,8 @@ CREATE TABLE `orders` (
   `preference_response` text COLLATE utf8mb4_unicode_ci,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `orders_uuid_unique` (`uuid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -440,114 +436,6 @@ LOCK TABLES `password_reset_tokens` WRITE;
 UNLOCK TABLES;
 
 --
--- Table structure for table `pet_adoption_forms`
---
-
-DROP TABLE IF EXISTS `pet_adoption_forms`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `pet_adoption_forms` (
-  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
-  `pet_id` int NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `age` int NOT NULL,
-  `work` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `house_type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `garden_type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `address` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `phone` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `reason_to_adopt` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `has_pet` tinyint(1) NOT NULL,
-  `workout_time` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `pet_alone_time` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `old_parents` tinyint(1) NOT NULL,
-  `kids` tinyint(1) NOT NULL,
-  `has_any_other_pet` tinyint(1) NOT NULL,
-  `pet_type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `has_vet` tinyint(1) NOT NULL,
-  `family_aggree` tinyint(1) NOT NULL,
-  `media_adopt` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `message` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `pet_adoption_forms`
---
-
-LOCK TABLES `pet_adoption_forms` WRITE;
-/*!40000 ALTER TABLE `pet_adoption_forms` DISABLE KEYS */;
-/*!40000 ALTER TABLE `pet_adoption_forms` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `pet_categories`
---
-
-DROP TABLE IF EXISTS `pet_categories`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `pet_categories` (
-  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `description` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `pet_categories`
---
-
-LOCK TABLES `pet_categories` WRITE;
-/*!40000 ALTER TABLE `pet_categories` DISABLE KEYS */;
-INSERT INTO `pet_categories` VALUES (1,'Mestizos',NULL,'2024-07-10 20:11:00','2024-07-10 20:11:00'),(2,'Chihuahua',NULL,'2024-07-10 20:11:00','2024-07-10 20:11:00');
-/*!40000 ALTER TABLE `pet_categories` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `pets`
---
-
-DROP TABLE IF EXISTS `pets`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `pets` (
-  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `image2` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `image3` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `image4` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `sex` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `size` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `age` int NOT NULL,
-  `live_with` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `breed` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `status` int NOT NULL DEFAULT '1',
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `pets`
---
-
-LOCK TABLES `pets` WRITE;
-/*!40000 ALTER TABLE `pets` DISABLE KEYS */;
-/*!40000 ALTER TABLE `pets` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `products`
 --
 
@@ -566,6 +454,19 @@ CREATE TABLE `products` (
   `price` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `category_id` int DEFAULT NULL,
   `in_stock` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '1',
+  `size` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `large` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `meters` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `presentation` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `area` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `square_meters` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `applications` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `recycling` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '1',
+  `life` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `maintenance` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `weight` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `box_size` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `installation_video` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -607,6 +508,7 @@ CREATE TABLE `sessions` (
 
 LOCK TABLES `sessions` WRITE;
 /*!40000 ALTER TABLE `sessions` DISABLE KEYS */;
+INSERT INTO `sessions` VALUES ('iM7G7qMMzzUkTRsBO4qH6XjxPvX0UBI1BhCyPu5x',NULL,'127.0.0.1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36','YTozOntzOjY6Il90b2tlbiI7czo0MDoidXF4c2VoQ0h0MWxvOUlBTHZReHJMSmRmRU91ZFVGV3BnclVMcnBPViI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjI6Imh0dHA6Ly9saW1kZWstcGhwLnRlc3QiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19',1721600747);
 /*!40000 ALTER TABLE `sessions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -653,6 +555,7 @@ CREATE TABLE `users` (
   `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email_verified_at` timestamp NULL DEFAULT NULL,
   `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `role` int NOT NULL DEFAULT '2',
   `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
@@ -667,7 +570,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'Admin','admin@gmail.com',NULL,'$2y$12$3iiTfcRMyHKop3CsLZkK0ORm5uoUjTR9pTuLmyvihLoNracrTTqtm',NULL,'2024-07-10 20:11:00','2024-07-10 20:11:00');
+INSERT INTO `users` VALUES (1,'Admin','admin@gmail.com',NULL,'$2y$12$ZFkd8LDtSmmrlvpCqrs0d.6JbggeEdbkUNRc4diG3RqNYTPnWSEs2',1,NULL,'2024-07-22 04:24:59','2024-07-22 04:24:59');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -680,4 +583,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-07-10  8:13:09
+-- Dump completed on 2024-07-21 16:26:35

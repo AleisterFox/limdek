@@ -31,13 +31,13 @@ return new class extends Migration
             $table->string('banner_image_1')->nullable();
             $table->string('banner_text_1')->nullable();
 
-            $table->string('banner_image_2')->default();
+            $table->string('banner_image_2')->nullable();
             $table->string('banner_text_2')->nullable();
 
-            $table->string('banner_image_3')->default();
+            $table->string('banner_image_3')->nullable();
             $table->string('banner_text_3')->nullable();
 
-            $table->string('banner_image_4')->default();
+            $table->string('banner_image_4')->nullable();
             $table->string('banner_text_4')->nullable();
 
             $table->string('card_title_1')->default('Envíos');

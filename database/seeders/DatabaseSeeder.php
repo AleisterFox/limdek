@@ -36,7 +36,5 @@ class DatabaseSeeder extends Seeder
             'WPC Exterior',
             'Macetas'
         ])->each(fn ($name) => Category::firstOrCreate(['name' => $name]));
-
-        LadingPageConfig::create();
     }
 }

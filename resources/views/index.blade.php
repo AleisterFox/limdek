@@ -92,9 +92,11 @@ $instace = LadingPageConfig::getInstance();
                     @each('landing._product_carousel', $products, 'product')
                 @else
 
-                    @for($i = 1; $i <= 10; $i++)
-                        @include('landing._product_carousel')
-                    @endfor
+                    @if (false)
+                        @for($i = 1; $i <= 10; $i++)
+                            @include('landing._product_carousel')
+                        @endfor
+                    @endif
 
                 @endif
             </div>
@@ -119,9 +121,11 @@ $instace = LadingPageConfig::getInstance();
                     @each('landing._product_carousel', $products, 'product')
                 @else
 
-                    @for($i = 1; $i <= 10; $i++)
-                        @include('landing._product_carousel')
-                    @endfor
+                    @if (false)
+                        @for($i = 1; $i <= 10; $i++)
+                            @include('landing._product_carousel')
+                        @endfor
+                    @endif
 
                 @endif
             </div>
@@ -144,9 +148,11 @@ $instace = LadingPageConfig::getInstance();
                 @if ($products->count() > 0)
                     @each('landing._product_carousel', $products, 'product')
                 @else
-                    @for($i = 1; $i <= 10; $i++)
-                        @include('landing._product_carousel')
-                    @endfor
+                    @if (false)
+                        @for($i = 1; $i <= 10; $i++)
+                            @include('landing._product_carousel')
+                        @endfor
+                    @endif
                 @endif
             </div>
         </div>

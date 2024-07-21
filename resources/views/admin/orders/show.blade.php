@@ -13,7 +13,7 @@
             <td><img src="{{ asset('/images/' . $product->image) }}" alt="Imagen" style="width: 30px;" /></td>
             <td>{{ $product->name }}</td>
             <td>{{ $product->pivot->quantity }}</td>
-            <td>{{ $product->pivot->total }}</td>
+            <td>{{ $product->pivot->price }}</td>
         </tr>
         @endforeach
     </tbody>
