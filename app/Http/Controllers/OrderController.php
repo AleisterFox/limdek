@@ -60,7 +60,7 @@ class OrderController extends Controller
         }
 
         MercadoPagoConfig::setAccessToken(env('MERCADO_PAGO_TOKEN'));
-        MercadoPagoConfig::setRuntimeEnviroment(MercadoPagoConfig::LOCAL);
+        MercadoPagoConfig::setRuntimeEnviroment(MercadoPagoConfig::SERVER);
 
         $client = new PreferenceClient();
 
@@ -73,17 +73,22 @@ class OrderController extends Controller
             ];
         });
 
-        $preference = $client->create([
-            'items' => [$products],
-            "auto_return" => "approved",
-            "back_urls" => [
-                "success" => route('order.callback', ['order' => $order, 'status' => 'success']),
-                "failure" => route('order.callback', ['order' => $order, 'status' => 'failure']),
-                "pending" => route('order.callback', ['order' => $order, 'status' => 'pending'])
-            ],
-            "statement_descriptor" => "Limdek",
-            "external_reference" => "CDP001"
-        ]);
+        try {
+            $preference = $client->create([
+                'items' => [$products],
+                "auto_return" => "approved",
+                "back_urls" => [
+                    "success" => route('order.callback', ['order' => $order, 'status' => 'success']),
+                    "failure" => route('order.callback', ['order' => $order, 'status' => 'failure']),
+                    "pending" => route('order.callback', ['order' => $order, 'status' => 'pending'])
+                ],
+                "statement_descriptor" => "Limdek",
+                "external_reference" => "CDP001"
+            ]);
+        } catch (\Exception $e) {
+            dd($e->getMessage());
+        }
+
 
         $order->update([
             'preferences_id' => $preference->id 

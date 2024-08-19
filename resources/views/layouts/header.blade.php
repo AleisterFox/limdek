@@ -15,14 +15,12 @@
       <!-- <li><a href="index.php#servicios">Servicios</a></li>
       <li><a href="index.php#faqs">Faqs</a></li> -->
       <li><a href="/contacto">Contacto</a></li>
-      @if (false)
       <li class="search">
-        <a href="javascript:void(0)"><i class="fas fa-magnifying-glass"></i></a>
+        <a href="javascript:void(0)"><i class="fas fa-magnifying-glass" style="display: none;"></i></a>
         <form action="">
           <input type="text" name="" id="">
         </form>
       </li>
-      @endif
       <li class="profile">
         <a href="javascript:void(0)"><i class="fas fa-user"></i></a>
         <ul class="profile-menu">
