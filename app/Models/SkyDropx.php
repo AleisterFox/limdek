@@ -15,6 +15,11 @@ class SkyDropx
 
   public function test()
   {
-    return Http::withToken(env('SKY_DROPS_API_KEY'))->get("https://api.skydropx.com/v1/carriers")->json();
+    return $this->getClient()->get("https://api.skydropx.com/v1/carriers")->json();
+  }
+
+  private function getClient()
+  {
+    return Http::withToken(env('SKY_DROPS_API_KEY'));
   }
 }
