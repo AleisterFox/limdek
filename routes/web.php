@@ -36,6 +36,8 @@ Route::middleware([])->group(function() {
 
     Route::resource('order', OrderController::class);
     Route::get('order-callback/{order}', [OrderController::class, 'callback'])->name('order.callback');
+
+    Route::post('/shipping', [OrderController::class, 'shipping']);
 });
 
 Route::prefix('admin')->middleware(['auth'])->group(function() {

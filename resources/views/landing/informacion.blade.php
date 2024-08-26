@@ -9,7 +9,7 @@
         <div class="steps">
             <div class="step">
                 <a href="/carrito">Carrito</a>
-                <i class="fas fa-chevron-right"></i>
+                <i class="fas fa-chevron-carrito-right"></i">
             </div>
             <div class="step active">
                 <p>Información</p>
@@ -69,13 +69,12 @@
 
                     <div class="bottom">
                         <a href="/carrito" class="back"><i class="fas fa-chevron-left"></i>Volver a carrito</a>
-                        <button form="orderForm" type="submit" class="button__black">Continuar</button>
+                        <button form="orderForm" type="submit" class="button__black" @disabled(true)>Continuar</button>
                     </div>
                 </div>
             </div>
 
-
-            <div class="right">
+            <div class="right" id="carrito-right">
                 @include('landing._total_carrito')
             </div>
         </div>
@@ -128,6 +127,30 @@
         option.text = estadoMexicano;
         option.value = index + 1;
         select.add(option);
+    });
+</script>
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script>
+    $("#state").on('change', function() {
+        var address = $("#address").val();
+        var zip = $("#zip").val();
+        var city = $("#city").val();
+        var state = $("#state option:selected").text();
+
+        $.ajax({
+            url: "/shipping",
+            type: "POST",
+            data: {
+                address: address,
+                zip: zip,
+                city: city,
+                state: state,
+                '_token': $('input[name=_token]').val()
+            },
+            success: function(response) {
+                $("#carrito-right").html(response);
+            }
+        });
     });
 </script>
 @endpush

@@ -123,4 +123,13 @@ class OrderController extends Controller
             $order->updateStatus();
         }
     }
+
+    public function shipping(\App\Models\SkyDropx $skyDropx, Request $request)
+    {
+        $response = collect($skyDropx->checkAbility());
+        $total = $response->min('total_pricing');
+        return view('landing._total_carrito', [
+            'total' => $total
+        ]);
+    }
 }

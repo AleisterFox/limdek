@@ -69,9 +69,10 @@ class CartService
     {
         $total = 0;
         $cart = Session::get('cart', []);
-    
+        
         foreach ($cart as $item) {
-            $total += $item['product']->price * $item['quantity'];
+            $quantity = $item['quantity'] == 0 ? 1 : $item['quantity'];
+            $total += $item['product']->price * $quantity;
         }
     
         return number_format($total, 2, '.', '');
